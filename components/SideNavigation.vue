@@ -169,6 +169,11 @@ export default Vue.extend({
           divider: true
         },
         {
+          title: this.$t('葛飾区新型コロナウイルス関連情報'),
+          link:
+            'http://www.city.katsushika.lg.jp/information/kouho/1005542/1023108.html'
+        },
+        {
           title: this.$t('東京都新型コロナウイルス感染症対策本部報'),
           link:
             'https://www.bousai.metro.tokyo.lg.jp/taisaku/saigai/1007261/index.html'
@@ -177,6 +182,11 @@ export default Vue.extend({
           title: this.$t('東京都主催等 中止又は延期するイベント等'),
           link:
             'https://www.seisakukikaku.metro.tokyo.lg.jp/information/event00.html'
+        },
+        {
+          title: this.$t('区長からのメッセージ'),
+          link:
+            'http://www.city.katsushika.lg.jp/information/kouho/1005541/1023205.html'
         },
         {
           title: this.$t('知事からのメッセージ'),
