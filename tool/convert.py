@@ -25,21 +25,22 @@ with open('../data/row_data.csv', 'r') as row_data_f:
                     '入院調整中': True if row[6] == '1' else False,
                     '入院中': True if row[7] == '1' else False,
                     '自宅療養中': True if row[8] == '1' else False,
-                    '退院': True if row[9] == '1' else False
+                    '死亡': True if row[9] == '1' else False,
+                    '退院': True if row[10] == '1' else False
                 },
                 'symptoms': {
-                    '発熱': True if row[10] == '1' else False,
-                    '咳': True if row[11] == '1' else False,
-                    '咽頭痛': True if row[12] == '1' else False,
-                    '味覚障害': True if row[13] == '1' else False,
-                    '嗅覚障害': True if row[14] == '1' else False,
-                    '倦怠感': True if row[15] == '1' else False,
-                    '下痢': True if row[16] == '1' else False,
-                    '頭痛': True if row[17] == '1' else False,
-                    '鼻汁': True if row[18] == '1' else False,
-                    '関節痛': True if row[19] == '1' else False,
-                    '鼻閉': True if row[20] == '1' else False,
-                    '痰': True if row[21] == '1' else False
+                    '発熱': True if row[11] == '1' else False,
+                    '咳': True if row[12] == '1' else False,
+                    '咽頭痛': True if row[13] == '1' else False,
+                    '味覚障害': True if row[14] == '1' else False,
+                    '嗅覚障害': True if row[15] == '1' else False,
+                    '倦怠感': True if row[16] == '1' else False,
+                    '下痢': True if row[17] == '1' else False,
+                    '頭痛': True if row[18] == '1' else False,
+                    '鼻汁': True if row[19] == '1' else False,
+                    '関節痛': True if row[20] == '1' else False,
+                    '鼻閉': True if row[21] == '1' else False,
+                    '痰': True if row[22] == '1' else False
                 }
             }
             row_datas.append(temp_data)
@@ -100,7 +101,7 @@ while True:
 
 # main_summary
 
-status_sumary = {'入院調整中': 0, '入院中': 0, '自宅療養中': 0, '退院': 0}
+status_sumary = {'入院調整中': 0, '入院中': 0, '自宅療養中': 0, '死亡': 0, '退院': 0}
 for row_data in row_datas:
     if row_data['status']['入院調整中'] is True:
         status_sumary['入院調整中'] += 1
@@ -108,6 +109,8 @@ for row_data in row_datas:
         status_sumary['入院中'] += 1
     if row_data['status']['自宅療養中'] is True:
         status_sumary['自宅療養中'] += 1
+    if row_data['status']['死亡'] is True:
+        status_sumary['死亡'] += 1
     if row_data['status']['退院'] is True:
         status_sumary['退院'] += 1
 
@@ -126,6 +129,9 @@ main_summary = {
         }, {
             'attr': '自宅療養中',
             'value': status_sumary['自宅療養中']
+        }, {
+            'attr': '死亡',
+            'value': status_sumary['死亡']
         }, {
             'attr': '退院',
             'value': status_sumary['退院']
