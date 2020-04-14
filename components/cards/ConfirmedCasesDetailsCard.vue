@@ -1,7 +1,7 @@
 <template>
   <v-col cols="12" md="6" class="DataCard">
     <data-view
-      :title="$t('検査陽性者の状況')"
+      :title="$t('感染者の状況')"
       :title-id="'details-of-confirmed-cases'"
       :date="Data.patients.date"
     >
@@ -11,7 +11,7 @@
         </p>
       </template>
       <confirmed-cases-details-table
-        :aria-label="$t('検査陽性者の状況')"
+        :aria-label="$t('感染者の状況')"
         v-bind="confirmedCases"
       />
     </data-view>
