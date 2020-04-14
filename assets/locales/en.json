@@ -3,7 +3,7 @@
   "かかりつけ医に相談することもできます。": "You can also consult with your doctor.",
   "詳しくはこちらをご参照ください。": "For more information, please refer this:",
   "詳細を見る（東京都福祉保健局）": "For details: Bureau of Social Welfare and Public Health website",
-  "都内の最新感染動向": "Latest updates on COVID-19 in Tokyo",
+  "区内の最新感染動向": "Latest updates on COVID-19 in Tokyo",
   "自分や家族の症状に不安や心配があればまずは電話相談をどうぞ": "Consult over the phone if you have any concerns",
   "相談の手順を見る": "Consultation flowchart",
   "検査陽性者の状況": "Details of people testing positive",
@@ -339,5 +339,12 @@
   "学びの支援サイト": "Learning Support Links (Japanese)",
   "鉄道利用者数の推移（新宿、東京、渋谷、各駅エリア）[PDF]": "Transition of train passengers (Areas of Shinjuku, Tokyo, Shibuya, etc.) [PDF}",
   "電話のおかけ間違いが多くなっております。発信の際は今一度電話番号をお確かめの上、お間違えのないようお願いいたします。": "Wrong tel is increasing. Please check call number when you call tell.",
-  "東京都緊急事態措置について": "About Tokyo Emergency Measures"
+  "東京都緊急事態措置について": "About Tokyo Emergency Measures",
+  "当サイトは有志が東京都のサイトを基に開発したものです。": "This site was developed by volunteers based on the site in Tokyo.",
+  "葛飾区新型コロナウイルス関連情報": "Information related to the COVID-19 in Katsushika",
+  "区長からのメッセージ": "Message from the mayor on COVID-19",
+  "葛飾区公式ホームページ": "Official website of the Katsushika City",
+  "感染者の状況": "Status of infected person",
+  "感染者数": "Number of infected people",
+  "自宅療養中": "Under medical treatment at home"
 }
