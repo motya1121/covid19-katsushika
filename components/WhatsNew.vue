@@ -5,17 +5,8 @@
         <v-icon size="24" class="WhatsNew-title-icon">
           mdi-information
         </v-icon>
-        {{ $t('最新のお知らせ') }}
+        {{ $t('お知らせ') }}
       </h3>
-      <span class="WhatsNew-link-to-emergency-page">
-        <v-icon size="20" class="WhatsNew-link-to-emergency-page-icon">
-          mdi-bullhorn
-        </v-icon>
-        <external-link
-          url="https://www.bousai.metro.tokyo.lg.jp/1007617/index.html"
-          :label="$t('東京都緊急事態措置について')"
-        />
-      </span>
     </div>
     <ul class="WhatsNew-list">
       <li v-for="(item, i) in items" :key="i" class="WhatsNew-list-item">
@@ -26,6 +17,7 @@
           rel="noopener noreferrer"
         >
           <time
+            v-if="item.date != ''"
             class="WhatsNew-list-item-anchor-time px-2"
             :datetime="formattedDate(item.date)"
           >
