@@ -37,9 +37,6 @@
         :unit="info.unit"
       />
     </template>
-    <template v-slot:footer>
-      <open-data-link :url="url" />
-    </template>
   </data-view>
 </template>
 
