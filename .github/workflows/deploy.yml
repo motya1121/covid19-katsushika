@@ -38,12 +38,12 @@ jobs:
         env:
           GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
 
-      - name: Temporarily disable "include administrators" branch protection
-        uses: benjefferies/branch-protection-bot@master
-        if: always()
-        with:
-          access-token: ${{ secrets.ACCESS_TOKEN }}
-          branch: production
+#      - name: Temporarily disable "include administrators" branch protection
+#        uses: benjefferies/branch-protection-bot@master
+#        if: always()
+#        with:
+#          access-token: ${{ secrets.ACCESS_TOKEN }}
+#          branch: production
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
@@ -52,12 +52,12 @@ jobs:
           publish_dir: ./dist
           publish_branch: production
           
-      - name: Enable "include administrators" branch protection
-        uses: benjefferies/branch-protection-bot@master
-        if: always()  # Force to always run this step to ensure "include administrators" is always turned back on
-        with:
-          access-token: ${{ secrets.ACCESS_TOKEN }}
-          branch: production
+#      - name: Enable "include administrators" branch protection
+#        uses: benjefferies/branch-protection-bot@master
+#        if: always()  # Force to always run this step to ensure "include administrators" is always turned back on
+#        with:
+#          access-token: ${{ secrets.ACCESS_TOKEN }}
+#          branch: production
       - name: Create GitHub release
         uses: rymndhng/release-on-push-action@master
         with:
