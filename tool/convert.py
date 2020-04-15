@@ -4,6 +4,10 @@ import csv
 import datetime
 import json
 
+# 手動で日時を設定
+updated_datetime = datetime.datetime.strptime('2020-04-14', '%Y-%m-%d')
+# 現在の時刻を採用
+# updated_datetime = datetime.datetime.now()
 
 header = []
 row_datas = []
@@ -55,7 +59,7 @@ with open('../data/row_data.csv', 'r') as row_data_f:
 退院					String | null			"〇"	表中の「公表日」の列に対応．値は「○」または null．
 date					String			"2020-01-24"	不使用
 '''
-patients = {'date': datetime.datetime.now().strftime('%Y/%m/%d %H:%M'), 'data': []}
+patients = {'date': updated_datetime.strftime('%Y/%m/%d %H:%M'), 'data': []}
 
 for row_data in row_datas:
     temp_patient = {
@@ -83,9 +87,9 @@ for row_data in row_datas:
         temp_per_day[row_data['revealed_date']] = 0
     temp_per_day[row_data['revealed_date']] += 1
 
-patients_summary = {'date': datetime.datetime.now().strftime('%Y/%m/%d %H:%M'), 'data': []}
+patients_summary = {'date': updated_datetime.strftime('%Y/%m/%d %H:%M'), 'data': []}
 start_date = datetime.datetime.strptime('2020-02-16', '%Y-%m-%d')
-end_date = datetime.datetime.now()
+end_date = updated_datetime
 
 date = start_date
 while True:
@@ -140,7 +144,7 @@ main_summary = {
 }
 
 export_data = {
-    'lastUpdate': datetime.datetime.now().strftime('%Y/%m/%d %H:%M'),
+    'lastUpdate': updated_datetime.strftime('%Y/%m/%d %H:%M'),
     'patients': patients,
     'patients_summary': patients_summary,
     'main_summary': main_summary
