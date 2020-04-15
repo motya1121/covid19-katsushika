@@ -13,7 +13,7 @@
           <img
             class="SideNavigation-HeaderLogo"
             src="/logo.svg"
-            :alt="$t('東京都')"
+            :alt="$t('葛飾区')"
           />
           <div class="SideNavigation-HeaderText">
             {{ $t('menu/新型コロナウイルス感染症') }}<br />{{
@@ -74,7 +74,6 @@
           </a>
           {{ $t('の下に提供されています。') }}
           <br />
-          2020
         </small>
       </footer>
     </div>

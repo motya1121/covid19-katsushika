@@ -18,15 +18,17 @@
     <whats-new class="mb-4" :items="newsItems" />
     <static-info
       class="mb-4"
-      :url="localePath('/flow')"
-      :text="$t('自分や家族の症状に不安や心配があればまずは電話相談をどうぞ')"
-      :btn-text="$t('相談の手順を見る')"
+      :url="localePath('/about')"
+      :text="
+        $t(
+          '当サイトは有志が作成したものです。本サイトに関するお問い合わせは葛飾区ではなく、当サイト運営まで。'
+        )
+      "
     />
     <v-row class="DataBlock">
       <confirmed-cases-details-card />
       <confirmed-cases-attributes-card />
       <confirmed-cases-number-card />
-
     </v-row>
     <v-divider />
   </div>
