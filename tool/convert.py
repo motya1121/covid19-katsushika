@@ -5,9 +5,9 @@ import datetime
 import json
 
 # 手動で日時を設定
-updated_datetime = datetime.datetime.strptime('2020-04-17', '%Y-%m-%d')
+# updated_datetime = datetime.datetime.strptime('2020-04-18', '%Y-%m-%d')
 # 現在の時刻を採用
-# updated_datetime = datetime.datetime.now()
+updated_datetime = datetime.datetime.now()
 
 header = []
 row_datas = []
