@@ -25,6 +25,18 @@
         )
       "
     />
+    <static-card>
+      {{
+        $t(
+          '東京都福祉保健局が公開している人数との差異がありますが，これは葛飾区が東京都と確認中の情報についても公開しているためです．'
+        )
+      }}<br />
+      {{
+        $t(
+          'また，細心の注意を払っておりますが，データに間違いがある可能性がございます．正確な情報は葛飾区の公式ホームページをご覧ください．'
+        )
+      }}
+    </static-card>
     <v-row class="DataBlock">
       <confirmed-cases-details-card />
       <confirmed-cases-attributes-card />
@@ -40,6 +52,7 @@ import { MetaInfo } from 'vue-meta'
 import PageHeader from '@/components/PageHeader.vue'
 import WhatsNew from '@/components/WhatsNew.vue'
 import StaticInfo from '@/components/StaticInfo.vue'
+import StaticCard from '@/components/StaticCard.vue'
 import Data from '@/data/data.json'
 import News from '@/data/news.json'
 import ConfirmedCasesDetailsCard from '@/components/cards/ConfirmedCasesDetailsCard.vue'
@@ -59,6 +72,7 @@ export default Vue.extend({
     PageHeader,
     WhatsNew,
     StaticInfo,
+    StaticCard,
     ConfirmedCasesDetailsCard,
     TestedCasesDetailsCard,
     ConfirmedCasesNumberCard,
