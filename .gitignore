@@ -102,3 +102,5 @@ ogp/*
 
 # data numbers
 data/row_data.numbers
+tool/covid_data/search/__pycache__/
+tool/covid_data/__pycache__/
