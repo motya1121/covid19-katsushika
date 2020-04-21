@@ -346,5 +346,7 @@
   "葛飾区公式ホームページ": "Official website of the Katsushika City",
   "感染者の状況": "Status of infected person",
   "感染者数": "Number of infected people",
-  "自宅療養中": "Under medical treatment at home"
+  "自宅療養中": "Under medical treatment at home",
+  "入院調整中": "Adjusting hospitalization",
+  "宿泊療養中": "Under medical treatment at hotel"
 }
