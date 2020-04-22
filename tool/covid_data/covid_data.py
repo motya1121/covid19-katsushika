@@ -41,30 +41,31 @@ def add_city():
         return 0
 
     # city_name.py
-    shutil.copyfile("./search/city_template.py", "./search/" + city_name + ".py")
-    with open("./search/" + city_name + ".py", "r", newline='') as city_py:
-        rows = city_py.readlines()
-    write_pg = []
-    for row in rows:
-        if row.find('temp_city_code') != -1:
-            write_pg.append(row.replace('temp_city_code', city_code))
-        elif row.find('temp_city_name') != -1:
-            write_pg.append(row.replace('temp_city_name', city_name))
-        else:
-            write_pg.append(row)
-    with open("./search/" + city_name + ".py", "w") as city_py:
-        city_py.writelines(write_pg)
+    if os.path.exists("./search/" + city_name + ".py") is False:
+        shutil.copyfile("./search/city_template.py", "./search/" + city_name + ".py")
+        with open("./search/" + city_name + ".py", "r", newline='') as city_py:
+            rows = city_py.readlines()
+        write_pg = []
+        for row in rows:
+            if row.find('temp_city_code') != -1:
+                write_pg.append(row.replace('temp_city_code', city_code))
+            elif row.find('temp_city_name') != -1:
+                write_pg.append(row.replace('temp_city_name', city_name))
+            else:
+                write_pg.append(row)
+        with open("./search/" + city_name + ".py", "w") as city_py:
+            city_py.writelines(write_pg)
 
-    # __init__.py
-    with open("./search/__init__.py", "r", newline='') as init_py:
-        rows = init_py.readlines()
-    rows.append('from . import {}'.format(city_name))
-    with open("./search/__init__.py", "w") as city_py:
-        city_py.writelines(rows)
+        # __init__.py
+        with open("./search/__init__.py", "r", newline='') as init_py:
+            rows = init_py.readlines()
+        rows.append('from . import {}\n'.format(city_name))
+        with open("./search/__init__.py", "w") as city_py:
+            city_py.writelines(rows)
 
     sql = "INSERT INTO city_setting (city_code, city_url) VALUES('{}', {})".format(city_code, city_url)
     execute_sql(sql)
-    sql = "CREATE TABLE patients_{}( id TEXT PRYMARY KEY, No INTEGER UNIQUE, revealed_city_code TEXT NOT NULL, revealed_dt TEXT, appearance_dt TEXT, live_city_code TEXT, old INTEGER, sex INTEGER, travel_history INTEGER, status_id TEXT);".format(
+    sql = "CREATE TABLE patients_{}( id TEXT PRYMARY KEY, No INTEGER UNIQUE, revealed_city_code TEXT NOT NULL, revealed_dt TEXT, appearance_dt TEXT, live_city_code TEXT, old INTEGER, sex INTEGER, job TEXT, travel_history INTEGER, status_id TEXT);".format(
         city_code)
     execute_sql(sql)
 
@@ -77,13 +78,17 @@ def database_init():
     execute_sql(sql)
     sql = "CREATE TABLE statuses( status_id INTEGER PRYMARY KEY, status TEXT UNIQUE);"
     execute_sql(sql)
+    sql = "INSERT INTO statuses VALUES ('1', '入院調整中'), ('2', '入院中'), ('3', '宿泊療養'), ('4', '自宅療養中'), ('5', '退院'), ('6', '死亡');"
+    execute_sql(sql)
     sql = "CREATE TABLE symptoms_map( id TEXT PRYMARY KEY, symptoms_id INTEGER, datetime TEXT NOT NULL);"
     execute_sql(sql)
     sql = "CREATE TABLE symptoms( symptoms_id TEXT PRYMARY KEY, symptoms TEXT UNIQUE);"
     execute_sql(sql)
+    sql = "INSERT INTO symptoms VALUES ('3a335cbf', '発熱'), ('50608b3c', '咳'), ('ad25dbf5', '咽頭痛'), ('ba37a6a6', '味覚障害'), ('d85230a0', '嗅覚障害'), ('2c062671', '倦怠感'), ('8fbd4b35', '下痢'), ('bcccd4be', '頭痛'), ('5a3888d5', '鼻汁'), ('9c47dac3', '関節痛'), ('a1a05b1f', '鼻閉'), ('d9a6c0a1', '痰'), ('3a61a964', '肺炎'), ('a5d30b3f', '呼吸困難');"
+    execute_sql(sql)
 
 
-def print_list():
+def print_list_city():
     sql = "SELECT city_setting.city_code, ken, shi, ku FROM city_setting"
     sql += " INNER JOIN city_codes ON city_setting.city_code = city_codes.city_code"
     results = execute_sql(sql)
@@ -116,7 +121,10 @@ if __name__ == "__main__":
     parser.add_argument('-w', '--watch_price', action='store_true', help='更新されているサイトの確認')
     parser.add_argument('-a', '--add_city', action='store_true', help='都市を追加')
     parser.add_argument('-di', '--database_init', action='store_true', help='データベースを初期化')
-    parser.add_argument('-l', '--list', action='store_true', help='登録されている都市を表示')
+    parser.add_argument('-lc', '--list_city', action='store_true', help='登録されている都市を表示')
+    parser.add_argument('-l', '--list', action='store_true', help='感染者のリストを表示')
+    parser.add_argument('-e', '--export', action='store_true', help='データをエクスポート')
+    parser.add_argument('-u', '--update_data', help='データの更新')
 
     args = parser.parse_args()
     setting = setting.setting()
@@ -135,5 +143,14 @@ if __name__ == "__main__":
     elif args.watch_price is True:
         tk = search.toukyouto_katsushikaku.toukyouto_katsushikaku(setting)
         tk.watch()
+    elif args.list_city is True:
+        print_list_city()
     elif args.list is True:
-        print_list()
+        tk = search.toukyouto_katsushikaku.toukyouto_katsushikaku(setting)
+        tk.print_list()
+    elif args.export is True:
+        tk = search.toukyouto_katsushikaku.toukyouto_katsushikaku(setting)
+        tk.export_data()
+    elif args.update_data is not None:
+        tk = search.toukyouto_katsushikaku.toukyouto_katsushikaku(setting)
+        tk.update_data()

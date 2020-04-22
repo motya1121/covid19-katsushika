@@ -37,6 +37,7 @@ CREATE TABLE city_setting(
 | live_city_code     | TEXT    |             | 居住地の全国地方公共団体コード(都道府県コード及び市区町村コード)                 |
 | old                | INTEGER |             | 年代(NULL: 不明, 0: 10歳未満, 10: 10代・・・)                                    |
 | sex                | INTEGER |             | 性別(1:男性, 2:女性, NULL: 不明)                                                 |
+| job                | TEXT    |             |                                                                                  |
 | travel_history     | INTEGER |             | 渡航歴(0:なし, 1:あり, NULL:不明)                                                |
 | status_id          | TEXT    |             | 患者の状態                                                                       |
 
@@ -54,6 +55,7 @@ CREATE TABLE patients-<city_code>(
     live_city_code TEXT,
     old INTEGER,
     sex INTEGER,
+    job TEXT,
     travel_history INTEGER,
     status_id TEXT
 );
@@ -93,14 +95,18 @@ CREATE TABLE patients_timetable(
 2. 入院中
 3. 宿泊療養
 4. 自宅療養中
-5. 退院
-6. 死亡
+5. 死亡
+6. 退院
 
 ```
 CREATE TABLE statuses(
     status_id INTEGER PRYMARY KEY,
     status TEXT UNIQUE
 );
+```
+
+```
+INSERT INTO statuses VALUES ('1', '入院調整中'), ('2', '入院中'), ('3', '宿泊療養'), ('4', '自宅療養中'), ('5', '退院'), ('6', '死亡');
 ```
 
 ## symptoms_map Table
@@ -137,6 +143,10 @@ CREATE TABLE symptoms(
     symptoms_id TEXT PRYMARY KEY,
     symptoms TEXT UNIQUE
 );
+```
+
+```
+INSERT INTO symptoms VALUES ('3a335cbf', '発熱'), ('50608b3c', '咳'), ('ad25dbf5', '咽頭痛'), ('ba37a6a6', '味覚障害'), ('d85230a0', '嗅覚障害'), ('2c062671', '倦怠感'), ('8fbd4b35', '下痢'), ('bcccd4be', '頭痛'), ('5a3888d5', '鼻汁'), ('9c47dac3', '関節痛'), ('a1a05b1f', '鼻閉'), ('d9a6c0a1', '痰'), ('3a61a964', '肺炎'), ('a5d30b3f', '呼吸困難');
 ```
 
 
