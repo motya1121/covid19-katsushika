@@ -199,9 +199,9 @@ class toukyouto_katsushikaku(City.City):
                 '居住地':
                     '調査中',
                 '年代':
-                    db_patient['old'] + '代' if db_patient['old'] == '0' else '10歳未満',
+                    str(db_patient['old']) + '代' if db_patient['old'] != 0 else '10歳未満',
                 '性別':
-                    db_patient['sex'],
+                    '男性' if db_patient['sex'] == 1 else '女性',
                 '退院':
                     '〇' if db_patient['status_id'] == '6' else None,
                 'date':
