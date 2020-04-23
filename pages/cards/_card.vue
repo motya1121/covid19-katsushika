@@ -143,10 +143,10 @@ export default {
           content:
             this.title +
             ' | ' +
-            this.$t('東京都') +
+            this.$t('葛飾区') +
             ' ' +
             this.$t('新型コロナウイルス感染症') +
-            this.$t('対策サイト')
+            this.$t('対策サイト(非公式)')
         },
         {
           hid: 'description',
