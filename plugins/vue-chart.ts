@@ -1,6 +1,6 @@
 import Vue, { PropType } from 'vue'
 import { ChartData, ChartOptions } from 'chart.js'
-import { Doughnut, Bar, Line, mixins } from 'vue-chartjs'
+import { Doughnut, Pie, Bar, Line, mixins } from 'vue-chartjs'
 import { Plugin } from '@nuxt/types'
 import { useDayjsAdapter } from './chartjs-adapter-dayjs'
 
@@ -42,6 +42,30 @@ const createCustomChart = () => {
         displayLegends: {
           type: Array,
           default: () => null
+        },
+        options: {
+          type: Object as PropType<ChartOptions>,
+          default: () => {}
+        }
+      },
+      watch: {
+        displayLegends: watchDisplayLegends
+      },
+      mounted(): void {
+        this.renderChart(this.chartData, this.options)
+      }
+    }
+  )
+
+  Vue.component<ChartVCData, ChartVCMethod, ChartVCComputed, ChartVCProps>(
+    'pie-chart',
+    {
+      extends: Pie,
+      mixins: [reactiveProp],
+      props: {
+        displayLegends: {
+          type: Array,
+          default: () => []
         },
         options: {
           type: Object as PropType<ChartOptions>,

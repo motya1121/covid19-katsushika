@@ -1,4 +1,5 @@
 <template>
+  <!--
   <v-col cols="12" md="6" class="DataCard">
     <time-bar-chart
       :title="$t('陽性患者数')"
@@ -9,20 +10,29 @@
       :unit="$t('人')"
     />
   </v-col>
+  -->
+  <v-col cols="12" md="6" class="DataCard">
+    <CircleChart
+      :title="$t('感染者の状況(円グラフ)')"
+      :title-id="'details-of-confirmed-cases'"
+      :chart-data="patientsGraph"
+      :date="Data.patients.date"
+    />
+  </v-col>
 </template>
 
 <script>
 import Data from '@/data/data.json'
-import formatGraph from '@/utils/formatGraph'
-import TimeBarChart from '@/components/TimeBarChart.vue'
+import formatByAgeGraph from '@/utils/formatByAgeGraph'
+import CircleChart from '@/components/CircleChart.vue'
 
 export default {
   components: {
-    TimeBarChart
+    CircleChart
   },
   data() {
     // 感染者数グラフ
-    const patientsGraph = formatGraph(Data.patients_summary.data)
+    const patientsGraph = formatByAgeGraph(Data.patients_by_age.data)
 
     const data = {
       Data,
