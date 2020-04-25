@@ -209,6 +209,28 @@ class toukyouto_katsushikaku(City.City):
             }
             patients['data'].append(temp_patient)
 
+        # patients_by_age
+        patients_by_age = {'date': updated_datetime.strftime('%Y/%m/%d %H:%M'), 'data': []}
+        temp_patient = {}
+        for db_patient in db_patients:
+            if db_patient['old'] not in temp_patient.keys():
+                temp_patient[db_patient['old']] = 1
+            else:
+                temp_patient[db_patient['old']] += 1
+
+        age = 0
+        while True:
+            if max(temp_patient.keys()) < age:
+                break
+            if age not in temp_patient.keys():
+                patients_by_age['data'].append({'age': str(age) + '代' if age != 0 else '10歳未満', 'number': 0})
+            else:
+                patients_by_age['data'].append({
+                    'age': str(age) + '代' if age != 0 else '10歳未満',
+                    'number': temp_patient[age]
+                })
+            age += 10
+
         # patients_summary
 
         temp_per_day = {}
@@ -286,6 +308,7 @@ class toukyouto_katsushikaku(City.City):
             'lastUpdate': updated_datetime.strftime('%Y/%m/%d %H:%M'),
             'patients': patients,
             'patients_summary': patients_summary,
+            'patients_by_age': patients_by_age,
             'main_summary': main_summary
         }
 
