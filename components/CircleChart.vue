@@ -127,6 +127,7 @@ export default {
       const chartData = this.chartData
       return {
         tooltips: {
+          showAllTooltips: true,
           displayColors: false,
           callbacks: {
             label(tooltipItem) {
@@ -140,9 +141,10 @@ export default {
           }
         },
         responsive: true,
-        maintainAspectRatio: false,
+        maintainAspectRatio: true,
         legend: {
-          display: true
+          display: true,
+          position: 'right'
         }
       }
     }
