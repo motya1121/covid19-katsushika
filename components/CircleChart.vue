@@ -1,5 +1,11 @@
 <template>
-  <data-view :title="title" :title-id="titleId" :url="url" :url-text="urlText">
+  <data-view
+    :title="title"
+    :title-id="titleId"
+    :url="url"
+    :url-text="urlText"
+    :date="date"
+  >
     <pie-chart
       :chart-id="chartId"
       :chart-data="displayData"
@@ -42,6 +48,10 @@ export default {
       required: false,
       default: () => []
     },
+    date: {
+      type: String,
+      required: true
+    },
     unit: {
       type: String,
       required: false,
@@ -74,12 +84,23 @@ export default {
         lText: this.chartData[
           this.chartData.length - 1
         ].cumulative.toLocaleString(),
-        sText: this.info,
+        sText: '',
         unit: this.unit
       }
     },
     displayData() {
-      const colorArray = ['#979797', '#008830']
+      const colorArray = [
+        '#ddffe9',
+        '#aaffc8',
+        '#77ffa7',
+        '#44ff86',
+        '#11ff65',
+        '#00dd4e',
+        '#00aa3c',
+        '#00772a',
+        '#004418',
+        '#001106'
+      ]
       return {
         labels: this.chartData.map(d => {
           return d.label
@@ -95,7 +116,8 @@ export default {
             backgroundColor: this.chartData.map((d, index) => {
               return colorArray[index]
             }),
-            borderWidth: 0
+            borderColor: '#ffffff',
+            borderWidth: 1
           }
         ]
       }
@@ -108,15 +130,9 @@ export default {
           displayColors: false,
           callbacks: {
             label(tooltipItem) {
-              /* return (
-                parseInt(
-                  chartData[tooltipItem.index].transition
-                ).toLocaleString() + unit
-              ) */
               return `${chartData[tooltipItem.index].transition} ${
                 tooltipItem.index === 1 ? unit : '人'
-              } (総病床数: ${chartData[0].transition +
-                chartData[1].transition}${unit})`
+              }`
             },
             title(tooltipItem, data) {
               return data.labels[tooltipItem[0].index]

@@ -13,10 +13,12 @@
   -->
   <v-col cols="12" md="6" class="DataCard">
     <CircleChart
-      :title="$t('感染者の状況(円グラフ)')"
-      :title-id="'details-of-confirmed-cases'"
+      :title="$t('感染者の状況(年代別)')"
+      :title-id="'confirmed-cases-by-age'"
+      :chart-id="'pie-chart-patients'"
       :chart-data="patientsGraph"
       :date="Data.patients.date"
+      :unit="$t('人')"
     />
   </v-col>
 </template>
