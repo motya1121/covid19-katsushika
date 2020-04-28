@@ -42,6 +42,7 @@
       <confirmed-cases-attributes-card />
       <confirmed-cases-number-card />
       <ConfirmedCasesPieChartCard />
+      <GoogleMapCard />
     </v-row>
     <v-divider />
   </div>
@@ -61,6 +62,7 @@ import TestedCasesDetailsCard from '@/components/cards/TestedCasesDetailsCard.vu
 import ConfirmedCasesNumberCard from '@/components/cards/ConfirmedCasesNumberCard.vue'
 import ConfirmedCasesAttributesCard from '@/components/cards/ConfirmedCasesAttributesCard.vue'
 import ConfirmedCasesPieChartCard from '@/components/cards/ConfirmedCasesPieChartCard.vue'
+import GoogleMapCard from '@/components/cards/GoogleMapCard.vue'
 import TestedNumberCard from '@/components/cards/TestedNumberCard.vue'
 import InspectionPersonsNumberCard from '@/components/cards/InspectionPersonsNumberCard.vue'
 import TelephoneAdvisoryReportsNumberCard from '@/components/cards/TelephoneAdvisoryReportsNumberCard.vue'
@@ -80,6 +82,7 @@ export default Vue.extend({
     ConfirmedCasesNumberCard,
     ConfirmedCasesAttributesCard,
     ConfirmedCasesPieChartCard,
+    GoogleMapCard,
     TestedNumberCard,
     InspectionPersonsNumberCard,
     TelephoneAdvisoryReportsNumberCard,
