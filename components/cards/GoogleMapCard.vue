@@ -33,7 +33,7 @@ export default {
   data() {
     return {
       // TODO: GoogleMapを更新したら更新する
-      date: '2020/04/29 01:19'
+      date: '2020/04/30 00:52'
     }
   }
 }
