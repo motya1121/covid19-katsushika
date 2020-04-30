@@ -191,6 +191,7 @@ class toukyouto_katsushikaku(City.City):
 
         # patients
         patients = {'date': updated_datetime.strftime('%Y/%m/%d %H:%M'), 'data': []}
+        status_id = {'1': '入院調整中', '2': '入院中', '3': '宿泊療養中', '4': '自宅療養中', '5': '死亡', '6': '退院'}
 
         for db_patient in db_patients:
             temp_patient = {
@@ -204,7 +205,9 @@ class toukyouto_katsushikaku(City.City):
                 '性別':
                     '男性' if db_patient['sex'] == 1 else '女性',
                 '退院':
-                    '〇' if db_patient['status_id'] == '6' else None,
+                    '〇' if db_patient['status_id'] in ['5', '6'] else None,
+                '状態':
+                    status_id[db_patient['status_id']],
                 'date':
                     datetime.datetime.strptime(db_patient['revealed_dt'], '%Y-%m-%d %H:%M:%S').strftime('%Y-%m-%d')
             }
