@@ -184,7 +184,8 @@ class toukyouto_katsushikaku(City.City):
                 patient['appearance_dt'][:-9], status_id[patient['status_id']]))
 
     def export_data(self):
-        updated_datetime = datetime.datetime.now()
+        #updated_datetime = datetime.datetime.now()
+        updated_datetime = datetime.datetime.strptime('2020-04-30 23:59', '%Y-%m-%d %H:%M')
         sql = "SELECT * FROM patients_{} ORDER BY No".format(self.city_code)
         db_patients = self.execute_sql(sql, ret_type='dict')
 
@@ -305,7 +306,7 @@ class toukyouto_katsushikaku(City.City):
             }]
         }
         export_data = {
-            'lastUpdate': updated_datetime.strftime('%Y/%m/%d %H:%M'),
+            'lastUpdate': datetime.datetime.now().strftime('%Y/%m/%d %H:%M'),
             'patients': patients,
             'patients_summary': patients_summary,
             'patients_by_age': patients_by_age,
