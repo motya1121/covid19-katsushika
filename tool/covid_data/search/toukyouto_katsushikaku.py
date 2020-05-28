@@ -186,7 +186,7 @@ class toukyouto_katsushikaku(City.City):
     def export_data(self):
         #updated_datetime = datetime.datetime.now()
         # TODO: 日付を変える
-        updated_datetime = datetime.datetime.strptime('2020-05-27 23:59', '%Y-%m-%d %H:%M')
+        updated_datetime = datetime.datetime.strptime('2020-05-28 17:15', '%Y-%m-%d %H:%M')
         sql = "SELECT * FROM patients_{} ORDER BY No".format(self.city_code)
         db_patients = self.execute_sql(sql, ret_type='dict')
 
