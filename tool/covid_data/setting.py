@@ -10,7 +10,8 @@ class setting():
         "city_setting": {
             "city_url": "",
             "survey_datetime": "1970-01-01 00:00:00",
-            "update_datetime": "1970-01-01 00:00:00"
+            "update_datetime": "1970-01-01 00:00:00",
+            "public_datetime": "1970-01-01 00:00:00"
         }
     }
     error_flag = False
@@ -21,6 +22,7 @@ class setting():
         self.city_url = ''
         self.survey_datetime = ''
         self.update_datetime = ''
+        self.public_datetime = ''
 
         self.init_setting()
         if self.error_flag is False:
@@ -63,6 +65,10 @@ class setting():
                         print("設定ファイルの形式が異なっています．(city_setting内にupdate_datetimeが存在しません)")
                         print("現在の設定ファイルを削除し，もう一度このプログラムを実行すると，正常なテンプレートが作成されます．")
                         self.error_flag = True
+                    elif 'public_datetime' not in self.setting_json['city_setting'].keys():
+                        print("設定ファイルの形式が異なっています．(city_setting内にpublic_datetimeが存在しません)")
+                        print("現在の設定ファイルを削除し，もう一度このプログラムを実行すると，正常なテンプレートが作成されます．")
+                        self.error_flag = True
                 except json.JSONDecodeError:
                     print('jsonファイルの形式が壊れています．')
                     print('正常なテンプレートに置き換えました．')
@@ -85,6 +91,7 @@ class setting():
         self.notify_token = self.setting_json['notify_token']
         self.survey_datetime = self.setting_json['city_setting']['survey_datetime']
         self.update_datetime = self.setting_json['city_setting']['update_datetime']
+        self.public_datetime = self.setting_json['city_setting']['public_datetime']
 
     def dump_setting(self):
         '''jsonファイルに書き出す．クラス内の変数に値が入っている場合はそちらを書き込む
@@ -93,6 +100,8 @@ class setting():
             self.setting_json['city_setting']['survey_datetime'] = self.survey_datetime
         if self.update_datetime != '':
             self.setting_json['city_setting']['update_datetime'] = self.update_datetime
+        if self.public_datetime != '':
+            self.setting_json['city_setting']['public_datetime'] = self.public_datetime
 
         with open(self.setting_file, "w") as f:
             json.dump(self.setting_json, f, indent=4)
@@ -103,5 +112,6 @@ class setting():
         ret_string += '- notify_token:' + json.dumps(self.notify_token) + '\n'
         ret_string += '- survey_datetime:' + self.survey_datetime + '\n'
         ret_string += '- update_datetime:' + self.update_datetime + '\n'
+        ret_string += '- public_datetime:' + self.public_datetime + '\n'
 
         return ret_string
