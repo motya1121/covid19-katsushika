@@ -3,11 +3,8 @@
         "line": "OscNWrWqBP1HDilVHaLaNOkq69U39CujbPX60msHEiy"
     },
     "city_setting": {
-        "tokyo_katsushika": {
-            "city_url": "http://www.city.katsushika.lg.jp/kurashi/1000050/1001797/1023014.html",
-            "city_code": "",
-            "survey_datetime": "2020-04-20 19:05:17",
-            "update_datetime": "2020-04-20 00:00:00"
-        }
+        "city_url": "http://www.city.katsushika.lg.jp/kurashi/1000050/1001797/1023014.html",
+        "survey_datetime": "2020-04-20 19:05:17",
+        "update_datetime": "2020-04-20 00:00:00"
     }
 }
