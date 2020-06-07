@@ -90,9 +90,9 @@ class setting():
         '''jsonファイルに書き出す．クラス内の変数に値が入っている場合はそちらを書き込む
         '''
         if self.survey_datetime != '':
-            self.setting_file['city_setting']['survey_datetime'] = self.survey_datetime
+            self.setting_json['city_setting']['survey_datetime'] = self.survey_datetime
         if self.update_datetime != '':
-            self.setting_file['city_setting']['update_datetime'] = self.update_datetime
+            self.setting_json['city_setting']['update_datetime'] = self.update_datetime
 
         with open(self.setting_file, "w") as f:
             json.dump(self.setting_json, f, indent=4)
