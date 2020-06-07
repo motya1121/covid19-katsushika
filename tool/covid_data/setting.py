@@ -82,7 +82,7 @@ class setting():
         '''
         # TODO: データの形式を確認
         self.city_url = self.setting_json['city_setting']['city_url']
-        self.notify_tokens = self.setting_json['notify_token']
+        self.notify_token = self.setting_json['notify_token']
         self.survey_datetime = self.setting_json['city_setting']['survey_datetime']
         self.update_datetime = self.setting_json['city_setting']['update_datetime']
 
@@ -100,7 +100,7 @@ class setting():
     def __str__(self):
         ret_string = ''
         ret_string += '- city_url:' + self.city_url + '\n'
-        ret_string += '- notify_tokens:' + self.notify_tokens + '\n'
+        ret_string += '- notify_token:' + json.dumps(self.notify_token) + '\n'
         ret_string += '- survey_datetime:' + self.survey_datetime + '\n'
         ret_string += '- update_datetime:' + self.update_datetime + '\n'
 
