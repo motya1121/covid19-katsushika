@@ -93,7 +93,7 @@ class setting():
         '''
         # TODO: データの形式を確認
         self.city_url = self.setting_json['city_setting']['city_url']
-        self.city_url = self.setting_json['city_setting']['pdf_base_url']
+        self.pdf_base_url = self.setting_json['city_setting']['pdf_base_url']
         self.notify_token = self.setting_json['notify_token']
         self.survey_datetime = self.setting_json['city_setting']['survey_datetime']
         self.update_datetime = self.setting_json['city_setting']['update_datetime']
