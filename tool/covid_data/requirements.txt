@@ -2,3 +2,6 @@ six
 semidbm
 pykakasi
 jaconv
+pdfminer.six
+beautifulsoup4
+requests
