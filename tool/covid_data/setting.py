@@ -20,6 +20,7 @@ class setting():
         self.setting_file = os.path.dirname(os.path.abspath(__file__)) + "/setting.json"
         self.notify_token = {}
         self.city_url = ''
+        self.pdf_base_url = ''
         self.survey_datetime = ''
         self.update_datetime = ''
         self.public_datetime = ''
@@ -57,6 +58,10 @@ class setting():
                         print("設定ファイルの形式が異なっています．(city_setting内にcity_urlが存在しません)")
                         print("現在の設定ファイルを削除し，もう一度このプログラムを実行すると，正常なテンプレートが作成されます．")
                         self.error_flag = True
+                    elif 'pdf_base_url' not in self.setting_json['city_setting'].keys():
+                        print("設定ファイルの形式が異なっています．(city_setting内にpdf_base_urlが存在しません)")
+                        print("現在の設定ファイルを削除し，もう一度このプログラムを実行すると，正常なテンプレートが作成されます．")
+                        self.error_flag = True
                     elif 'survey_datetime' not in self.setting_json['city_setting'].keys():
                         print("設定ファイルの形式が異なっています．(city_setting内にsurvey_datetimeが存在しません)")
                         print("現在の設定ファイルを削除し，もう一度このプログラムを実行すると，正常なテンプレートが作成されます．")
@@ -88,6 +93,7 @@ class setting():
         '''
         # TODO: データの形式を確認
         self.city_url = self.setting_json['city_setting']['city_url']
+        self.city_url = self.setting_json['city_setting']['pdf_base_url']
         self.notify_token = self.setting_json['notify_token']
         self.survey_datetime = self.setting_json['city_setting']['survey_datetime']
         self.update_datetime = self.setting_json['city_setting']['update_datetime']
@@ -109,6 +115,7 @@ class setting():
     def __str__(self):
         ret_string = ''
         ret_string += '- city_url:' + self.city_url + '\n'
+        ret_string += '- pdf_base_url:' + self.pdf_base_url + '\n'
         ret_string += '- notify_token:' + json.dumps(self.notify_token) + '\n'
         ret_string += '- survey_datetime:' + self.survey_datetime + '\n'
         ret_string += '- update_datetime:' + self.update_datetime + '\n'
