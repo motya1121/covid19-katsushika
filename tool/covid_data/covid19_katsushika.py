@@ -28,6 +28,7 @@ def check():
         notify(setting)
         setting.update_datetime = get_update_datetime.strftime('%Y-%m-%d %H:%M:%S')
         setting.public_datetime = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        update_flag = True
     setting.survey_datetime = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
     print('survey_datetime={}\nupdate_datetime={}\npublic_datetime={}\n'.format(setting.survey_datetime, setting.update_datetime, setting.public_datetime))
@@ -191,5 +192,7 @@ def export_data(pdf_datas):
 
 if __name__ == "__main__":
     setting = setting.setting()
+    update_flag = False
     check()
-    update()
+    if update_flag = True:
+        update()
