@@ -30,6 +30,8 @@ def check():
         setting.public_datetime = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     setting.survey_datetime = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
+    print('survey_datetime={}\nupdate_datetime={}\npublic_datetime={}\n'.format(setting.survey_datetime, setting.update_datetime, setting.public_datetime))
+
     setting.dump_setting()
 
 
@@ -183,7 +185,7 @@ def export_data(pdf_datas):
         'main_summary': main_summary
     }
 
-    with open('../../data/data.json', 'w') as f:
+    with open(os.path.dirname(os.path.abspath(__file__)) + '/../../data/data.json', 'w') as f:
         json.dump(export_data, f, indent=4, ensure_ascii=False)
 
 
