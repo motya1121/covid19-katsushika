@@ -194,5 +194,5 @@ if __name__ == "__main__":
     setting = setting.setting()
     update_flag = False
     check()
-    if update_flag = True:
+    if update_flag is True:
         update()
