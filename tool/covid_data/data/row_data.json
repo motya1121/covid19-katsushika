@@ -1358,5 +1358,15 @@
         "symptom": "鼻汁、味覚・嗅覚障害",
         "appearance_dt": "2020-05-05",
         "status_id": 5
+    },
+    {
+        "Symptom": "発熱、味覚障害、嗅覚障害、\n咽頭痛",
+        "No": "137",
+        "revealed_dt": "2020-06-07",
+        "old": 30,
+        "sex": 2,
+        "job": "会社員",
+        "appearance_dt": "2020-06-03",
+        "status_id": 3
     }
 ]
