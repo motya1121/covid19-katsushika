@@ -29,13 +29,9 @@ def get_data(setting):
     '''
     # pdf格納用のテンプディレクトリを作成
     with tempfile.TemporaryDirectory() as dname:
-        # pdfのurl作成
-        pdf_date = datetime.datetime.strptime(setting.update_datetime, '%Y-%m-%d %H:%M:%S') - datetime.timedelta(days=1)
-        url = '{}{}_list.pdf'.format(setting.pdf_base_url, pdf_date.strftime('%m%d'))
-
         # pdf取得
         pdf_path = dname + '/covid_data.pdf'
-        with urllib.request.urlopen(url) as u:
+        with urllib.request.urlopen(setting.pdf_url) as u:
             with open(pdf_path, 'bw') as o:
                 o.write(u.read())
 
@@ -59,6 +55,7 @@ def get_data(setting):
                 next_i = False
                 temp_data = {}
                 for box in boxes:
+                    next_i = False
                     text = []
                     if is_skip(box.get_text().strip()) is True:
                         continue
@@ -70,7 +67,7 @@ def get_data(setting):
                         else:
                             temp_data['No'] = box.get_text().strip()
                     if count == 1:
-                        if next_i != 0:
+                        if next_i is not False and next_i != 0:
                             temp_data['revealed_dt'] = datetime.datetime.strptime('2020/' + text[next_i], '%Y/%m/%d')
                             next_i += 1
                             if next_i < len(text):
@@ -244,6 +241,8 @@ def get_status_id(coordinate):
         return 5
     elif 525 <= coordinate and coordinate <= 535:
         return 6
+    else:
+        return 0
 
 
 def is_skip(text):

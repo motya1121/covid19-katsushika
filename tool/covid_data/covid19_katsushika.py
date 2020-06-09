@@ -1,6 +1,7 @@
 import setting
 import urllib.request
 import urllib.error
+import urllib.parse
 from bs4 import BeautifulSoup
 import datetime
 import re
@@ -13,6 +14,10 @@ import json
 def check():
     '''区の情報が更新されているか確認する
 
+    Returns
+    -------
+    str
+        最新の感染者一覧のPDFのURL
     '''
     # 更新の確認
     soup = BeautifulSoup(urllib.request.urlopen(setting.city_url), 'html.parser')
@@ -31,6 +36,11 @@ def check():
         update_flag = True
     setting.survey_datetime = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
+    # PDFのURL取得
+    relative_pdf_link = soup.find(class_="objectlink").find('a').get('href')
+    setting.pdf_url = urllib.parse.urljoin(setting.city_url, relative_pdf_link)
+
+    # 時刻のログを表示
     print('survey_datetime={}\nupdate_datetime={}\npublic_datetime={}\n'.format(setting.survey_datetime, setting.update_datetime, setting.public_datetime))
 
     setting.dump_setting()
@@ -193,6 +203,7 @@ def export_data(pdf_datas):
 if __name__ == "__main__":
     setting = setting.setting()
     update_flag = False
+    flesh = True
     check()
-    if update_flag is True:
+    if update_flag is True or flesh is True:
         update()
