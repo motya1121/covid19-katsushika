@@ -8,6 +8,224 @@ import tempfile
 import urllib.request
 import datetime
 
+class patient_data():
+    def __init__(self):
+        self.no = ''
+        self.revealed_dt = ''
+        self.old = ''
+        self.sex = ''
+        self.job = ''
+        self.symptom = ''
+        self.appearance_dt = ''
+        self.status_id = ''
+        self.temp_data = []
+
+    def append(self, text, box):
+        if text.find('○') != -1:  # '◯'の場合
+            self.status_id = self.get_status_id(box.x0)
+        else:
+            # noかどうか
+            if self.no == '':  # 未取得の場合
+                self.no = self.check_no(text)
+                if self.no != '':  # noの場合関数終了
+                    return
+
+            # 陽性判明日かどうか
+            if self.revealed_dt == '':
+                self.revealed_dt = self.check_date(text)
+                if self.revealed_dt != '':
+                    return
+
+            # 年代かどうか
+            if self.old == '':
+                self.old = self.check_old(text)
+                if self.old != '':
+                    return
+
+            # 性別かどうか
+            if self.sex == '':
+                self.sex = self.check_sex(text)
+                if self.sex != '':
+                    return
+
+            # 職業
+            if self.job == '':
+                self.job = self.checl_job(text)
+                if self.job != '':
+                    return
+
+            # 症状
+            temp_text = self.check_symptom(text)
+            self.symptom += temp_text
+            if temp_text != '':
+                return
+
+            # 発症日
+            if self.appearance_dt == '':
+                self.appearance_dt = self.check_date(text)
+                if self.appearance_dt != '':
+                    return
+
+    def check_full_data(self):
+        '''全項目のデータが取得できたか確認
+
+        Returns
+        -------
+        bool
+            True: データが揃ってる， False: データが揃っていない
+        '''
+
+        if self.no != '' and self.revealed_dt != '' and self.old != '' and self.sex != '' and self.job != '' and self.symptom != '' and self.appearance_dt != '' and self.status_id != '':
+            return True
+        else:
+            return False
+
+    def check_no(self, text):
+        if text.isdecimal() is True:
+            return str(int(text))
+        else:
+            return ''
+
+    def check_date(self, text):
+        if text.find('なし') != -1:
+            if self.symptom != '':
+                return None
+            else:
+                return ''
+
+        try:
+            temp_dt = datetime.datetime.strptime('2020/' + text, '%Y/%m/%d')
+        except ValueError:
+            return ''
+        return temp_dt
+
+
+    def check_old(self, text):
+        # oldでhない場合
+        if text.find('代') == -1 and text.find('未満') == -1 and text.find('以上') == -1:
+            return ''
+
+        # oldの場合
+        if text.find('未満') != -1:
+            return 0
+        if text.find('１０') != -1:
+            return 10
+        elif text.find('２０') != -1:
+            return 20
+        elif text.find('３０') != -1:
+            return 30
+        elif text.find('４０') != -1:
+            return 40
+        elif text.find('５０') != -1:
+            return 50
+        elif text.find('６０') != -1:
+            return 60
+        elif text.find('７０') != -1:
+            return 70
+        elif text.find('８０') != -1:
+            return 80
+        elif text.find('９０') != -1:
+            return 90
+        return 100
+
+    def check_sex(self, text):
+        if text.find('男') != -1:
+            return 1
+        elif text.find('女') != -1:
+            return 2
+        else:
+            return ''
+
+    def checl_job(self, text):
+        if text.find('無職') != -1:
+            return '無職'
+        elif text.find('会社員') != -1:
+            return '会社員'
+        elif text.find('学生') != -1:
+            return '学生'
+        elif text.find('自営業') != -1:
+            return '自営業'
+        elif text.find('医療従事者') != -1:
+            return '医療従事者'
+        elif text.find('公務員') != -1:
+            return '公務員'
+        elif text.find('ー') != -1:
+            return 'ー'
+        else:
+            return ''
+
+
+    def check_symptom(self, text):
+        # なしの場合の処理
+        if text.find('なし') != -1:
+            if self.symptom == '':
+                return text
+            else:
+                return ''
+
+        if text.find('熱') != -1:
+            return text
+        if text.find('発熱') != -1:
+            return text
+        if text.find('咳') != -1:
+            return text
+        if text.find('咽頭痛') != -1:
+            return text
+        if text.find('味覚障害') != -1:
+            return text
+        if text.find('嗅覚障害') != -1:
+            return text
+        if text.find('倦怠感') != -1:
+            return text
+        if text.find('下痢') != -1:
+            return text
+        if text.find('頭痛') != -1:
+            return text
+        if text.find('鼻汁') != -1:
+            return text
+        if text.find('関節痛') != -1:
+            return text
+        if text.find('鼻閉') != -1:
+            return text
+        if text.find('痰') != -1:
+            return text
+        if text.find('肺炎') != -1:
+            return text
+        if text.find('呼吸困難') != -1:
+            return text
+        return ''
+
+    def get_status_id(self, coordinate):
+        if 400 <= coordinate and coordinate <= 415:
+            return 1
+        elif 420 <= coordinate and coordinate <= 433:
+            return 2
+        elif 450 <= coordinate and coordinate <= 460:
+            return 3
+        elif 475 <= coordinate and coordinate <= 485:
+            return 4
+        elif 500 <= coordinate and coordinate <= 510:
+            return 5
+        elif 525 <= coordinate and coordinate <= 535:
+            return 6
+        else:
+            return 0
+
+    def export_dict(self):
+        temp_dict = {}
+        temp_dict['No'] = self.no
+        temp_dict['revealed_dt'] = self.revealed_dt
+        temp_dict['old'] = self.old
+        temp_dict['sex'] = self.sex
+        temp_dict['job'] = self.job
+        temp_dict['symptom'] = self.symptom
+        temp_dict['appearance_dt'] = self.appearance_dt
+        temp_dict['status_id'] = self.status_id
+        return temp_dict
+
+    def __str__(self):
+        return 'no:{}, revealed_dt:{}, old:{}, sex:{}, job:{}, symptom:{}, appearance_dt:{}, status_id:{}\n'.format(self.no, self.revealed_dt, self.old, self.sex, self.job, self.symptom, self.appearance_dt, self.status_id)
+
 
 def get_data(setting):
     '''
@@ -23,6 +241,7 @@ def get_data(setting):
     interpreter = PDFPageInterpreter(resource_manager, device)
     # 返却する辞書
     ret_data = []
+    patient_datas = []
 
     '''
     処理
@@ -50,138 +269,18 @@ def get_data(setting):
                 # y1（Y座標の値）は上に行くほど大きくなるので、正負を反転させている。
                 boxes.sort(key=lambda b: (-b.y1, b.x0))
 
-                count = 0
-                symptom_flag = False
-                next_i = False
-                temp_data = {}
+                temp_patient_data = patient_data()
                 for box in boxes:
-                    next_i = False
-                    text = []
-                    if is_skip(box.get_text().strip()) is True:
-                        continue
-                    if count == 0:
-                        if check_symptom(box.get_text().strip()) is True:
-                            temp_data['Symptom'] = box.get_text().strip()
-                            symptom_flag = True
-                            count -= 1
-                        else:
-                            temp_data['No'] = box.get_text().strip()
-                    if count == 1:
-                        if next_i is not False and next_i != 0:
-                            temp_data['revealed_dt'] = datetime.datetime.strptime('2020/' + text[next_i], '%Y/%m/%d')
-                            next_i += 1
-                            if next_i < len(text):
-                                count += 1
-                            else:
-                                next_i = 0
-                        else:
-                            text = box.get_text().strip()
-                            text = text.split(' ')
-                            if 1 < len(text):
-                                next_i += 1
-                                count += 1
-                            temp_data['revealed_dt'] = datetime.datetime.strptime('2020/' + text[0], '%Y/%m/%d')  # 要請判明日
-                    if count == 2:
-                        if next_i != 0:
-                            temp_data['old'] = cal_old(text[next_i])
-                            next_i += 1
-                            if next_i < len(text):
-                                count += 1
-                            else:
-                                next_i = 0
-                        else:
-                            text = box.get_text().strip()
-                            text = text.split(' ')
-                            if 1 < len(text):
-                                next_i += 1
-                                count += 1
-                            temp_data['old'] = cal_old(text[0])
-                    if count == 3:
-                        if next_i != 0:
-                            temp_data['sex'] = 1 if text[next_i].find('男') != -1 else 2
-                            next_i += 1
-                            if next_i < len(text):
-                                count += 1
-                            else:
-                                next_i = 0
-                        else:
-                            text = box.get_text().strip()
-                            text = text.split(' ')
-                            if 1 < len(text):
-                                next_i += 1
-                                count += 1
-                            temp_data['sex'] = 1 if text[0].find('男') != -1 else 2
-                    if count == 4:
-                        if next_i != 0:
-                            temp_data['job'] = text[next_i]
-                            next_i += 1
-                            if next_i < len(text):
-                                count += 1
-                            else:
-                                next_i = 0
-                        else:
-                            text = box.get_text().strip()
-                            text = text.split(' ')
-                            if 1 < len(text):
-                                next_i += 1
-                                count += 1
-                                temp_data['job'] = text[0]
-                            else:
-                                temp_data['job'] = box.get_text().strip()
-                    if count == 5:
-                        if symptom_flag is True:
-                            count += 1
-                        elif next_i != 0:
-                            temp_data['symptom'] = text[next_i]
-                            next_i += 1
-                            if next_i < len(text):
-                                count += 1
-                            else:
-                                next_i = 0
-                        else:
-                            text = box.get_text().strip()
-                            text = text.split(' ')
-                            if 1 < len(text):
-                                next_i += 1
-                                count += 1
-                                temp_data['symptom'] = text[0]
-                            else:
-                                temp_data['symptom'] = box.get_text().strip()
-                    if count == 6:
-                        if next_i != 0:
-                            if text[next_i].find('なし') != -1:
-                                temp_data['appearance_dt'] = None
-                            else:
-                                temp_data['appearance_dt'] = datetime.datetime.strptime('2020/' + text[next_i], '%Y/%m/%d')  # 発症日text[next_i]
-                            next_i += 1
-                            if next_i < len(text):
-                                count += 1
-                            else:
-                                next_i = 0
-                        else:
-                            text = box.get_text().strip()
-                            text = text.split(' ')
-                            if 1 < len(text):
-                                next_i += 1
-                                count += 1
-                                if box.get_text().strip().find('なし') != -1:
-                                    temp_data['appearance_dt'] = None
-                                else:
-                                    temp_data['appearance_dt'] = datetime.datetime.strptime('2020/' + text[0], '%Y/%m/%d')  # 発症日
-                            else:
-                                if box.get_text().strip().find('なし') != -1:
-                                    temp_data['appearance_dt'] = None
-                                else:
-                                    temp_data['appearance_dt'] = datetime.datetime.strptime('2020/' + box.get_text().strip(), '%Y/%m/%d')  # 発症日
-                    if count == 7:
-                        temp_data['status_id'] = get_status_id(box.x0)
-                        count = -1
-                        symptom_flag = False
-                        ret_data.append(temp_data)
-                        temp_data = {}
-                    count += 1
+                    for text in box.get_text().strip().split():
+                        if is_skip(text) is False:
+                            temp_patient_data.append(text, box)
+                    if temp_patient_data.check_full_data() is True:
+                        patient_datas.append(temp_patient_data)
+                        temp_patient_data = patient_data()
 
-    ret_data.reverse()  # リストを反転させる
+    patient_datas.reverse()  # リストを反転させる
+    for patient in patient_datas:
+        ret_data.append(patient.export_dict())
     return ret_data
 
 
@@ -202,47 +301,6 @@ def find_textboxes_recursively(layout_obj):
         return boxes
 
     return []  # その他の場合は空リストを返す。
-
-
-def cal_old(text):
-    if text.find('未満') != -1:
-        return 0
-    if text.find('１０') != -1:
-        return 10
-    elif text.find('２０') != -1:
-        return 20
-    elif text.find('３０') != -1:
-        return 30
-    elif text.find('４０') != -1:
-        return 40
-    elif text.find('５０') != -1:
-        return 50
-    elif text.find('６０') != -1:
-        return 60
-    elif text.find('７０') != -1:
-        return 70
-    elif text.find('８０') != -1:
-        return 80
-    elif text.find('９０') != -1:
-        return 90
-    return 100
-
-
-def get_status_id(coordinate):
-    if 400 <= coordinate and coordinate <= 415:
-        return 1
-    elif 420 <= coordinate and coordinate <= 433:
-        return 2
-    elif 450 <= coordinate and coordinate <= 460:
-        return 3
-    elif 475 <= coordinate and coordinate <= 485:
-        return 4
-    elif 500 <= coordinate and coordinate <= 510:
-        return 5
-    elif 525 <= coordinate and coordinate <= 535:
-        return 6
-    else:
-        return 0
 
 
 def is_skip(text):
@@ -284,36 +342,7 @@ def is_skip(text):
         return True
     elif text.find('通学') != -1:
         return True
-    return False
-
-
-def check_symptom(text):
-    if text.find('発熱') != -1:
-        return True
-    if text.find('咳') != -1:
-        return True
-    if text.find('咽頭痛') != -1:
-        return True
-    if text.find('味覚障害') != -1:
-        return True
-    if text.find('嗅覚障害') != -1:
-        return True
-    if text.find('倦怠感') != -1:
-        return True
-    if text.find('下痢') != -1:
-        return True
-    if text.find('頭痛') != -1:
-        return True
-    if text.find('鼻汁') != -1:
-        return True
-    if text.find('関節痛') != -1:
-        return True
-    if text.find('鼻閉') != -1:
-        return True
-    if text.find('痰') != -1:
-        return True
-    if text.find('肺炎') != -1:
-        return True
-    if text.find('呼吸困難') != -1:
+    elif text.find('ｺﾛﾅ以外') != -1:
         return True
     return False
+
