@@ -90,12 +90,12 @@
         "status_id": 5
     },
     {
-        "Symptom": "発熱、咳、倦怠感、頭痛、下\n痢、味覚・嗅覚障害",
         "No": "10",
         "revealed_dt": "2020-03-31",
         "old": 20,
         "sex": 1,
         "job": "学生",
+        "symptom": "発熱、咳、倦怠感、頭痛、下痢、味覚・嗅覚障害",
         "appearance_dt": "2020-03-23",
         "status_id": 5
     },
@@ -140,12 +140,12 @@
         "status_id": 5
     },
     {
-        "Symptom": "発熱、咳、倦怠感、頭痛、味覚\n障害",
         "No": "15",
         "revealed_dt": "2020-04-01",
         "old": 40,
         "sex": 1,
         "job": "会社員",
+        "symptom": "発熱、咳、倦怠感、頭痛、味覚",
         "appearance_dt": "2020-03-26",
         "status_id": 5
     },
@@ -207,7 +207,7 @@
         "job": "会社員",
         "symptom": "発熱、咳",
         "appearance_dt": "2020-04-03",
-        "status_id": 5
+        "status_id": 6
     },
     {
         "No": "22",
@@ -697,7 +697,7 @@
         "job": "無職",
         "symptom": "肺炎",
         "appearance_dt": "2020-04-12",
-        "status_id": 5
+        "status_id": 6
     },
     {
         "No": "71",
@@ -1250,12 +1250,12 @@
         "status_id": 5
     },
     {
-        "Symptom": "鼻閉、頭痛、倦怠感、関節痛、\n味覚・嗅覚障害",
         "No": "126",
         "revealed_dt": "2020-04-25",
         "old": 50,
         "sex": 1,
         "job": "会社員",
+        "symptom": "鼻閉、頭痛、倦怠感、関節痛、味覚・嗅覚障害",
         "appearance_dt": "2020-04-10",
         "status_id": 5
     },
@@ -1274,7 +1274,7 @@
         "revealed_dt": "2020-04-26",
         "old": 10,
         "sex": 1,
-        "job": "学生※",
+        "job": "学生",
         "symptom": "咳、味覚障害、のどの痛み",
         "appearance_dt": "2020-04-20",
         "status_id": 5
@@ -1284,18 +1284,18 @@
         "revealed_dt": "2020-04-26",
         "old": 10,
         "sex": 1,
-        "job": "学生※",
+        "job": "学生",
         "symptom": "味覚障害",
         "appearance_dt": "2020-04-21",
         "status_id": 5
     },
     {
-        "Symptom": "咳、痰、倦怠感、頭痛、味覚・\n嗅覚障害",
         "No": "130",
         "revealed_dt": "2020-04-26",
         "old": 30,
         "sex": 1,
         "job": "公務員",
+        "symptom": "咳、痰、倦怠感、頭痛、味覚・嗅覚障害",
         "appearance_dt": "2020-04-13",
         "status_id": 5
     },
@@ -1330,12 +1330,12 @@
         "status_id": 5
     },
     {
-        "Symptom": "発熱、頭痛、倦怠感、味覚障\n害",
         "No": "134",
         "revealed_dt": "2020-05-06",
         "old": 20,
         "sex": 2,
         "job": "会社員",
+        "symptom": "発熱、頭痛、倦怠感、味覚障",
         "appearance_dt": "2020-04-27",
         "status_id": 5
     },
@@ -1360,12 +1360,12 @@
         "status_id": 5
     },
     {
-        "Symptom": "発熱、味覚障害、嗅覚障害、\n咽頭痛",
         "No": "137",
         "revealed_dt": "2020-06-07",
         "old": 30,
         "sex": 2,
         "job": "会社員",
+        "symptom": "発熱、味覚障害、嗅覚障害、咽頭痛",
         "appearance_dt": "2020-06-03",
         "status_id": 3
     },
