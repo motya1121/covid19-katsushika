@@ -1378,5 +1378,15 @@
         "symptom": "発熱",
         "appearance_dt": "2020-06-09",
         "status_id": 2
+    },
+    {
+        "No": "139",
+        "revealed_dt": "2020-06-13",
+        "old": 10,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "発熱、下痢",
+        "appearance_dt": "2020-06-09",
+        "status_id": 2
     }
 ]
