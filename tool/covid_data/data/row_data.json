@@ -1367,7 +1367,7 @@
         "job": "会社員",
         "symptom": "発熱、味覚障害、嗅覚障害、咽頭痛",
         "appearance_dt": "2020-06-03",
-        "status_id": 3
+        "status_id": 5
     },
     {
         "No": "138",
@@ -1387,6 +1387,16 @@
         "job": "無職",
         "symptom": "発熱、下痢",
         "appearance_dt": "2020-06-09",
+        "status_id": 2
+    },
+    {
+        "No": "140",
+        "revealed_dt": "2020-06-16",
+        "old": 60,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "2020-06-14",
         "status_id": 2
     }
 ]
