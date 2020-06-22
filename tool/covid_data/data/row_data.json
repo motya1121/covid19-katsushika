@@ -1398,5 +1398,15 @@
         "symptom": "なし",
         "appearance_dt": "2020-06-14",
         "status_id": 2
+    },
+    {
+        "No": "141",
+        "revealed_dt": "2020-06-20",
+        "old": 20,
+        "sex": 2,
+        "job": "会社員",
+        "symptom": "発熱、.倦怠感、嗅覚障害",
+        "appearance_dt": "2020-06-15",
+        "status_id": 3
     }
 ]
