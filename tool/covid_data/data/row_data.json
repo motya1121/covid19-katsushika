@@ -1408,5 +1408,15 @@
         "symptom": "発熱、.倦怠感、嗅覚障害",
         "appearance_dt": "2020-06-15",
         "status_id": 3
+    },
+    {
+        "No": "142",
+        "revealed_dt": "2020-06-23",
+        "old": 60,
+        "sex": 1,
+        "job": "会社員",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
     }
 ]
