@@ -1418,5 +1418,15 @@
         "symptom": "なし",
         "appearance_dt": "",
         "status_id": 1
+    },
+    {
+        "No": "143",
+        "revealed_dt": "2020-06-23",
+        "old": 20,
+        "sex": 1,
+        "job": "学生",
+        "symptom": "発熱、頭痛、倦怠感",
+        "appearance_dt": "2020-06-23",
+        "status_id": 2
     }
 ]
