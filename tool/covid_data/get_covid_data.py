@@ -87,8 +87,9 @@ class patient_data():
             return ''
 
     def check_date(self, text):
-        if text.find('なし') != -1:
-            if self.symptom != '':
+        # －の場合の処理
+        if text.find('－') != -1:
+            if self.appearance_dt == '':
                 return None
             else:
                 return ''
@@ -137,6 +138,13 @@ class patient_data():
             return ''
 
     def checl_job(self, text):
+        # －の場合の処理
+        if text.find('－') != -1:
+            if self.job == '':
+                return text
+            else:
+                return ''
+
         if text.find('無職') != -1:
             return '無職'
         elif text.find('会社員') != -1:
@@ -149,8 +157,6 @@ class patient_data():
             return '医療従事者'
         elif text.find('公務員') != -1:
             return '公務員'
-        elif text.find('ー') != -1:
-            return 'ー'
         else:
             return ''
 
