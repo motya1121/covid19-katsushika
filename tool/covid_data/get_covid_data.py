@@ -88,8 +88,8 @@ class patient_data():
 
     def check_date(self, text):
         # －の場合の処理
-        if text.find('－') != -1:
-            if self.appearance_dt == '':
+        if text.find('－') != -1 or text.find('ー') != -1:
+            if self.job != '':
                 return None
             else:
                 return ''
@@ -139,11 +139,8 @@ class patient_data():
 
     def checl_job(self, text):
         # －の場合の処理
-        if text.find('－') != -1:
-            if self.job == '':
+        if text.find('－') != -1 or text.find('ー') != -1:
                 return text
-            else:
-                return ''
 
         if text.find('無職') != -1:
             return '無職'
