@@ -1458,5 +1458,15 @@
         "symptom": "なし",
         "appearance_dt": "",
         "status_id": 3
+    },
+    {
+        "No": "147",
+        "revealed_dt": "2020-07-02",
+        "old": 50,
+        "sex": 1,
+        "job": "会社員",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 2
     }
 ]
