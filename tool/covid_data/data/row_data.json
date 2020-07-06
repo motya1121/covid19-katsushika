@@ -1468,5 +1468,55 @@
         "symptom": "なし",
         "appearance_dt": "",
         "status_id": 2
+    },
+    {
+        "No": "148",
+        "revealed_dt": "2020-07-03",
+        "old": 40,
+        "sex": 2,
+        "job": "会社員",
+        "symptom": "発熱、咳",
+        "appearance_dt": "2020-06-16",
+        "status_id": 3
+    },
+    {
+        "No": "149",
+        "revealed_dt": "2020-07-03",
+        "old": 20,
+        "sex": 2,
+        "job": "学生",
+        "symptom": "発熱",
+        "appearance_dt": "2020-06-28",
+        "status_id": 2
+    },
+    {
+        "No": "150",
+        "revealed_dt": "2020-07-04",
+        "old": 20,
+        "sex": 1,
+        "job": "会社員",
+        "symptom": "発熱",
+        "appearance_dt": "2020-06-30",
+        "status_id": 3
+    },
+    {
+        "No": "151",
+        "revealed_dt": "2020-07-04",
+        "old": 30,
+        "sex": 2,
+        "job": "会社員",
+        "symptom": "発熱、鼻閉、倦怠感、味覚障",
+        "appearance_dt": "2020-06-26",
+        "status_id": 2
+    },
+    {
+        "No": "152",
+        "revealed_dt": "2020-07-06",
+        "old": 20,
+        "sex": 2,
+        "job": "会社員",
+        "symptom": "味覚障害、嗅覚障害",
+        "appearance_dt": "2020-06-25",
+        "status_id": 5
     }
 ]
