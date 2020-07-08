@@ -28,6 +28,11 @@
     <static-card>
       {{
         $t(
+          '当サイトは葛飾区より発表される感染者一覧のPDFを参考に作成しています．'
+        )
+      }}<br />
+      {{
+        $t(
           '東京都福祉保健局が公開している人数との差異がありますが，これは葛飾区が東京都と確認中の情報についても公開しているためです．'
         )
       }}<br />
@@ -58,17 +63,10 @@ import StaticCard from '@/components/StaticCard.vue'
 import Data from '@/data/data.json'
 import News from '@/data/news.json'
 import ConfirmedCasesDetailsCard from '@/components/cards/ConfirmedCasesDetailsCard.vue'
-import TestedCasesDetailsCard from '@/components/cards/TestedCasesDetailsCard.vue'
 import ConfirmedCasesNumberCard from '@/components/cards/ConfirmedCasesNumberCard.vue'
 import ConfirmedCasesAttributesCard from '@/components/cards/ConfirmedCasesAttributesCard.vue'
 import ConfirmedCasesPieChartCard from '@/components/cards/ConfirmedCasesPieChartCard.vue'
 import GoogleMapCard from '@/components/cards/GoogleMapCard.vue'
-import TestedNumberCard from '@/components/cards/TestedNumberCard.vue'
-import InspectionPersonsNumberCard from '@/components/cards/InspectionPersonsNumberCard.vue'
-import TelephoneAdvisoryReportsNumberCard from '@/components/cards/TelephoneAdvisoryReportsNumberCard.vue'
-import ConsultationDeskReportsNumberCard from '@/components/cards/ConsultationDeskReportsNumberCard.vue'
-import MetroCard from '@/components/cards/MetroCard.vue'
-import AgencyCard from '@/components/cards/AgencyCard.vue'
 import { convertDatetimeToISO8601Format } from '@/utils/formatDate'
 
 export default Vue.extend({
@@ -78,17 +76,10 @@ export default Vue.extend({
     StaticInfo,
     StaticCard,
     ConfirmedCasesDetailsCard,
-    TestedCasesDetailsCard,
     ConfirmedCasesNumberCard,
     ConfirmedCasesAttributesCard,
     ConfirmedCasesPieChartCard,
-    GoogleMapCard,
-    TestedNumberCard,
-    InspectionPersonsNumberCard,
-    TelephoneAdvisoryReportsNumberCard,
-    ConsultationDeskReportsNumberCard,
-    MetroCard,
-    AgencyCard
+    GoogleMapCard
   },
   data() {
     const data = {

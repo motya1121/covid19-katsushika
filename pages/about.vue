@@ -4,7 +4,19 @@
       {{ $t('当サイトについて') }}
     </page-header>
     <static-card>
-      {{ $t('当サイトは有志が東京都のサイトを基に開発したものです。') }}<br />
+      <i18n
+        tag="p"
+        path="当サイトは{Motya_0624}が東京都のサイトを基に開発したものです。"
+      >
+        <a
+          href="https://twitter.com/Motya_0624"
+          target="_blank"
+          rel="noopener"
+          place="Motya_0624"
+        >
+          {{ $t('@Motya_0624') }}
+        </a>
+      </i18n>
     </static-card>
     <static-card>
       <h3>{{ $t('ブラウザ環境について') }}</h3>
