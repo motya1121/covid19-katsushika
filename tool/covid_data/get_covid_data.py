@@ -8,6 +8,9 @@ import tempfile
 import urllib.request
 import datetime
 
+DEBUG = False
+DEBUG_PRT_MAX_NO = '150'
+
 class patient_data():
     def __init__(self):
         self.no = ''
@@ -279,7 +282,14 @@ def get_data(setting):
                     for text in box.get_text().strip().split():
                         if is_skip(text) is False:
                             temp_patient_data.append(text, box)
+                            if DEBUG:
+                                print(text)
+                                print(temp_patient_data)
                     if temp_patient_data.check_full_data() is True:
+                        if DEBUG:
+                            print('******ここまで {} *****'.format(temp_patient_data.no))
+                            if temp_patient_data.no == DEBUG_PRT_MAX_NO:
+                                exit()
                         patient_datas.append(temp_patient_data)
                         temp_patient_data = patient_data()
 
