@@ -154,6 +154,8 @@ class patient_data():
             return '医療従事者'
         elif text.find('公務員') != -1:
             return '公務員'
+        elif text.find('調査中') != -1:
+            return '調査中'
         else:
             return ''
 
