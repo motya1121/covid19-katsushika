@@ -16,10 +16,11 @@
       :title="$t('感染者の状況(年代別)')"
       :title-id="'confirmed-cases-by-age'"
       :chart-id="'pie-chart-patients'"
-      :chart-data="patientsGraph"
+      :chart-data="cut_Data_by_time"
       :date="Data.patients.date"
       :unit="$t('人')"
     />
+    {{ cut_Data_by_time }}
   </v-col>
 </template>
 
@@ -34,13 +35,16 @@ export default {
   },
   data() {
     // 感染者数グラフ
-    const patientsGraph = formatByAgeGraph(Data.patients_by_age.data)
 
     const data = {
-      Data,
-      patientsGraph
+      Data
     }
     return data
+  },
+  computed: {
+    cut_Data_by_time() {
+      return formatByAgeGraph(Data.patients_by_age.data)
+    }
   }
 }
 </script>
