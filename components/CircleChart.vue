@@ -10,8 +10,7 @@
       :chart-id="chartId"
       :chart-data="displayData"
       :options="displayOption"
-      :height="240"
-    />
+      :height="240"/>
     <template v-slot:infoPanel>
       <data-view-basic-info-panel
         :l-text="displayInfo.lText"
@@ -19,7 +18,19 @@
         :unit="displayInfo.unit"
       />
     </template>
-  </data-view>
+    <form id="app">
+      開始日: <input v-model="start_date" type="date" /> 終了日:
+      <input v-model="end_date" type="date" />
+      {{ start_date }}
+      {{ end_date }}
+    </form>
+    <v-range-slider
+      v-model="range"
+      :min="start_date"
+      :max="end_date"
+      hide-details
+      class="align-center"
+  /></data-view>
 </template>
 
 <script>
@@ -78,6 +89,12 @@ export default {
       default: () => []
     }
   },
+  data() {
+    return {
+      start_date: '',
+      end_date: ''
+    }
+  },
   computed: {
     displayInfo() {
       return {
@@ -114,6 +131,7 @@ export default {
               return d.transition
             }),
             backgroundColor: this.chartData.map((d, index) => {
+              console.log(d)
               return colorArray[index]
             }),
             borderColor: '#ffffff',
