@@ -18,9 +18,13 @@
       :chart-id="'pie-chart-patients'"
       :chart-data="cut_Data_by_time"
       :date="Data.patients.date"
+      :daterange="date_range"
       :unit="$t('人')"
+      @update_cut_Data="update_cut_Data"
     />
     {{ cut_Data_by_time }}
+    {{ start_date }}
+    {{ end_date }}
   </v-col>
 </template>
 
@@ -36,14 +40,26 @@ export default {
   data() {
     // 感染者数グラフ
 
-    const data = {
-      Data
+    return {
+      Data,
+      start_date: 0,
+      end_date: 0
     }
-    return data
   },
   computed: {
     cut_Data_by_time() {
+      // start_dateとend_dateの間のデータを切り出す
       return formatByAgeGraph(Data.patients_by_age.data)
+    },
+    date_range() {
+      // 日付の最大と最小
+      return [0, 10]
+    }
+  },
+  methods: {
+    update_cut_Data(startDate, endDate) {
+      this.start_date = startDate
+      this.end_date = endDate
     }
   }
 }

@@ -21,15 +21,15 @@
     <form id="app">
       開始日: <input v-model="start_date" type="date" /> 終了日:
       <input v-model="end_date" type="date" />
-      {{ start_date }}
-      {{ end_date }}
+      {{ date_range }}
     </form>
     <v-range-slider
-      v-model="range"
+      v-model="date_range"
       :min="start_date"
       :max="end_date"
       hide-details
       class="align-center"
+      @input="onInput"
   /></data-view>
 </template>
 
@@ -87,12 +87,17 @@ export default {
       type: Array,
       required: false,
       default: () => []
+    },
+    daterange: {
+      type: Array,
+      required: true
     }
   },
   data() {
     return {
-      start_date: '',
-      end_date: ''
+      date_range: this.daterange,
+      start_date: this.daterange[0],
+      end_date: this.daterange[1]
     }
   },
   computed: {
@@ -165,6 +170,12 @@ export default {
           position: 'right'
         }
       }
+    }
+  },
+  methods: {
+    onInput(e) {
+      // v-on:input: 値を入力したときにinputイベントを発火させて、親コンポーネントのv-modelを更新する
+      this.$emit('update_cut_Data', e[0], e[1])
     }
   }
 }
