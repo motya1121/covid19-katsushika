@@ -214,7 +214,7 @@ class patient_data():
             return 4
         elif 500 <= coordinate and coordinate <= 510:
             return 5
-        elif 525 <= coordinate and coordinate <= 535:
+        elif 520 <= coordinate and coordinate <= 535:
             return 6
         else:
             return 0
