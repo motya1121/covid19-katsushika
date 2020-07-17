@@ -41,9 +41,15 @@
             "text": "感染者一覧からNo.1〜2の方が削除されたため，合計感染者数及び退院者数が2減少しました．"
         },
         {
-            "date": "2020/07/14",
+            "date": "2020/07/16",
             "url": "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/07148.pdf",
             "text": "感染者一覧からNo.3〜5方が削除されたため，合計感染者数及び退院者数が3減少しました．"
+        }
+        ,
+        {
+            "date": "2020/07/17",
+            "url": "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/07148.pdf",
+            "text": "感染者一覧からNo.1〜5の方が復活しました．"
         }
     ]
 }

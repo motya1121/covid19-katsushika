@@ -1,5 +1,55 @@
 [
     {
+        "No": "1",
+        "revealed_dt": "2020-02-16",
+        "old": 30,
+        "sex": 1,
+        "job": "会社員",
+        "symptom": "咳、発熱",
+        "appearance_dt": "2020-02-14",
+        "status_id": 5
+    },
+    {
+        "No": "2",
+        "revealed_dt": "2020-03-05",
+        "old": 70,
+        "sex": 1,
+        "job": "自営業",
+        "symptom": "咳、発熱",
+        "appearance_dt": "2020-02-10",
+        "status_id": 5
+    },
+    {
+        "No": "3",
+        "revealed_dt": "2020-03-07",
+        "old": 50,
+        "sex": 1,
+        "job": "会社員",
+        "symptom": "発熱、咳",
+        "appearance_dt": "2020-02-26",
+        "status_id": 5
+    },
+    {
+        "No": "4",
+        "revealed_dt": "2020-03-27",
+        "old": 40,
+        "sex": 1,
+        "job": "会社員",
+        "symptom": "咳、咽頭痛",
+        "appearance_dt": "2020-03-18",
+        "status_id": 5
+    },
+    {
+        "No": "5",
+        "revealed_dt": "2020-03-27",
+        "old": 40,
+        "sex": 1,
+        "job": "会社員",
+        "symptom": "発熱、咳",
+        "appearance_dt": "2020-03-26",
+        "status_id": 5
+    },
+    {
         "No": "6",
         "revealed_dt": "2020-03-29",
         "old": 50,
@@ -1767,6 +1817,46 @@
         "job": "会社員",
         "symptom": "咽頭痛",
         "appearance_dt": "2020-07-10",
+        "status_id": 2
+    },
+    {
+        "No": "183",
+        "revealed_dt": "2020-07-15",
+        "old": 50,
+        "sex": 2,
+        "job": "会社員",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 2
+    },
+    {
+        "No": "184",
+        "revealed_dt": "2020-07-12",
+        "old": 60,
+        "sex": 2,
+        "job": "医療従事者",
+        "symptom": "発熱、咳、頭痛、咽頭痛",
+        "appearance_dt": "2020-07-15",
+        "status_id": 1
+    },
+    {
+        "No": "185",
+        "revealed_dt": "2020-07-15",
+        "old": 30,
+        "sex": 1,
+        "job": "会社員",
+        "symptom": "発熱、咳",
+        "appearance_dt": "2020-07-14",
+        "status_id": 2
+    },
+    {
+        "No": "186",
+        "revealed_dt": "2020-07-15",
+        "old": 80,
+        "sex": 1,
+        "job": "調査中",
+        "symptom": "発熱、鼻汁",
+        "appearance_dt": "2020-07-11",
         "status_id": 2
     }
 ]
