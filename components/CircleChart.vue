@@ -10,7 +10,8 @@
       :chart-id="chartId"
       :chart-data="displayData"
       :options="displayOption"
-      :height="240"/>
+      :height="240"
+    />
     <template v-slot:infoPanel>
       <data-view-basic-info-panel
         :l-text="displayInfo.lText"
@@ -18,19 +19,21 @@
         :unit="displayInfo.unit"
       />
     </template>
-    <form id="app">
-      開始日: <input v-model="start_date" type="date" /> 終了日:
-      <input v-model="end_date" type="date" />
-      {{ date_range }}
-    </form>
+    <br />
     <v-range-slider
       v-model="date_range"
       :min="start_date"
       :max="end_date"
       hide-details
+      thumb-label="always"
       class="align-center"
       @input="onInput"
-  /></data-view>
+    >
+      <template v-slot:thumb-label="props">
+        {{ getSliderLabels(props.value) }}
+      </template>
+    </v-range-slider>
+  </data-view>
 </template>
 
 <script>
@@ -90,6 +93,20 @@ export default {
     },
     daterange: {
       type: Array,
+      required: true
+    },
+    StartDate: {
+      type: Number
+    },
+    StartDateString: {
+      type: Date,
+      required: true
+    },
+    EndDate: {
+      type: Number
+    },
+    EndDateString: {
+      type: Date,
       required: true
     }
   },
@@ -176,6 +193,13 @@ export default {
     onInput(e) {
       // v-on:input: 値を入力したときにinputイベントを発火させて、親コンポーネントのv-modelを更新する
       this.$emit('update_cut_Data', e[0], e[1])
+    },
+    getSliderLabels(id) {
+      if (id === this.StartDate) {
+        return this.StartDateString
+      } else {
+        return this.EndDateString
+      }
     }
   }
 }
