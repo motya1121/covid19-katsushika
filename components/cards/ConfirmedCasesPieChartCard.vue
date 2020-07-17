@@ -14,7 +14,6 @@
       :unit="$t('人')"
       @update_cut_Data="update_cut_Data"
     />
-    {{ cut_Data_by_time }}
   </v-col>
 </template>
 
