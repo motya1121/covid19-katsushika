@@ -39,7 +39,57 @@ export default {
   computed: {
     cut_Data_by_time() {
       // start_dateとend_dateの間のデータを切り出す
-      return formatByAgeGraph(Data.patients_by_age.data)
+      const InitData = [
+        {
+          age: '10歳未満',
+          number: 0
+        },
+        {
+          age: '10代',
+          number: 0
+        },
+        {
+          age: '20代',
+          number: 0
+        },
+        {
+          age: '30代',
+          number: 0
+        },
+        {
+          age: '40代',
+          number: 0
+        },
+        {
+          age: '50代',
+          number: 0
+        },
+        {
+          age: '60代',
+          number: 0
+        },
+        {
+          age: '70代',
+          number: 0
+        },
+        {
+          age: '80代',
+          number: 0
+        }
+      ]
+      for (const patient of Data.patients.data) {
+        if (
+          this.start_dt <= new Date(patient.date) &&
+          new Date(patient.date) <= this.end_dt
+        ) {
+          for (const AgeCount of InitData) {
+            if (AgeCount.age === patient['年代']) {
+              AgeCount.number++
+            }
+          }
+        }
+      }
+      return formatByAgeGraph(InitData)
     },
     startDT() {
       return new Date(Data.patients_summary.data[0]['日付'])
@@ -53,15 +103,27 @@ export default {
       const CountDateNumber = diff / (1000 * 60 * 60 * 24)
       return [0, CountDateNumber]
     },
-    start_date_string() {
+    start_dt() {
       const tempDt = new Date(Data.patients_summary.data[0]['日付'])
       tempDt.setDate(this.startDT.getDate() + this.start_date)
-      return String(tempDt.getMonth() + 1) + '/' + String(tempDt.getDate())
+      return tempDt
     },
-    end_date_string() {
+    start_date_string() {
+      return (
+        String(this.start_dt.getMonth() + 1) +
+        '/' +
+        String(this.start_dt.getDate())
+      )
+    },
+    end_dt() {
       const tempDt = new Date(Data.patients_summary.data[0]['日付'])
       tempDt.setDate(this.startDT.getDate() + this.end_date)
-      return String(tempDt.getMonth() + 1) + '/' + String(tempDt.getDate())
+      return tempDt
+    },
+    end_date_string() {
+      return (
+        String(this.end_dt.getMonth() + 1) + '/' + String(this.end_dt.getDate())
+      )
     }
   },
   mounted() {
