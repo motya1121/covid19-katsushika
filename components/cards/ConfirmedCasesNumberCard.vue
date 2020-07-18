@@ -37,7 +37,14 @@ export default {
   },
   computed: {
     cut_Data_by_time() {
-      return formatGraph(Data.patients_summary.data)
+      const PatientsSummary = Data.patients_summary.data
+      const ExportData = []
+      for (const i in PatientsSummary) {
+        if (this.start_date_number <= i && i <= this.end_date_number) {
+          ExportData.push(PatientsSummary[i])
+        }
+      }
+      return formatGraph(ExportData)
     },
     startDT() {
       return new Date(Data.patients_summary.data[0]['日付'])
@@ -80,7 +87,7 @@ export default {
       )
     }
   },
-  mounted() {
+  created() {
     this.end_date_number = this.max_date_number
   },
   methods: {
