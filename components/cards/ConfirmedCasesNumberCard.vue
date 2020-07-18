@@ -4,9 +4,15 @@
       :title="$t('陽性患者数')"
       :title-id="'number-of-confirmed-cases'"
       :chart-id="'time-bar-chart-patients'"
-      :chart-data="patientsGraph"
+      :chart-data="cut_Data_by_time"
       :date="Data.patients.date"
+      :daterange="date_range"
+      :min-date-number="min_date_number"
+      :max-date-number="max_date_number"
+      :start-date-string="start_date_string"
+      :end-date-string="end_date_string"
       :unit="$t('人')"
+      @update_cut_Data="update_cut_Data"
     />
   </v-col>
 </template>
@@ -22,13 +28,66 @@ export default {
   },
   data() {
     // 感染者数グラフ
-    const patientsGraph = formatGraph(Data.patients_summary.data)
-
     const data = {
       Data,
-      patientsGraph
+      start_date_number: 0,
+      end_date_number: 0
     }
     return data
+  },
+  computed: {
+    cut_Data_by_time() {
+      return formatGraph(Data.patients_summary.data)
+    },
+    startDT() {
+      return new Date(Data.patients_summary.data[0]['日付'])
+    },
+    endDT() {
+      return new Date(Data.patients_summary.data.slice(-1)[0]['日付'])
+    },
+    min_date_number() {
+      return 0
+    },
+    max_date_number() {
+      const diff = this.endDT.getTime() - this.startDT.getTime()
+      const CountDateNumber = diff / (1000 * 60 * 60 * 24)
+      return CountDateNumber
+    },
+    date_range() {
+      // 現在選択されている日付の最大最小
+      return [this.start_date_number, this.end_date_number]
+    },
+    start_dt() {
+      const tempDt = new Date(Data.patients_summary.data[0]['日付'])
+      tempDt.setDate(this.startDT.getDate() + this.start_date_number)
+      return tempDt
+    },
+    start_date_string() {
+      return (
+        String(this.start_dt.getMonth() + 1) +
+        '/' +
+        String(this.start_dt.getDate())
+      )
+    },
+    end_dt() {
+      const tempDt = new Date(Data.patients_summary.data[0]['日付'])
+      tempDt.setDate(this.startDT.getDate() + this.end_date_number)
+      return tempDt
+    },
+    end_date_string() {
+      return (
+        String(this.end_dt.getMonth() + 1) + '/' + String(this.end_dt.getDate())
+      )
+    }
+  },
+  mounted() {
+    this.end_date_number = this.max_date_number
+  },
+  methods: {
+    update_cut_Data(startDateNumber, endDateNumber) {
+      this.start_date_number = startDateNumber
+      this.end_date_number = endDateNumber
+    }
   }
 }
 </script>

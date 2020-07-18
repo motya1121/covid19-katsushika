@@ -67,6 +67,19 @@
         :unit="displayInfo.unit"
       />
     </template>
+    <v-range-slider
+      v-model="daterange"
+      :min="MinDateNumber"
+      :max="MaxDateNumber"
+      hide-details
+      thumb-label="always"
+      class="align-center"
+      @input="onInput"
+    >
+      <template v-slot:thumb-label="props">
+        {{ getSliderLabels(props.value) }}
+      </template>
+    </v-range-slider>
   </data-view>
 </template>
 
@@ -91,6 +104,8 @@ type Data = {
 }
 type Methods = {
   formatDayBeforeRatio: (dayBeforeRatio: number) => string
+  onInput: (e: Array<number>) => void
+  getSliderLabels: (id: number) => string
 }
 
 type Computed = {
@@ -125,6 +140,11 @@ type Props = {
   url: string
   scrollPlugin: Chart.PluginServiceRegistrationOptions[]
   yAxesBgPlugin: Chart.PluginServiceRegistrationOptions[]
+  daterange: Array<number>
+  MinDateNumber: number
+  StartDateString: string
+  MaxDateNumber: number
+  EndDateString: string
 }
 
 const options: ThisTypedComponentOptionsWithRecordProps<
@@ -178,6 +198,21 @@ const options: ThisTypedComponentOptionsWithRecordProps<
     yAxesBgPlugin: {
       type: Array,
       default: () => yAxesBgPlugin
+    },
+    daterange: {
+      type: Array
+    },
+    MinDateNumber: {
+      type: Number
+    },
+    StartDateString: {
+      type: String
+    },
+    MaxDateNumber: {
+      type: Number
+    },
+    EndDateString: {
+      type: String
     }
   },
   data: () => ({
@@ -488,6 +523,16 @@ const options: ThisTypedComponentOptionsWithRecordProps<
           return `${dayBeforeRatioLocaleString}`
         default:
           return `${dayBeforeRatioLocaleString}`
+      }
+    },
+    onInput(e: Array<number>): void {
+      this.$emit('update_cut_Data', e[0], e[1])
+    },
+    getSliderLabels(id): string {
+      if (id === this.daterange[0]) {
+        return this.StartDateString
+      } else {
+        return this.EndDateString
       }
     }
   },
