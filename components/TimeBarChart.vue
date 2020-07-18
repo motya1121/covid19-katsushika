@@ -14,59 +14,15 @@
       {{ $t(`{title}のグラフ`, { title }) }}
     </h4>
     <div class="LegendStickyChart">
-      <div class="scrollable" :style="{ display: canvas ? 'block' : 'none' }">
-        <div :style="{ width: `${chartWidth}px` }">
-          <bar
-            :ref="'barChart'"
-            :chart-id="chartId"
-            :chart-data="displayData"
-            :options="displayOption"
-            :plugins="scrollPlugin"
-            :height="240"
-            :width="chartWidth"
-          />
-        </div>
-      </div>
       <bar
-        class="sticky-legend"
-        :style="{ display: canvas ? 'block' : 'none' }"
-        :chart-id="`${chartId}-header`"
-        :chart-data="displayDataHeader"
-        :options="displayOptionHeader"
-        :plugins="yAxesBgPlugin"
+        :ref="'barChart'"
+        :chart-data="displayData"
+        :options="displayOption"
         :height="240"
         :width="chartWidth"
       />
     </div>
-    <v-data-table
-      :style="{ top: '-9999px', position: canvas ? 'fixed' : 'static' }"
-      :headers="tableHeaders"
-      :items="tableData"
-      :items-per-page="-1"
-      :hide-default-footer="true"
-      :height="240"
-      :fixed-header="true"
-      :disable-sort="true"
-      :mobile-breakpoint="0"
-      class="cardTable"
-      item-key="name"
-    >
-      <template v-slot:body="{ items }">
-        <tbody>
-          <tr v-for="item in items" :key="item.text">
-            <th class="text-start">{{ item.text }}</th>
-            <td class="text-start">{{ item['0'] }}</td>
-          </tr>
-        </tbody>
-      </template>
-    </v-data-table>
-    <template v-slot:infoPanel>
-      <data-view-basic-info-panel
-        :l-text="displayInfo.lText"
-        :s-text="displayInfo.sText"
-        :unit="displayInfo.unit"
-      />
-    </template>
+    <br />
     <v-range-slider
       v-model="daterange"
       :min="MinDateNumber"
@@ -538,14 +494,7 @@ const options: ThisTypedComponentOptionsWithRecordProps<
   },
   mounted() {
     if (this.$el) {
-      this.chartWidth =
-        ((this.$el!.clientWidth - 22 * 2 - 38) / 60) *
-          this.displayData.labels!.length +
-        38
-      this.chartWidth = Math.max(
-        this.$el!.clientWidth - 22 * 2,
-        this.chartWidth
-      )
+      this.chartWidth = this.$el!.clientWidth - 22 * 2
     }
     const barChart = this.$refs.barChart as Vue
     const barElement = barChart.$el
