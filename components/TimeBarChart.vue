@@ -27,6 +27,8 @@
       v-model="daterange"
       :min="MinDateNumber"
       :max="MaxDateNumber"
+      thumb-color="#388242"
+      color="#388242"
       hide-details
       thumb-label="always"
       class="align-center"
