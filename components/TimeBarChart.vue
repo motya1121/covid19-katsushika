@@ -29,6 +29,7 @@
       :max="MaxDateNumber"
       thumb-color="#388242"
       color="#388242"
+      track-color="#52c463"
       hide-details
       thumb-label="always"
       class="align-center"
