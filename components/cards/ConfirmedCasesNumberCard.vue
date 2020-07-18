@@ -13,7 +13,15 @@
       :end-date-string="end_date_string"
       :unit="$t('人')"
       @update_cut_Data="update_cut_Data"
-    />
+    >
+      <template v-slot:description>
+        <ul class="ListStyleNone">
+          <li>
+            {{ $t('（注）累計は選択期間内') }}
+          </li>
+        </ul>
+      </template>
+    </time-bar-chart>
   </v-col>
 </template>
 
