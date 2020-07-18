@@ -14,59 +14,31 @@
       {{ $t(`{title}のグラフ`, { title }) }}
     </h4>
     <div class="LegendStickyChart">
-      <div class="scrollable" :style="{ display: canvas ? 'block' : 'none' }">
-        <div :style="{ width: `${chartWidth}px` }">
-          <bar
-            :ref="'barChart'"
-            :chart-id="chartId"
-            :chart-data="displayData"
-            :options="displayOption"
-            :plugins="scrollPlugin"
-            :height="240"
-            :width="chartWidth"
-          />
-        </div>
-      </div>
       <bar
-        class="sticky-legend"
-        :style="{ display: canvas ? 'block' : 'none' }"
-        :chart-id="`${chartId}-header`"
-        :chart-data="displayDataHeader"
-        :options="displayOptionHeader"
-        :plugins="yAxesBgPlugin"
+        :ref="'barChart'"
+        :chart-data="displayData"
+        :options="displayOption"
         :height="240"
         :width="chartWidth"
       />
     </div>
-    <v-data-table
-      :style="{ top: '-9999px', position: canvas ? 'fixed' : 'static' }"
-      :headers="tableHeaders"
-      :items="tableData"
-      :items-per-page="-1"
-      :hide-default-footer="true"
-      :height="240"
-      :fixed-header="true"
-      :disable-sort="true"
-      :mobile-breakpoint="0"
-      class="cardTable"
-      item-key="name"
+    <br />
+    <v-range-slider
+      v-model="daterange"
+      :min="MinDateNumber"
+      :max="MaxDateNumber"
+      thumb-color="#388242"
+      color="#388242"
+      track-color="#52c463"
+      hide-details
+      thumb-label="always"
+      class="align-center"
+      @input="onInput"
     >
-      <template v-slot:body="{ items }">
-        <tbody>
-          <tr v-for="item in items" :key="item.text">
-            <th class="text-start">{{ item.text }}</th>
-            <td class="text-start">{{ item['0'] }}</td>
-          </tr>
-        </tbody>
+      <template v-slot:thumb-label="props">
+        {{ getSliderLabels(props.value) }}
       </template>
-    </v-data-table>
-    <template v-slot:infoPanel>
-      <data-view-basic-info-panel
-        :l-text="displayInfo.lText"
-        :s-text="displayInfo.sText"
-        :unit="displayInfo.unit"
-      />
-    </template>
+    </v-range-slider>
   </data-view>
 </template>
 
@@ -91,6 +63,8 @@ type Data = {
 }
 type Methods = {
   formatDayBeforeRatio: (dayBeforeRatio: number) => string
+  onInput: (e: Array<number>) => void
+  getSliderLabels: (id: number) => string
 }
 
 type Computed = {
@@ -125,6 +99,11 @@ type Props = {
   url: string
   scrollPlugin: Chart.PluginServiceRegistrationOptions[]
   yAxesBgPlugin: Chart.PluginServiceRegistrationOptions[]
+  daterange: Array<number>
+  MinDateNumber: number
+  StartDateString: string
+  MaxDateNumber: number
+  EndDateString: string
 }
 
 const options: ThisTypedComponentOptionsWithRecordProps<
@@ -178,6 +157,21 @@ const options: ThisTypedComponentOptionsWithRecordProps<
     yAxesBgPlugin: {
       type: Array,
       default: () => yAxesBgPlugin
+    },
+    daterange: {
+      type: Array
+    },
+    MinDateNumber: {
+      type: Number
+    },
+    StartDateString: {
+      type: String
+    },
+    MaxDateNumber: {
+      type: Number
+    },
+    EndDateString: {
+      type: String
     }
   },
   data: () => ({
@@ -489,18 +483,21 @@ const options: ThisTypedComponentOptionsWithRecordProps<
         default:
           return `${dayBeforeRatioLocaleString}`
       }
+    },
+    onInput(e: Array<number>): void {
+      this.$emit('update_cut_Data', e[0], e[1])
+    },
+    getSliderLabels(id): string {
+      if (id === this.daterange[0]) {
+        return this.StartDateString
+      } else {
+        return this.EndDateString
+      }
     }
   },
   mounted() {
     if (this.$el) {
-      this.chartWidth =
-        ((this.$el!.clientWidth - 22 * 2 - 38) / 60) *
-          this.displayData.labels!.length +
-        38
-      this.chartWidth = Math.max(
-        this.$el!.clientWidth - 22 * 2,
-        this.chartWidth
-      )
+      this.chartWidth = this.$el!.clientWidth - 22 * 2
     }
     const barChart = this.$refs.barChart as Vue
     const barElement = barChart.$el
