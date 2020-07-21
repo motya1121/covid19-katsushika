@@ -1951,13 +1951,13 @@
     },
     {
         "No": "196",
-        "revealed_dt": "2020-07-16",
+        "revealed_dt": "2020-07-18",
         "old": 30,
         "sex": 1,
         "job": "会社員",
         "symptom": "発熱",
-        "appearance_dt": "2020-07-18",
-        "status_id": 1
+        "appearance_dt": "2020-07-16",
+        "status_id": 3
     },
     {
         "No": "197",
@@ -2028,5 +2028,55 @@
         "symptom": "発熱、咳、倦怠感",
         "appearance_dt": "2020-07-12",
         "status_id": 3
+    },
+    {
+        "No": "204",
+        "revealed_dt": "2020-07-20",
+        "old": 40,
+        "sex": 1,
+        "job": "会社員",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "205",
+        "revealed_dt": "2020-07-18",
+        "old": 80,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "発熱、咳、鼻汁",
+        "appearance_dt": "2020-07-20",
+        "status_id": 1
+    },
+    {
+        "No": "206",
+        "revealed_dt": "2020-07-20",
+        "old": 80,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "207",
+        "revealed_dt": "2020-07-20",
+        "old": 80,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "208",
+        "revealed_dt": "2020-07-20",
+        "old": 60,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
     }
 ]
