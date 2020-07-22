@@ -201,6 +201,8 @@ class patient_data():
             return text
         if text.find('呼吸困難') != -1:
             return text
+        if text.find('調査中') != -1:
+            return text
         return ''
 
     def get_status_id(self, coordinate):
