@@ -9,6 +9,11 @@
         :aria-label="$t('感染者の状況')"
         v-bind="confirmedCases"
       />
+      <template v-slot:footer>
+        <OpenDataLink
+          url="https://raw.githubusercontent.com/motya1121/covid19-katsushika/master/tool/covid_data/data/row_data.json"
+        />
+      </template>
     </data-view>
   </v-col>
 </template>
@@ -27,11 +32,13 @@ import Data from '@/data/data.json'
 import formatConfirmedCases from '@/utils/formatConfirmedCases'
 import DataView from '@/components/DataView.vue'
 import ConfirmedCasesDetailsTable from '@/components/ConfirmedCasesDetailsTable.vue'
+import OpenDataLink from '@/components/OpenDataLink.vue'
 
 export default {
   components: {
     DataView,
-    ConfirmedCasesDetailsTable
+    ConfirmedCasesDetailsTable,
+    OpenDataLink
   },
   data() {
     // 検査陽性者の状況
