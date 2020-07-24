@@ -88,7 +88,7 @@ def export_data(pdf_datas):
     for pdf_data in pdf_datas:
         temp_patient = {
             'リリース日': pdf_data['revealed_dt'].strftime('%Y-%m-%d') + 'T08:00:00.000Z',
-            '居住地': '調査中',
+            '症状': pdf_data['symptom'],
             '年代': str(pdf_data['old']) + '代' if pdf_data['old'] != 0 else '10歳未満',
             '性別': '男性' if pdf_data['sex'] == 1 else '女性',
             '退院': '〇' if pdf_data['status_id'] in [5, 6] else None,

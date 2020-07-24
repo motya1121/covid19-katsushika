@@ -45,7 +45,7 @@ export default {
     }
     // 陽性患者の属性 中身の翻訳
     for (const row of patientsTable.datasets) {
-      row['居住地'] = this.getTranslatedWording(row['居住地'])
+      row['症状'] = this.getTranslatedWording(row['症状'])
       row['性別'] = this.getTranslatedWording(row['性別'])
       row['退院'] = this.getTranslatedWording(row['退院'])
 
