@@ -96,7 +96,7 @@ CREATE TABLE patients_timetable(
 3. 宿泊療養
 4. 自宅療養中
 5. 死亡
-6. 退院
+6. 回復
 
 ```
 CREATE TABLE statuses(
@@ -106,7 +106,7 @@ CREATE TABLE statuses(
 ```
 
 ```
-INSERT INTO statuses VALUES ('1', '入院調整中'), ('2', '入院中'), ('3', '宿泊療養'), ('4', '自宅療養中'), ('5', '退院'), ('6', '死亡');
+INSERT INTO statuses VALUES ('1', '入院調整中'), ('2', '入院中'), ('3', '宿泊療養'), ('4', '自宅療養中'), ('5', '回復'), ('6', '死亡');
 ```
 
 ## symptoms_map Table

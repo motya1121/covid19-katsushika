@@ -23,13 +23,13 @@
             <td class="text-start">{{ item['年代'] }}</td>
             <td class="text-start">{{ item['性別'] }}</td>
             <td class="text-start">{{ item['状態'] }}</td>
-            <td class="text-center">{{ item['退院'] }}</td>
+            <td class="text-center">{{ item['回復'] }}</td>
           </tr>
         </tbody>
       </template>
     </v-data-table>
     <div class="note">
-      {{ $t('※退院には、死亡退院を含む') }}
+      {{ $t('※回復には、死亡回復を含む') }}
     </div>
     <template v-slot:infoPanel>
       <data-view-basic-info-panel
