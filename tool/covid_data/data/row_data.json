@@ -2190,12 +2190,22 @@
         "status_id": 1
     },
     {
+        "No": "220",
+        "revealed_dt": "2020-07-20",
+        "old": 60,
+        "sex": 1,
+        "job": "調査中",
+        "symptom": "発熱、咳、肺炎、全身倦怠感",
+        "appearance_dt": "2020-07-20",
+        "status_id": 2
+    },
+    {
         "No": "221",
         "revealed_dt": "2020-07-21",
         "old": 20,
         "sex": 2,
         "job": "調査中",
-        "symptom": "発熱、咳、肺炎、全身倦怠感",
+        "symptom": "調査中",
         "appearance_dt": "2020-07-14",
         "status_id": 1
     },
