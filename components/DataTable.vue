@@ -19,17 +19,17 @@
         <tbody>
           <tr v-for="item in items" :key="item.text">
             <th class="text-start">{{ item['公表日'] }}</th>
-            <td class="text-start">{{ item['居住地'] }}</td>
+            <td class="text-start">{{ item['症状'] }}</td>
             <td class="text-start">{{ item['年代'] }}</td>
             <td class="text-start">{{ item['性別'] }}</td>
             <td class="text-start">{{ item['状態'] }}</td>
-            <td class="text-center">{{ item['退院'] }}</td>
+            <td class="text-center">{{ item['回復'] }}</td>
           </tr>
         </tbody>
       </template>
     </v-data-table>
     <div class="note">
-      {{ $t('※退院には、死亡退院を含む') }}
+      {{ $t('※回復には、死亡回復を含む') }}
     </div>
     <template v-slot:infoPanel>
       <data-view-basic-info-panel
@@ -107,10 +107,9 @@
 import Vue from 'vue'
 import DataView from '@/components/DataView.vue'
 import DataViewBasicInfoPanel from '@/components/DataViewBasicInfoPanel.vue'
-import OpenDataLink from '@/components/OpenDataLink.vue'
 
 export default Vue.extend({
-  components: { DataView, DataViewBasicInfoPanel, OpenDataLink },
+  components: { DataView, DataViewBasicInfoPanel },
   props: {
     title: {
       type: String,

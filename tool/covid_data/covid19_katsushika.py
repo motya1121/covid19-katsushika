@@ -25,7 +25,7 @@ def check():
 
     m = re.match(r'.*(\d+)月(\d+)日発表', update_text)
     if m is None:
-        return - 1
+        return -1
 
     get_update_datetime = datetime.datetime.strptime('2020-{0[0]}-{0[1]}'.format(m.groups()), '%Y-%m-%d')
     update_datetime = datetime.datetime.strptime(setting.update_datetime, '%Y-%m-%d %H:%M:%S')
@@ -41,7 +41,9 @@ def check():
     setting.pdf_url = urllib.parse.urljoin(setting.city_url, relative_pdf_link)
 
     # 時刻のログを表示
-    print('survey_datetime={}\nupdate_datetime={}\npublic_datetime={}\n'.format(setting.survey_datetime, setting.update_datetime, setting.public_datetime))
+    print('survey_datetime={}\nupdate_datetime={}\npublic_datetime={}\n'.format(setting.survey_datetime,
+                                                                                setting.update_datetime,
+                                                                                setting.public_datetime))
 
     setting.dump_setting()
 
@@ -83,15 +85,15 @@ def export_data(pdf_datas):
 
     # patients
     patients = {'date': updated_datetime.strftime('%Y/%m/%d %H:%M'), 'data': []}
-    status_id = {1: '入院調整中', 2: '入院中', 3: '宿泊療養中', 4: '自宅療養中', 6: '死亡', 5: '退院'}
+    status_id = {1: '入院調整中', 2: '入院中', 3: '宿泊療養中', 4: '自宅療養中', 6: '死亡', 5: '回復'}
 
     for pdf_data in pdf_datas:
         temp_patient = {
             'リリース日': pdf_data['revealed_dt'].strftime('%Y-%m-%d') + 'T08:00:00.000Z',
-            '居住地': '調査中',
+            '症状': pdf_data['symptom'],
             '年代': str(pdf_data['old']) + '代' if pdf_data['old'] != 0 else '10歳未満',
             '性別': '男性' if pdf_data['sex'] == 1 else '女性',
-            '退院': '〇' if pdf_data['status_id'] in [5, 6] else None,
+            '回復': '〇' if pdf_data['status_id'] in [5, 6] else None,
             '状態': status_id[pdf_data['status_id']],
             'date': pdf_data['revealed_dt'].strftime('%Y-%m-%d')
         }
@@ -142,7 +144,7 @@ def export_data(pdf_datas):
         date += datetime.timedelta(days=1)
 
     # main_summary
-    status_sumary = {'入院調整中': 0, '入院中': 0, '宿泊療養中': 0, '自宅療養中': 0, '死亡': 0, '退院': 0}
+    status_sumary = {'入院調整中': 0, '入院中': 0, '宿泊療養中': 0, '自宅療養中': 0, '死亡': 0, '回復': 0}
     for pdf_data in pdf_datas:
         if pdf_data['status_id'] == 1:
             status_sumary['入院調整中'] += 1
@@ -155,7 +157,7 @@ def export_data(pdf_datas):
         if pdf_data['status_id'] == 6:
             status_sumary['死亡'] += 1
         if pdf_data['status_id'] == 5:
-            status_sumary['退院'] += 1
+            status_sumary['回復'] += 1
 
     main_summary = {
         "attr":
@@ -183,8 +185,8 @@ def export_data(pdf_datas):
                 'attr': '死亡',
                 'value': status_sumary['死亡']
             }, {
-                'attr': '退院',
-                'value': status_sumary['退院']
+                'attr': '回復',
+                'value': status_sumary['回復']
             }]
         }]
     }

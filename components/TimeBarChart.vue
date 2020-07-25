@@ -22,6 +22,12 @@
         :width="chartWidth"
       />
     </div>
+    <template v-slot:infoPanel>
+      <data-view-basic-info-panel
+        :l-text="displayInfo.lText"
+        :unit="displayInfo.unit"
+      />
+    </template>
     <br />
     <v-range-slider
       v-model="daterange"
@@ -193,7 +199,7 @@ const options: ThisTypedComponentOptionsWithRecordProps<
     displayInfo() {
       if (this.dataKind === 'transition') {
         return {
-          lText: `${this.chartData.slice(-1)[0].transition.toLocaleString()}`,
+          lText: `${this.chartData.slice(-1)[0].cumulative.toLocaleString()}`,
           sText: `${this.chartData.slice(-1)[0].label} ${this.$t(
             '実績値'
           )}（${this.$t('前日比')}: ${this.displayTransitionRatio} ${

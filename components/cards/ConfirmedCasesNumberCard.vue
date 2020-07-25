@@ -17,7 +17,10 @@
       <template v-slot:description>
         <ul class="ListStyleNone">
           <li>
-            {{ $t('（注）累計は選択期間内') }}
+            {{ $t('（注）患者数は選択期間内') }}
+          </li>
+          <li>
+            {{ $t('（注）累計のグラフは選択期間内') }}
           </li>
         </ul>
       </template>
