@@ -124,7 +124,7 @@ class patient_data():
             return 50
         elif text.find('６０') != -1:
             return 60
-        elif text.find('７０') != -1:
+        elif text.find('７０') != -1 or text.find('70') != -1:
             return 70
         elif text.find('８０') != -1:
             return 80
