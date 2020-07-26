@@ -115,18 +115,23 @@ export default Vue.extend({
         {
           icon: 'CovidIcon',
           title: this.$t('新型コロナウイルス感染症が心配なときに'),
-          link: this.localePath('/flow'),
+          link:
+            'http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/koronasoudan.pdf',
           divider: true
         },
         {
-          title: this.$t('葛飾区新型コロナウイルス関連情報'),
+          title: this.$t('葛飾区の新型コロナウイルス関連情報'),
           link:
             'http://www.city.katsushika.lg.jp/information/kouho/1005542/1023108.html'
         },
         {
-          title: this.$t('区長からのメッセージ'),
+          title: this.$t('葛飾区内の新型コロナウイルス感染者発生状況'),
           link:
-            'http://www.city.katsushika.lg.jp/information/kouho/1005541/1023205.html'
+            'http://www.city.katsushika.lg.jp/kurashi/1000050/1001797/1023014.html'
+        },
+        {
+          title: this.$t('東京都の新型コロナウイルス感染症対策サイト'),
+          link: 'https://stopcovid19.metro.tokyo.lg.jp/'
         },
         {
           title: this.$t('当サイトについて'),

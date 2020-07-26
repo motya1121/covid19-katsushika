@@ -196,15 +196,15 @@
       <h3>{{ $t('データについて') }}</h3>
       <i18n
         tag="p"
-        path="本サイトで公表しているデータは、{catalogWebsite}より誰でも自由にダウンロードが可能です。（データは順次追加予定です）"
+        path="本サイトで公表しているデータは、{catalogWebsite}より誰でも自由にダウンロードが可能です（データは順次追加予定です）。このデータは葛飾区より発表される感染者一覧のPDFを基に作成しています。"
       >
         <template v-slot:catalogWebsite>
           <a
-            href="https://portal.data.metro.tokyo.lg.jp/"
+            href="https://raw.githubusercontent.com/motya1121/covid19-katsushika/development/tool/covid_data/data/row_data.json"
             target="_blank"
             rel="noopener noreferrer"
           >
-            {{ $t('東京都オープンデータカタログサイト') }}
+            {{ $t('本サイトのGitHubリポジトリ') }}
           </a>
         </template>
       </i18n>
