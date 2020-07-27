@@ -33,6 +33,10 @@ class patient_data():
                 if self.no != '':  # noの場合関数終了
                     return
 
+            # 特殊データ(185の症状が書かれていない)
+            if self.no == '185':
+                self.status_id = 2
+
             # 陽性判明日かどうか
             if self.revealed_dt == '':
                 self.revealed_dt = self.check_date(text)
@@ -252,6 +256,7 @@ def get_data(setting):
     # 返却する辞書
     ret_data = []
     patient_datas = []
+    TEMP_NO = 0
 
     '''
     処理
@@ -292,6 +297,9 @@ def get_data(setting):
                             print('******ここまで {} *****'.format(temp_patient_data.no))
                             if temp_patient_data.no == DEBUG_PRT_MAX_NO:
                                 exit()
+                        if temp_patient_data.no != str(TEMP_NO - 1):
+                            print("error: no:{}".format(temp_patient_data.no))
+                        TEMP_NO = int(temp_patient_data.no)
                         patient_datas.append(temp_patient_data)
                         temp_patient_data = patient_data()
 
