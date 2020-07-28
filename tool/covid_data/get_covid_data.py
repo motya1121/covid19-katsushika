@@ -33,10 +33,6 @@ class patient_data():
                 if self.no != '':  # noの場合関数終了
                     return
 
-            # 特殊データ(185の症状が書かれていない)
-            if self.no == '185':
-                self.status_id = 2
-
             # 陽性判明日かどうか
             if self.revealed_dt == '':
                 self.revealed_dt = self.check_date(text)
