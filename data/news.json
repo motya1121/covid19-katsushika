@@ -13,9 +13,15 @@
         }
         ,
         {
-            "date": "2020/07/27",
+            "date": "2020/07/29",
             "url": "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/1kansen.pdf",
-            "text": "No185の症状が未記入だが，感染者属性別集計表より入院であるとしました．"
+            "text": "No193の症状が未記入ですが，前日のデータより入院であるとしました．"
+        }
+        ,
+        {
+            "date": "2020/07/29",
+            "url": "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/1kansen.pdf",
+            "text": "No199の症状が未記入ですが，前日のデータより回復であるとしました．"
         }
     ]
 }
