@@ -33,6 +33,11 @@ class patient_data():
                 if self.no != '':  # noの場合関数終了
                     return
 
+            if self.no == '193':
+                self.status_id = 2
+            if self.no == '199':
+                self.status_id = 5
+
             # 陽性判明日かどうか
             if self.revealed_dt == '':
                 self.revealed_dt = self.check_date(text)
@@ -202,6 +207,10 @@ class patient_data():
         if text.find('呼吸困難') != -1:
             return text
         if text.find('調査中') != -1:
+            return text
+        if text.find('咽頭痛') != -1:
+            return text
+        if text.find('意識障害') != -1:
             return text
         return ''
 

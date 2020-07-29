@@ -10,5 +10,21 @@
     "eslint.validate": [
       "javascript",
       "vue"
-    ]
-  }
+    ],
+    "python.linting.lintOnSave": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+      "--max-line-length=120",
+      "--ignore=E501",
+      "--ignore=W293, W504",
+    ],
+    "python.formatting.yapfArgs": [
+      "--style",
+      "{based_on_style: google, indent_width: 4, COLUMN_LIMIT: 120}",
+    ],
+    "python.formatting.yapfPath": "/home/ubuntu/.pyenv/shims/yapf",
+    "python.linting.flake8Path": "/home/ubuntu/.pyenv/shims/flake8",
+    "editor.formatOnType": true,
+    "python.formatting.provider": "yapf",
+}
