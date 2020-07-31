@@ -13,15 +13,9 @@
         }
         ,
         {
-            "date": "2020/07/30",
-            "url": "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/kansenitiran0730.pdf",
-            "text": "No203の症状が未記入ですが，前日のデータより回復であると判断しました．"
-        }
-        ,
-        {
-            "date": "2020/07/30",
-            "url": "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/kansenitiran0730.pdf",
-            "text": "No209の症状が未記入ですが，前日のデータと属性別集計表より入院であると判断しました．"
+            "date": "2020/07/31",
+            "url": "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/kansenitiran0731.pdf",
+            "text": "No209の症状が未記入ですが，前前日のデータと属性別集計表より入院であると判断しました．"
         }
     ]
 }
