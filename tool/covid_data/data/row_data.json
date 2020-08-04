@@ -2287,7 +2287,7 @@
         "job": "会社員",
         "symptom": "発熱、咳、息切れ、全身倦怠感、頭痛",
         "appearance_dt": "2020-07-20",
-        "status_id": 5
+        "status_id": 2
     },
     {
         "No": "230",
@@ -2367,7 +2367,7 @@
         "job": "無職",
         "symptom": "発熱",
         "appearance_dt": "2020-07-23",
-        "status_id": 2
+        "status_id": 5
     },
     {
         "No": "238",
@@ -2797,7 +2797,7 @@
         "job": "会社員",
         "symptom": "発熱、倦怠感",
         "appearance_dt": "2020-07-24",
-        "status_id": 4
+        "status_id": 2
     },
     {
         "No": "281",
@@ -2831,13 +2831,13 @@
     },
     {
         "No": "284",
-        "revealed_dt": "2020-07-15",
+        "revealed_dt": "2020-08-01",
         "old": 20,
         "sex": 1,
         "job": "会社員",
-        "symptom": "発熱、倦怠感、味覚障害、嗅",
-        "appearance_dt": "2020-08-01",
-        "status_id": 1
+        "symptom": "発熱、味覚障害、嗅覚障害",
+        "appearance_dt": "2020-07-16",
+        "status_id": 4
     },
     {
         "No": "285",
@@ -2881,13 +2881,13 @@
     },
     {
         "No": "289",
-        "revealed_dt": "2020-08-01",
-        "old": 20,
-        "sex": 1,
-        "job": "会社員",
-        "symptom": "発熱、味覚障害、嗅覚障害",
-        "appearance_dt": "2020-07-16",
-        "status_id": 4
+        "revealed_dt": "2020-08-03",
+        "old": 60,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "発熱",
+        "appearance_dt": "2020-07-28",
+        "status_id": 2
     },
     {
         "No": "290",
@@ -2908,5 +2908,35 @@
         "symptom": "発熱、頭痛、倦怠感、咽頭痛、痰",
         "appearance_dt": "2020-08-03",
         "status_id": 1
+    },
+    {
+        "No": "292",
+        "revealed_dt": "2020-08-03",
+        "old": 30,
+        "sex": 1,
+        "job": "会社員",
+        "symptom": "発熱、味覚障害、嗅覚障害",
+        "appearance_dt": "2020-07-28",
+        "status_id": 4
+    },
+    {
+        "No": "293",
+        "revealed_dt": "2020-07-31",
+        "old": 50,
+        "sex": 1,
+        "job": "会社員",
+        "symptom": "咳",
+        "appearance_dt": "2020-08-03",
+        "status_id": 1
+    },
+    {
+        "No": "294",
+        "revealed_dt": "2020-08-03",
+        "old": 50,
+        "sex": 1,
+        "job": "公務員",
+        "symptom": "発熱",
+        "appearance_dt": "2020-07-31",
+        "status_id": 2
     }
 ]
