@@ -1697,7 +1697,7 @@
         "job": "無職",
         "symptom": "下痢",
         "appearance_dt": "2020-07-08",
-        "status_id": 2
+        "status_id": 5
     },
     {
         "No": "171",
@@ -1707,7 +1707,7 @@
         "job": "会社員",
         "symptom": "なし",
         "appearance_dt": "",
-        "status_id": 2
+        "status_id": 5
     },
     {
         "No": "172",
@@ -1717,7 +1717,7 @@
         "job": "会社員",
         "symptom": "なし",
         "appearance_dt": "",
-        "status_id": 2
+        "status_id": 5
     },
     {
         "No": "173",
@@ -1827,7 +1827,7 @@
         "job": "会社員",
         "symptom": "なし",
         "appearance_dt": "",
-        "status_id": 2
+        "status_id": 5
     },
     {
         "No": "184",
@@ -2047,7 +2047,7 @@
         "job": "無職",
         "symptom": "発熱、咳、鼻汁",
         "appearance_dt": "2020-07-18",
-        "status_id": 2
+        "status_id": 5
     },
     {
         "No": "206",
@@ -2107,7 +2107,7 @@
         "job": "会社員",
         "symptom": "咳、嗅覚障害",
         "appearance_dt": "2020-07-13",
-        "status_id": 4
+        "status_id": 5
     },
     {
         "No": "212",
@@ -2137,7 +2137,7 @@
         "job": "無職",
         "symptom": "発熱、鼻閉、味覚障害",
         "appearance_dt": "2020-07-17",
-        "status_id": 2
+        "status_id": 5
     },
     {
         "No": "215",
@@ -2177,7 +2177,7 @@
         "job": "無職",
         "symptom": "なし",
         "appearance_dt": "",
-        "status_id": 2
+        "status_id": 5
     },
     {
         "No": "219",
@@ -2267,7 +2267,7 @@
         "job": "自営業",
         "symptom": "発熱、咳",
         "appearance_dt": "2020-07-16",
-        "status_id": 2
+        "status_id": 4
     },
     {
         "No": "228",
@@ -2277,7 +2277,7 @@
         "job": "会社員",
         "symptom": "発熱、咳",
         "appearance_dt": "2020-07-21",
-        "status_id": 2
+        "status_id": 4
     },
     {
         "No": "229",
@@ -2367,7 +2367,7 @@
         "job": "無職",
         "symptom": "発熱",
         "appearance_dt": "2020-07-23",
-        "status_id": 5
+        "status_id": 2
     },
     {
         "No": "238",
@@ -2457,7 +2457,7 @@
         "job": "会社員",
         "symptom": "発熱、倦怠感、味覚障害、嗅",
         "appearance_dt": "2020-07-23",
-        "status_id": 2
+        "status_id": 5
     },
     {
         "No": "247",
@@ -2507,7 +2507,7 @@
         "job": "会社員",
         "symptom": "味覚障害、嗅覚障害",
         "appearance_dt": "2020-07-18",
-        "status_id": 2
+        "status_id": 5
     },
     {
         "No": "252",
@@ -2938,5 +2938,145 @@
         "symptom": "発熱",
         "appearance_dt": "2020-07-31",
         "status_id": 2
+    },
+    {
+        "No": "295",
+        "revealed_dt": "2020-08-04",
+        "old": 30,
+        "sex": 1,
+        "job": "会社員",
+        "symptom": "発熱、咳、息苦しさ",
+        "appearance_dt": "2020-08-01",
+        "status_id": 2
+    },
+    {
+        "No": "296",
+        "revealed_dt": "2020-08-04",
+        "old": 60,
+        "sex": 1,
+        "job": "会社員",
+        "symptom": "発熱、倦怠感、咽頭痛",
+        "appearance_dt": "2020-08-03",
+        "status_id": 2
+    },
+    {
+        "No": "297",
+        "revealed_dt": "2020-08-04",
+        "old": 10,
+        "sex": 2,
+        "job": "学生",
+        "symptom": "発熱、咳、頭痛",
+        "appearance_dt": "2020-07-29",
+        "status_id": 2
+    },
+    {
+        "No": "298",
+        "revealed_dt": "2020-08-02",
+        "old": 20,
+        "sex": 1,
+        "job": "公務員",
+        "symptom": "味覚障害、嗅覚障害",
+        "appearance_dt": "2020-08-04",
+        "status_id": 1
+    },
+    {
+        "No": "299",
+        "revealed_dt": "2020-08-04",
+        "old": 30,
+        "sex": 1,
+        "job": "会社員",
+        "symptom": "咳",
+        "appearance_dt": "2020-08-02",
+        "status_id": 4
+    },
+    {
+        "No": "300",
+        "revealed_dt": "2020-08-04",
+        "old": 20,
+        "sex": 1,
+        "job": "会社員",
+        "symptom": "発熱、頭痛",
+        "appearance_dt": "2020-07-29",
+        "status_id": 4
+    },
+    {
+        "No": "301",
+        "revealed_dt": "2020-08-04",
+        "old": 20,
+        "sex": 2,
+        "job": "会社員",
+        "symptom": "咳、咽頭痛、痰",
+        "appearance_dt": "2020-07-26",
+        "status_id": 4
+    },
+    {
+        "No": "302",
+        "revealed_dt": "2020-08-01",
+        "old": 30,
+        "sex": 2,
+        "job": "会社員",
+        "symptom": "発熱、呼吸困難",
+        "appearance_dt": "2020-08-04",
+        "status_id": 1
+    },
+    {
+        "No": "303",
+        "revealed_dt": "2020-08-02",
+        "old": 30,
+        "sex": 1,
+        "job": "調査中",
+        "symptom": "発熱",
+        "appearance_dt": "2020-08-04",
+        "status_id": 1
+    },
+    {
+        "No": "304",
+        "revealed_dt": "2020-08-04",
+        "old": 70,
+        "sex": 2,
+        "job": "会社員",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "305",
+        "revealed_dt": "2020-07-30",
+        "old": 40,
+        "sex": 2,
+        "job": "会社員",
+        "symptom": "嗅覚障害",
+        "appearance_dt": "2020-08-04",
+        "status_id": 1
+    },
+    {
+        "No": "306",
+        "revealed_dt": "2020-07-31",
+        "old": 20,
+        "sex": 2,
+        "job": "会社員",
+        "symptom": "発熱、咳",
+        "appearance_dt": "2020-08-04",
+        "status_id": 1
+    },
+    {
+        "No": "307",
+        "revealed_dt": "2020-08-03",
+        "old": 40,
+        "sex": 1,
+        "job": "調査中",
+        "symptom": "発熱.",
+        "appearance_dt": "2020-08-05",
+        "status_id": 1
+    },
+    {
+        "No": "308",
+        "revealed_dt": "2020-08-02",
+        "old": 40,
+        "sex": 1,
+        "job": "学生",
+        "symptom": "発熱、頭痛、倦怠感",
+        "appearance_dt": "2020-08-05",
+        "status_id": 1
     }
 ]
