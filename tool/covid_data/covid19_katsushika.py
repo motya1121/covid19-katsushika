@@ -29,8 +29,8 @@ def check():
 
     get_update_datetime = datetime.datetime.strptime('2020-{0[0]}-{0[1]}'.format(m.groups()), '%Y-%m-%d')
     update_datetime = datetime.datetime.strptime(setting.update_datetime, '%Y-%m-%d %H:%M:%S')
+    update_flag = False
     if update_datetime < get_update_datetime:
-        notify(setting)
         setting.update_datetime = get_update_datetime.strftime('%Y-%m-%d %H:%M:%S')
         setting.public_datetime = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         update_flag = True
@@ -46,6 +46,9 @@ def check():
                                                                                 setting.public_datetime))
 
     setting.dump_setting()
+
+    if update_flag is True:
+        notify(setting)
 
 
 def update():
