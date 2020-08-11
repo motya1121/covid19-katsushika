@@ -33,8 +33,16 @@ class patient_data():
                 if self.no != '':  # noの場合関数終了
                     return
 
-            if self.no == '269':
+            if self.no == '287':
                 self.status_id = 5
+            if self.no == '292':
+                self.status_id = 4
+            if self.no == '293':
+                self.status_id = 3
+            if self.no == '322':
+                self.symptom = '発熱、咳、呼吸困難、倦怠感、筋肉痛、味覚・嗅覚障害、下痢'
+            if self.no == '323':
+                self.symptom = '発熱、頭痛、倦怠感、味覚障害、嗅覚障害'
 
             # 陽性判明日かどうか
             if self.revealed_dt == '':
@@ -332,6 +340,8 @@ def find_textboxes_recursively(layout_obj):
 
 
 def is_skip(text):
+    if text.find('葛飾区内の') != -1:
+        return True
     if text.find('一覧') != -1:
         return True
     elif text.find('備考') != -1:
