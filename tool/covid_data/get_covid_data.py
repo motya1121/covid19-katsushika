@@ -33,6 +33,8 @@ class patient_data():
                 if self.no != '':  # noの場合関数終了
                     return
 
+            if self.no == '315':
+                self.status_id = 5
             if self.no == '322':
                 self.symptom = '発熱、咳、呼吸困難、倦怠感、筋肉痛、味覚・嗅覚障害、下痢'
             if self.no == '323':
