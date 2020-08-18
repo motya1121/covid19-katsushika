@@ -82,6 +82,10 @@ class patient_data():
         '''
 
         if self.no != '' and self.revealed_dt != '' and self.old != '' and self.sex != '' and self.job != '' and self.symptom != '' and self.appearance_dt != '' and self.status_id != '':
+            if self.appearance_dt is not None and self.revealed_dt < self.appearance_dt:
+                temp = self.appearance_dt
+                self.appearance_dt = self.revealed_dt
+                self.revealed_dt = temp
             return True
         else:
             return False

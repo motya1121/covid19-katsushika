@@ -161,12 +161,12 @@
     },
     {
         "No": "17",
-        "revealed_dt": "2020-03-24",
+        "revealed_dt": "2020-04-03",
         "old": 20,
         "sex": 2,
         "job": "会社員",
         "symptom": "発熱、咳、鼻汁、頭痛、倦怠感",
-        "appearance_dt": "2020-04-03",
+        "appearance_dt": "2020-03-24",
         "status_id": 5
     },
     {
@@ -1331,12 +1331,12 @@
     },
     {
         "No": "134",
-        "revealed_dt": "2020-04-27",
+        "revealed_dt": "2020-05-06",
         "old": 20,
         "sex": 2,
         "job": "会社員",
         "symptom": "発熱、頭痛、倦怠感、味覚障害",
-        "appearance_dt": "2020-05-06",
+        "appearance_dt": "2020-04-27",
         "status_id": 5
     },
     {
@@ -1501,12 +1501,12 @@
     },
     {
         "No": "151",
-        "revealed_dt": "2020-06-26",
+        "revealed_dt": "2020-07-04",
         "old": 30,
         "sex": 2,
         "job": "会社員",
         "symptom": "発熱、鼻閉、倦怠感、味覚障害",
-        "appearance_dt": "2020-07-04",
+        "appearance_dt": "2020-06-26",
         "status_id": 5
     },
     {
@@ -1551,12 +1551,12 @@
     },
     {
         "No": "156",
-        "revealed_dt": "2020-07-03",
+        "revealed_dt": "2020-07-08",
         "old": 20,
         "sex": 2,
         "job": "会社員",
         "symptom": "味覚障害、嗅覚障害、咽頭痛",
-        "appearance_dt": "2020-07-08",
+        "appearance_dt": "2020-07-03",
         "status_id": 5
     },
     {
@@ -1601,12 +1601,12 @@
     },
     {
         "No": "161",
-        "revealed_dt": "2020-07-04",
+        "revealed_dt": "2020-07-09",
         "old": 20,
         "sex": 2,
         "job": "会社員",
         "symptom": "発熱、頭痛、関節痛、味覚障害",
-        "appearance_dt": "2020-07-09",
+        "appearance_dt": "2020-07-04",
         "status_id": 5
     },
     {
@@ -2721,12 +2721,12 @@
     },
     {
         "No": "273",
-        "revealed_dt": "2020-07-20",
+        "revealed_dt": "2020-08-01",
         "old": 30,
         "sex": 2,
         "job": "会社員",
         "symptom": "倦怠感、味覚障害、嗅覚障害",
-        "appearance_dt": "2020-08-01",
+        "appearance_dt": "2020-07-20",
         "status_id": 5
     },
     {
@@ -3161,12 +3161,12 @@
     },
     {
         "No": "317",
-        "revealed_dt": "2020-07-31",
+        "revealed_dt": "2020-08-05",
         "old": 20,
         "sex": 2,
         "job": "無職",
         "symptom": "倦怠感、味覚障害、嗅覚障害",
-        "appearance_dt": "2020-08-05",
+        "appearance_dt": "2020-07-31",
         "status_id": 4
     },
     {
@@ -3881,22 +3881,22 @@
     },
     {
         "No": "389",
-        "revealed_dt": "2020-08-08",
+        "revealed_dt": "2020-08-17",
         "old": 20,
         "sex": 2,
         "job": "会社員",
         "symptom": "発熱、咳、鼻閉、関節痛、味覚障害、嗅覚障害",
-        "appearance_dt": "2020-08-17",
+        "appearance_dt": "2020-08-08",
         "status_id": 1
     },
     {
         "No": "390",
-        "revealed_dt": "2020-08-12",
+        "revealed_dt": "2020-08-17",
         "old": 20,
         "sex": 1,
         "job": "会社員",
         "symptom": "発熱、咳",
-        "appearance_dt": "2020-08-17",
+        "appearance_dt": "2020-08-12",
         "status_id": 1
     }
 ]
