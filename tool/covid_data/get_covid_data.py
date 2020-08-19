@@ -33,7 +33,7 @@ class patient_data():
                 if self.no != '':  # noの場合関数終了
                     return
 
-            if self.no == '333':
+            if self.no == '345':
                 self.status_id = 5
 
             # 陽性判明日かどうか
