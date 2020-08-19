@@ -23,7 +23,8 @@ def check():
     soup = BeautifulSoup(urllib.request.urlopen(setting.city_url), 'html.parser')
     update_text = soup.find(text=re.compile("※令和"))
 
-    m = re.match(r'.*(\d+)月(\d+)日発表', update_text)
+    #m = re.match(r'.*(\d+)月(\d+)日発表', update_text)
+    m = re.match(r'.*(\d+)月(\d+)', update_text)
     if m is None:
         return -1
 
