@@ -20,7 +20,7 @@ class setting():
         self.setting_file = os.path.dirname(os.path.abspath(__file__)) + "/setting.json"
         self.notify_token = {}
         self.city_url = ''
-        self.pdf_url = ''
+        self.pdf_urls = ''
         self.survey_datetime = ''
         self.update_datetime = ''
         self.public_datetime = ''
@@ -97,8 +97,8 @@ class setting():
     def dump_setting(self):
         '''jsonファイルに書き出す．クラス内の変数に値が入っている場合はそちらを書き込む
         '''
-        if self.pdf_url != '':
-            self.setting_json['city_setting']['pdf_url'] = self.pdf_url
+        if self.pdf_urls != '':
+            self.setting_json['city_setting']['pdf_urls'] = self.pdf_urls
         if self.survey_datetime != '':
             self.setting_json['city_setting']['survey_datetime'] = self.survey_datetime
         if self.update_datetime != '':

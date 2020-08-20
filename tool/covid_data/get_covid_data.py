@@ -270,45 +270,47 @@ def get_data(setting):
     '''
     # pdf格納用のテンプディレクトリを作成
     with tempfile.TemporaryDirectory() as dname:
-        # pdf取得
-        pdf_path = dname + '/covid_data.pdf'
-        with urllib.request.urlopen(setting.pdf_url) as u:
-            with open(pdf_path, 'bw') as o:
-                o.write(u.read())
+        # 分割されたPDFを1つずつ読み込み・処理
+        for pdf_url in setting.pdf_urls:
+            # pdf取得
+            pdf_path = dname + '/covid_data.pdf'
+            with urllib.request.urlopen(pdf_url) as u:
+                with open(pdf_path, 'bw') as o:
+                    o.write(u.read())
 
-        # pdf解析
-        with open(pdf_path, 'rb') as f:
-            # PDFPage.get_pages()にファイルオブジェクトを指定して、PDFPageオブジェクトを順に取得する。
-            # 時間がかかるファイルは、キーワード引数pagenosで処理するページ番号（0始まり）のリストを指定するとよい。
-            for page in PDFPage.get_pages(f):
-                interpreter.process_page(page)  # ページを処理する。
-                layout = device.get_result()  # LTPageオブジェクトを取得。
+            # pdf解析
+            with open(pdf_path, 'rb') as f:
+                # PDFPage.get_pages()にファイルオブジェクトを指定して、PDFPageオブジェクトを順に取得する。
+                # 時間がかかるファイルは、キーワード引数pagenosで処理するページ番号（0始まり）のリストを指定するとよい。
+                for page in PDFPage.get_pages(f):
+                    interpreter.process_page(page)  # ページを処理する。
+                    layout = device.get_result()  # LTPageオブジェクトを取得。
 
-                # ページ内のテキストボックスのリストを取得する。
-                boxes = find_textboxes_recursively(layout)
+                    # ページ内のテキストボックスのリストを取得する。
+                    boxes = find_textboxes_recursively(layout)
 
-                # テキストボックスの左上の座標の順でテキストボックスをソートする。
-                # y1（Y座標の値）は上に行くほど大きくなるので、正負を反転させている。
-                boxes.sort(key=lambda b: (-b.y1, b.x0))
+                    # テキストボックスの左上の座標の順でテキストボックスをソートする。
+                    # y1（Y座標の値）は上に行くほど大きくなるので、正負を反転させている。
+                    boxes.sort(key=lambda b: (-b.y1, b.x0))
 
-                temp_patient_data = patient_data()
-                for box in boxes:
-                    for text in box.get_text().strip().split():
-                        if is_skip(text) is False:
-                            temp_patient_data.append(text, box)
+                    temp_patient_data = patient_data()
+                    for box in boxes:
+                        for text in box.get_text().strip().split():
+                            if is_skip(text) is False:
+                                temp_patient_data.append(text, box)
+                                if DEBUG:
+                                    print(text)
+                                    print(temp_patient_data)
+                        if temp_patient_data.check_full_data() is True:
                             if DEBUG:
-                                print(text)
-                                print(temp_patient_data)
-                    if temp_patient_data.check_full_data() is True:
-                        if DEBUG:
-                            print('******ここまで {} *****'.format(temp_patient_data.no))
-                            if temp_patient_data.no == DEBUG_PRT_MAX_NO:
-                                exit()
-                        if temp_patient_data.no != str(TEMP_NO - 1):
-                            print("error: no:{}".format(temp_patient_data.no))
-                        TEMP_NO = int(temp_patient_data.no)
-                        patient_datas.append(temp_patient_data)
-                        temp_patient_data = patient_data()
+                                print('******ここまで {} *****'.format(temp_patient_data.no))
+                                if temp_patient_data.no == DEBUG_PRT_MAX_NO:
+                                    exit()
+                            if temp_patient_data.no != str(TEMP_NO - 1):
+                                print("error: no:{}".format(temp_patient_data.no))
+                            TEMP_NO = int(temp_patient_data.no)
+                            patient_datas.append(temp_patient_data)
+                            temp_patient_data = patient_data()
 
     patient_datas.reverse()  # リストを反転させる
     for patient in patient_datas:

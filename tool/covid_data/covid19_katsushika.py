@@ -38,8 +38,11 @@ def check():
     setting.survey_datetime = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
     # PDFのURL取得
-    relative_pdf_link = soup.find(class_="objectlink").find('a').get('href')
-    setting.pdf_url = urllib.parse.urljoin(setting.city_url, relative_pdf_link)
+    setting.pdf_urls = []
+    relative_pdf_links = soup.find(class_="objectlink").find_all('a')
+    for link in relative_pdf_links:
+        if link.get('href').find('itiran') != -1:
+            setting.pdf_urls.append(urllib.parse.urljoin(setting.city_url, link.get('href')))
 
     # 時刻のログを表示
     print('survey_datetime={}\nupdate_datetime={}\npublic_datetime={}\n'.format(setting.survey_datetime,
