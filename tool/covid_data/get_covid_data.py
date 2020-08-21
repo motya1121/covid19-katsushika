@@ -51,7 +51,7 @@ class patient_data():
                 self.status_id = 5
             if self.no == '244':
                 self.status_id = 5
-            if self.no == '347':
+            if self.no == '357':
                 self.status_id = 5
 
             # 陽性判明日かどうか
