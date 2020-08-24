@@ -51,7 +51,7 @@ class patient_data():
                 self.status_id = 5
             if self.no == '244':
                 self.status_id = 5
-            if self.no == '357':
+            if self.no == '369':
                 self.status_id = 5
 
             # 陽性判明日かどうか
@@ -231,6 +231,8 @@ class patient_data():
         if text.find('咽頭痛') != -1:
             return text
         if text.find('意識障害') != -1:
+            return text
+        if text.find('食欲不振') != -1:
             return text
         return ''
 
