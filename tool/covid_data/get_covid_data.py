@@ -33,27 +33,6 @@ class patient_data():
                 if self.no != '':  # noの場合関数終了
                     return
 
-            if self.no == '38':
-                self.status_id = 5
-            if self.no == '43':
-                self.status_id = 5
-            if self.no == '44':
-                self.status_id = 5
-            if self.no == '138':
-                self.status_id = 5
-            if self.no == '143':
-                self.status_id = 5
-            if self.no == '144':
-                self.status_id = 5
-            if self.no == '238':
-                self.status_id = 5
-            if self.no == '243':
-                self.status_id = 5
-            if self.no == '244':
-                self.status_id = 5
-            if self.no == '369':
-                self.status_id = 5
-
             # 陽性判明日かどうか
             if self.revealed_dt == '':
                 self.revealed_dt = self.check_date(text)
