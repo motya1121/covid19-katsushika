@@ -21,6 +21,7 @@ class setting():
         self.notify_token = {}
         self.city_url = ''
         self.pdf_urls = ''
+        self.pdf_joukyou_url = ''
         self.survey_datetime = ''
         self.update_datetime = ''
         self.public_datetime = ''
@@ -99,6 +100,8 @@ class setting():
         '''
         if self.pdf_urls != '':
             self.setting_json['city_setting']['pdf_urls'] = self.pdf_urls
+        if self.pdf_joukyou_url != '':
+            self.setting_json['city_setting']['pdf_joukyou_url'] = self.pdf_joukyou_url
         if self.survey_datetime != '':
             self.setting_json['city_setting']['survey_datetime'] = self.survey_datetime
         if self.update_datetime != '':
