@@ -43,7 +43,8 @@ def check():
     for link in relative_pdf_links:
         if link.get('href').find('itiran') != -1 or link.get('href').find('a.pdf') != -1 or link.get('href').find('b.pdf') != -1:
             setting.pdf_urls.append(urllib.parse.urljoin(setting.city_url, link.get('href')))
-    setting.pdf_joukyou_url = setting.pdf_urls[0].replace('itiranpdf', 'zokusei')
+        if link.get('href').find('zokusei') != -1:
+            setting.pdf_joukyou_url = urllib.parse.urljoin(setting.city_url, link.get('href'))
 
     # 時刻のログを表示
     print('survey_datetime={}\nupdate_datetime={}\npublic_datetime={}\n'.format(setting.survey_datetime,
