@@ -16,7 +16,7 @@ def notify(setting):
         setting_json = json.load(f)
         headers = {'Content-Type': 'application/json'}
         message = '感染者情報が更新されました．\n<{0}|葛飾区内の新型コロナウイルス感染者発生状況>\n{1}<{2}|感染者属性別集計表>'.format(
-            setting.city_url, ichiran_msg, syukei)
+            setting.city_url, ichiran_msg, setting.pdf_joukyou_url)
 
         post_data = {'blocks': [{'type': 'section', 'text': {'type': 'mrkdwn', 'text': message}}]}
         req = urllib.request.Request(setting_json['slack_url'],
