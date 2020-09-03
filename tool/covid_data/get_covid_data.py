@@ -110,11 +110,11 @@ class patient_data():
 
     def check_old(self, text):
         # oldでhない場合
-        if text.find('代') == -1 and text.find('未満') == -1 and text.find('以上') == -1:
+        if text.find('代') == -1 and text.find('未満') == -1 and text.find('(cid:7053)(cid:8246)') == -1 and text.find('以上') == -1:
             return ''
 
         # oldの場合
-        if text.find('未満') != -1:
+        if text.find('未満') != -1 or text.find('(cid:7053)(cid:8246)') == -1:
             return 0
         if text.find('１０') != -1:
             return 10
@@ -196,6 +196,8 @@ class patient_data():
         if text.find('鼻汁') != -1:
             return text
         if text.find('関節痛') != -1:
+            return text
+        if text.find('筋肉痛') != -1:
             return text
         if text.find('鼻閉') != -1:
             return text
