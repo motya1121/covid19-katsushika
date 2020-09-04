@@ -114,7 +114,7 @@ class patient_data():
             return ''
 
         # oldの場合
-        if text.find('未満') != -1 or text.find('(cid:7053)(cid:8246)') == -1:
+        if text.find('未満') != -1 or text.find('(cid:7053)(cid:8246)') != -1:
             return 0
         if text.find('１０') != -1:
             return 10
