@@ -7,6 +7,8 @@ from pdfminer.pdfpage import PDFPage
 import tempfile
 import urllib.request
 import datetime
+import json
+import os
 
 DEBUG = False
 DEBUG_PRT_MAX_NO = '150'
@@ -220,7 +222,7 @@ class patient_data():
     def get_status_id(self, coordinate):
         if 365 <= coordinate and coordinate <= 415:
             return 1
-        elif 420 <= coordinate and coordinate <= 433:
+        elif 420 <= coordinate and coordinate <= 435:
             return 2
         elif 450 <= coordinate and coordinate <= 460:
             return 3
@@ -263,7 +265,7 @@ def get_data(setting):
     interpreter = PDFPageInterpreter(resource_manager, device)
     # 返却する辞書
     ret_data = []
-    patient_datas = []
+    patient_datas_o300 = []
     TEMP_NO = 0
 
     '''
@@ -310,10 +312,33 @@ def get_data(setting):
                             if temp_patient_data.no != str(TEMP_NO - 1):
                                 print("error: no:{}".format(temp_patient_data.no))
                             TEMP_NO = int(temp_patient_data.no)
-                            patient_datas.append(temp_patient_data)
+                            patient_datas_o300.append(temp_patient_data)
                             temp_patient_data = patient_data()
+    patient_datas_o300.reverse()  # リストを反転させる
 
-    patient_datas.reverse()  # リストを反転させる
+    # 1-300のデータを処理
+    row_datas = []
+    patient_datas_u300 = []
+    with open(os.path.dirname(os.path.abspath(__file__)) + "/data/row_data.json", "r") as f:
+        row_datas = json.load(f)
+    for row_data in row_datas:
+        if row_data['No'] == '301':
+            break
+        temp_patient_data = patient_data()
+        temp_patient_data.no = row_data['No']
+        temp_patient_data.revealed_dt = datetime.datetime.strptime(row_data['revealed_dt'], '%Y-%m-%d')
+        temp_patient_data.old = row_data['old']
+        temp_patient_data.sex = row_data['sex']
+        temp_patient_data.job = row_data['job']
+        temp_patient_data.symptom = row_data['symptom']
+        if row_data['appearance_dt'] == '':
+            temp_patient_data.appearance_dt = None
+        else:
+            temp_patient_data.appearance_dt = datetime.datetime.strptime(row_data['appearance_dt'], '%Y-%m-%d')
+        temp_patient_data.status_id = row_data['status_id']
+        patient_datas_u300.append(temp_patient_data)
+
+    patient_datas = patient_datas_u300 + patient_datas_o300
     for patient in patient_datas:
         ret_data.append(patient.export_dict())
     return ret_data
