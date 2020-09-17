@@ -4427,7 +4427,7 @@
         "job": "会社員",
         "symptom": "発熱",
         "appearance_dt": "2020-08-27",
-        "status_id": 2
+        "status_id": 5
     },
     {
         "No": "444",
@@ -4687,7 +4687,7 @@
         "job": "会社員",
         "symptom": "なし",
         "appearance_dt": "",
-        "status_id": 4
+        "status_id": 5
     },
     {
         "No": "470",
@@ -4697,7 +4697,7 @@
         "job": "学生",
         "symptom": "なし",
         "appearance_dt": "",
-        "status_id": 4
+        "status_id": 5
     },
     {
         "No": "471",
@@ -5277,7 +5277,7 @@
         "job": "自営業",
         "symptom": "発熱、咳、頭痛",
         "appearance_dt": "2020-09-06",
-        "status_id": 3
+        "status_id": 5
     },
     {
         "No": "529",
@@ -5307,7 +5307,7 @@
         "job": "自営業",
         "symptom": "発熱、咳",
         "appearance_dt": "2020-09-04",
-        "status_id": 4
+        "status_id": 5
     },
     {
         "No": "532",
@@ -5357,7 +5357,7 @@
         "job": "調査中",
         "symptom": "発熱、咳、味覚障害",
         "appearance_dt": "2020-09-04",
-        "status_id": 2
+        "status_id": 5
     },
     {
         "No": "537",
@@ -5477,7 +5477,7 @@
         "job": "学生",
         "symptom": "倦怠感",
         "appearance_dt": "2020-09-07",
-        "status_id": 3
+        "status_id": 5
     },
     {
         "No": "549",
@@ -5557,6 +5557,46 @@
         "job": "学生",
         "symptom": "なし",
         "appearance_dt": "",
+        "status_id": 3
+    },
+    {
+        "No": "557",
+        "revealed_dt": "2020-09-16",
+        "old": 30,
+        "sex": 2,
+        "job": "会社員",
+        "symptom": "発熱、味覚障害、嗅覚障害",
+        "appearance_dt": "2020-09-10",
+        "status_id": 4
+    },
+    {
+        "No": "558",
+        "revealed_dt": "2020-09-16",
+        "old": 30,
+        "sex": 1,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "559",
+        "revealed_dt": "2020-09-16",
+        "old": 10,
+        "sex": 1,
+        "job": "学生",
+        "symptom": "咳",
+        "appearance_dt": "2020-09-14",
+        "status_id": 1
+    },
+    {
+        "No": "560",
+        "revealed_dt": "2020-09-16",
+        "old": 30,
+        "sex": 2,
+        "job": "会社員",
+        "symptom": "発熱",
+        "appearance_dt": "2020-09-14",
         "status_id": 1
     }
 ]
