@@ -224,7 +224,9 @@ class patient_data():
         return ''
 
     def get_status_id(self, coordinate):
-        if 238 <= coordinate and coordinate <= 415:
+        # DEBUG
+        # print(self.no, coordinate)
+        if 190 <= coordinate and coordinate <= 415:
             return 1
         elif 420 <= coordinate and coordinate <= 435:
             return 2
