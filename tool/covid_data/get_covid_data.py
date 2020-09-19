@@ -33,6 +33,10 @@ class patient_data():
             if self.no == '':  # 未取得の場合
                 self.no = self.check_no(text)
                 if self.no != '':  # noの場合関数終了
+                    if self.no != 510:
+                        self.symptom = "発熱、咳、鼻汁、鼻閉、頭痛、倦怠感、関節痛、味覚・嗅覚障害"
+                    if self.no != 509:
+                        self.symptom = "発熱、咳、倦怠感、味覚障害、嗅覚障害"
                     return
 
             # 陽性判明日かどうか
