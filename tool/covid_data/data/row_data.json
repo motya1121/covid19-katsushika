@@ -4357,7 +4357,7 @@
         "job": "調査中",
         "symptom": "発熱、咳、倦怠感、味覚障害、嗅覚障害",
         "appearance_dt": "2020-08-26",
-        "status_id": 2
+        "status_id": 5
     },
     {
         "No": "437",
@@ -5397,7 +5397,7 @@
         "job": "会社員",
         "symptom": "発熱、咳、倦怠感、味覚障害、嗅覚障害発熱、咳、頭痛、関節痛",
         "appearance_dt": "2020-09-11",
-        "status_id": 2
+        "status_id": 5
     },
     {
         "No": "541",
@@ -5577,7 +5577,7 @@
         "job": "無職",
         "symptom": "発熱、咳、倦怠感、味覚障害、嗅覚障害",
         "appearance_dt": "",
-        "status_id": 3
+        "status_id": 5
     },
     {
         "No": "559",
@@ -5597,7 +5597,7 @@
         "job": "会社員",
         "symptom": "発熱、咳、倦怠感、味覚障害、嗅覚障害発熱",
         "appearance_dt": "2020-09-14",
-        "status_id": 1
+        "status_id": 5
     },
     {
         "No": "561",
@@ -5847,7 +5847,7 @@
         "job": "会社員",
         "symptom": "発熱、咳、倦怠感、味覚障害、嗅覚障害発熱、咳",
         "appearance_dt": "2020-09-16",
-        "status_id": 2
+        "status_id": 5
     },
     {
         "No": "586",
@@ -5937,7 +5937,7 @@
         "job": "学生",
         "symptom": "発熱、咳、倦怠感、味覚障害、嗅覚障害発熱、関節痛、咽頭痛",
         "appearance_dt": "2020-09-22",
-        "status_id": 1
+        "status_id": 3
     },
     {
         "No": "595",
@@ -6007,7 +6007,7 @@
         "job": "会社員",
         "symptom": "発熱、咳、倦怠感、味覚障害、嗅覚障害",
         "appearance_dt": "",
-        "status_id": 1
+        "status_id": 3
     },
     {
         "No": "602",
@@ -6017,7 +6017,7 @@
         "job": "学生",
         "symptom": "発熱、咳、倦怠感、味覚障害、嗅覚障害",
         "appearance_dt": "",
-        "status_id": 1
+        "status_id": 3
     },
     {
         "No": "603",
@@ -6027,6 +6027,206 @@
         "job": "会社員",
         "symptom": "発熱、咳、倦怠感、味覚障害、嗅覚障害発熱、鼻汁、下痢",
         "appearance_dt": "2020-09-22",
-        "status_id": 1
+        "status_id": 3
+    },
+    {
+        "No": "604",
+        "revealed_dt": "2020-09-25",
+        "old": 30,
+        "sex": 2,
+        "job": "会社員",
+        "symptom": "発熱、咳、倦怠感、味覚障害、嗅覚障害発熱、咳、頭痛",
+        "appearance_dt": "2020-09-18",
+        "status_id": 4
+    },
+    {
+        "No": "605",
+        "revealed_dt": "2020-09-25",
+        "old": 20,
+        "sex": 2,
+        "job": "医療従事者",
+        "symptom": "発熱、咳、倦怠感、味覚障害、嗅覚障害発熱、咳",
+        "appearance_dt": "2020-09-20",
+        "status_id": 3
+    },
+    {
+        "No": "606",
+        "revealed_dt": "2020-09-25",
+        "old": 60,
+        "sex": 2,
+        "job": "会社員",
+        "symptom": "発熱、咳、倦怠感、味覚障害、嗅覚障害発熱、咳",
+        "appearance_dt": "2020-09-24",
+        "status_id": 3
+    },
+    {
+        "No": "607",
+        "revealed_dt": "2020-09-25",
+        "old": 40,
+        "sex": 2,
+        "job": "会社員",
+        "symptom": "発熱、咳、倦怠感、味覚障害、嗅覚障害咳",
+        "appearance_dt": "2020-09-23",
+        "status_id": 2
+    },
+    {
+        "No": "608",
+        "revealed_dt": "2020-09-25",
+        "old": 20,
+        "sex": 1,
+        "job": "会社員",
+        "symptom": "発熱、咳、倦怠感、味覚障害、嗅覚障害咳、咽頭痛、痰",
+        "appearance_dt": "2020-09-18",
+        "status_id": 2
+    },
+    {
+        "No": "609",
+        "revealed_dt": "2020-09-25",
+        "old": 20,
+        "sex": 2,
+        "job": "会社員",
+        "symptom": "発熱、咳、倦怠感、味覚障害、嗅覚障害発熱、咳",
+        "appearance_dt": "2020-09-21",
+        "status_id": 4
+    },
+    {
+        "No": "610",
+        "revealed_dt": "2020-09-25",
+        "old": 30,
+        "sex": 1,
+        "job": "会社員",
+        "symptom": "発熱、咳、倦怠感、味覚障害、嗅覚障害",
+        "appearance_dt": "2020-09-19",
+        "status_id": 3
+    },
+    {
+        "No": "611",
+        "revealed_dt": "2020-09-25",
+        "old": 20,
+        "sex": 1,
+        "job": "会社員",
+        "symptom": "発熱、咳、倦怠感、味覚障害、嗅覚障害",
+        "appearance_dt": "",
+        "status_id": 4
+    },
+    {
+        "No": "612",
+        "revealed_dt": "2020-09-25",
+        "old": 80,
+        "sex": 1,
+        "job": "無職",
+        "symptom": "発熱、咳、倦怠感、味覚障害、嗅覚障害発熱",
+        "appearance_dt": "2020-09-24",
+        "status_id": 2
+    },
+    {
+        "No": "613",
+        "revealed_dt": "2020-09-25",
+        "old": 40,
+        "sex": 1,
+        "job": "会社員",
+        "symptom": "発熱、咳、倦怠感、味覚障害、嗅覚障害",
+        "appearance_dt": "",
+        "status_id": 4
+    },
+    {
+        "No": "614",
+        "revealed_dt": "2020-09-26",
+        "old": 50,
+        "sex": 1,
+        "job": "会社員",
+        "symptom": "発熱、咳、倦怠感、味覚障害、嗅覚障害発熱",
+        "appearance_dt": "2020-09-22",
+        "status_id": 4
+    },
+    {
+        "No": "615",
+        "revealed_dt": "2020-09-26",
+        "old": 20,
+        "sex": 2,
+        "job": "会社員",
+        "symptom": "発熱、咳、倦怠感、味覚障害、嗅覚障害",
+        "appearance_dt": "2020-09-20",
+        "status_id": 2
+    },
+    {
+        "No": "616",
+        "revealed_dt": "2020-09-26",
+        "old": 30,
+        "sex": 1,
+        "job": "会社員",
+        "symptom": "発熱、咳、倦怠感、味覚障害、嗅覚障害発熱",
+        "appearance_dt": "2020-09-21",
+        "status_id": 3
+    },
+    {
+        "No": "617",
+        "revealed_dt": "2020-09-26",
+        "old": 50,
+        "sex": 2,
+        "job": "会社員",
+        "symptom": "発熱、咳、倦怠感、味覚障害、嗅覚障害発熱",
+        "appearance_dt": "2020-09-21",
+        "status_id": 4
+    },
+    {
+        "No": "618",
+        "revealed_dt": "2020-09-26",
+        "old": 60,
+        "sex": 1,
+        "job": "無職",
+        "symptom": "発熱、咳、倦怠感、味覚障害、嗅覚障害発熱、咳、頭痛",
+        "appearance_dt": "2020-09-24",
+        "status_id": 2
+    },
+    {
+        "No": "619",
+        "revealed_dt": "2020-09-26",
+        "old": 60,
+        "sex": 2,
+        "job": "会社員",
+        "symptom": "発熱、咳、倦怠感、味覚障害、嗅覚障害咳、頭痛、下痢",
+        "appearance_dt": "2020-09-20",
+        "status_id": 4
+    },
+    {
+        "No": "620",
+        "revealed_dt": "2020-09-26",
+        "old": 30,
+        "sex": 1,
+        "job": "会社員",
+        "symptom": "発熱、咳、倦怠感、味覚障害、嗅覚障害発熱、咳、頭痛、倦怠感",
+        "appearance_dt": "2020-09-24",
+        "status_id": 4
+    },
+    {
+        "No": "621",
+        "revealed_dt": "2020-09-26",
+        "old": 20,
+        "sex": 2,
+        "job": "会社員",
+        "symptom": "発熱、咳、倦怠感、味覚障害、嗅覚障害",
+        "appearance_dt": "2020-09-22",
+        "status_id": 4
+    },
+    {
+        "No": "622",
+        "revealed_dt": "2020-09-26",
+        "old": 10,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "発熱、咳、倦怠感、味覚障害、嗅覚障害倦怠感、吐気",
+        "appearance_dt": "2020-09-22",
+        "status_id": 4
+    },
+    {
+        "No": "623",
+        "revealed_dt": "2020-09-27",
+        "old": 0,
+        "sex": 2,
+        "job": "－",
+        "symptom": "発熱、咳、倦怠感、味覚障害、嗅覚障害発熱",
+        "appearance_dt": "2020-09-21",
+        "status_id": 4
     }
 ]
