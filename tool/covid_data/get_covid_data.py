@@ -167,7 +167,7 @@ class patient_data():
             return '医療従事者'
         elif text.find('公務員') != -1 or text.find('(cid:3510)(cid:3771)員') != -1:
             return '公務員'
-        elif text.find('調査中') != -1:
+        elif text.find('調査中') != -1 or text.find('調(cid:7197)(cid:2928)') != -1:
             return '調査中'
         else:
             return ''
