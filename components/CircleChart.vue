@@ -102,14 +102,14 @@ export default {
       type: Number
     },
     StartDateString: {
-      type: Date,
+      type: String,
       required: true
     },
     EndDate: {
       type: Number
     },
     EndDateString: {
-      type: Date,
+      type: String,
       required: true
     }
   },

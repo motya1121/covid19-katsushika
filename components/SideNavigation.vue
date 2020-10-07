@@ -116,7 +116,7 @@ export default Vue.extend({
           icon: 'CovidIcon',
           title: this.$t('新型コロナウイルス感染症が心配なときに'),
           link:
-            'http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/koronasoudan.pdf',
+            'http://www.city.katsushika.lg.jp/information/kouho/1005542/1023004.html',
           divider: true
         },
         {
