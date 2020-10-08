@@ -11,7 +11,7 @@ import json
 import os
 
 DEBUG = False
-DEBUG_PRT_MAX_NO = '150'
+DEBUG_PRT_MAX_NO = '408'
 
 class patient_data():
     def __init__(self):
@@ -26,17 +26,25 @@ class patient_data():
         self.temp_data = []
 
     def append(self, text, box):
-        if text.find('○') != -1:  # '◯'の場合
+        if text.find('○') != -1 or text.find('〇') != -1:  # '◯'の場合
             self.status_id = self.get_status_id(box.x0)
         else:
             # noかどうか
             if self.no == '':  # 未取得の場合
                 self.no = self.check_no(text)
                 if self.no != '':  # noの場合関数終了
-                    if self.no != 510:
+                    if self.no == '510':
                         self.symptom = "発熱、咳、鼻汁、鼻閉、頭痛、倦怠感、関節痛、味覚・嗅覚障害"
-                    if self.no != 509:
+                    if self.no == '509':
                         self.symptom = "発熱、咳、倦怠感、味覚障害、嗅覚障害"
+                    if self.no == '411':
+                        self.symptom = "発熱、咳、呼吸困難、頭痛、倦怠感、筋肉痛、味覚・嗅覚障害"
+                    if self.no == '410':
+                        self.symptom = "発熱、倦怠感、味覚障害、嗅覚障害"
+                    if self.no == '319':
+                        self.symptom = "発熱、咳、呼吸困難、倦怠感、筋肉痛、味覚・嗅覚障害、下痢"
+                    if self.no == '318':
+                        self.symptom = "なし"
                     return
 
             # 陽性判明日かどうか
@@ -220,6 +228,8 @@ class patient_data():
         if text.find('意識障害') != -1:
             return text
         if text.find('食欲不振') != -1:
+            return text
+        if text.find('頭(cid:13596)感') != -1:
             return text
         return ''
 
