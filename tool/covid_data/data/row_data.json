@@ -7068,5 +7068,35 @@
         "symptom": "発熱、咳、鼻汁、嗅覚障害",
         "appearance_dt": "2020-10-08",
         "status_id": 2
+    },
+    {
+        "No": "708",
+        "revealed_dt": "2020-10-14",
+        "old": 20,
+        "sex": 1,
+        "job": "会社員",
+        "symptom": "発熱、咳、倦怠感",
+        "appearance_dt": "2020-10-13",
+        "status_id": 2
+    },
+    {
+        "No": "709",
+        "revealed_dt": "2020-10-14",
+        "old": 40,
+        "sex": 1,
+        "job": "自営業",
+        "symptom": "発熱、咳",
+        "appearance_dt": "2020-10-12",
+        "status_id": 4
+    },
+    {
+        "No": "710",
+        "revealed_dt": "2020-10-14",
+        "old": 20,
+        "sex": 1,
+        "job": "会社員",
+        "symptom": "なし",
+        "appearance_dt": "2020-10-01",
+        "status_id": 5
     }
 ]
