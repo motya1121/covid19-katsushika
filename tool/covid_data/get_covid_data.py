@@ -161,7 +161,7 @@ class patient_data():
     def checl_job(self, text):
         # －の場合の処理
         if text.find('－') != -1 or text.find('ー') != -1:
-                return text
+            return text
 
         if text.find('無職') != -1:
             return '無職'
@@ -171,7 +171,7 @@ class patient_data():
             return '学生'
         elif text.find('自営業') != -1:
             return '自営業'
-        elif text.find('医療従事者') != -1:
+        elif text.find('医療従事者') != -1 or text.find('(cid:3851)療(cid:5777)(cid:2982)者') != -1:
             return '医療従事者'
         elif text.find('公務員') != -1 or text.find('(cid:3510)(cid:3771)員') != -1:
             return '公務員'
@@ -203,8 +203,8 @@ class patient_data():
             return text
         if text.find('倦怠感') != -1:
             return text
-        if text.find('下痢') != -1:
-            return text
+        if text.find('下痢') != -1 or text.find('(cid:2903)(cid:9321)') != -1:
+            return '下痢'
         if text.find('頭痛') != -1:
             return text
         if text.find('鼻汁') != -1:
@@ -423,4 +423,3 @@ def is_skip(text):
     elif text.find('ｺﾛﾅ以外') != -1:
         return True
     return False
-
