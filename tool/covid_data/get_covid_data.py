@@ -229,7 +229,7 @@ class patient_data():
             return text
         if text.find('食欲不振') != -1:
             return text
-        if text.find('頭(cid:13596)感') != -1:
+        if text.find('頭重感') != -1 or text.find('頭(cid:13596)感') != -1:
             return text
         return ''
 
