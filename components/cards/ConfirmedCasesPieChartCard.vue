@@ -74,6 +74,10 @@ export default {
         {
           age: '80代',
           number: 0
+        },
+        {
+          age: '90代',
+          number: 0
         }
       ]
       for (const patient of Data.patients.data) {
