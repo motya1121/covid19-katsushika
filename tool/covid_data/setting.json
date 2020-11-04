@@ -5,14 +5,14 @@
     "city_setting": {
         "city_url": "http://www.city.katsushika.lg.jp/kurashi/1000050/1001797/1023014.html",
         "pdf_urls": [
-            "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/021102itirann.pdf",
+            "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/021104itiran.pdf",
             "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/1030itirann600.pdf",
             "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/021030itirann500.pdf",
             "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/021014itirann400.pdf"
         ],
-        "pdf_joukyou_url": "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/021102zokusei.pdf",
-        "survey_datetime": "2020-11-02 17:17:02",
-        "update_datetime": "2020-11-02 00:00:00",
-        "public_datetime": "2020-11-02 17:16:02"
+        "pdf_joukyou_url": "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/021104zokusei.pdf",
+        "survey_datetime": "2020-11-05 00:16:02",
+        "update_datetime": "2020-11-04 00:00:00",
+        "public_datetime": "2020-11-05 00:16:02"
     }
 }
