@@ -169,6 +169,8 @@ class patient_data():
             return '会社員'
         elif text.find('学生') != -1:
             return '学生'
+        elif text.find('生徒') != -1:
+            return '生徒'
         elif text.find('自営業') != -1:
             return '自営業'
         elif text.find('医療従事者') != -1 or text.find('(cid:3851)療(cid:5777)(cid:2982)者') != -1:
