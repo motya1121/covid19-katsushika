@@ -109,7 +109,8 @@ class patient_data():
 
     def check_date(self, text):
         # －の場合の処理
-        if text.find('－') != -1 or text.find('ー') != -1 or text.find('-') != -1:
+        if text.find('－') != -1 or text.find('ー') != -1 or text.find('-') != -1 or text.find('―') != -1 or text.find(
+                '(cid:16089)') != -1:
             if self.job != '':
                 return None
             else:
@@ -160,7 +161,8 @@ class patient_data():
 
     def checl_job(self, text):
         # －の場合の処理
-        if text.find('－') != -1 or text.find('ー') != -1 or text.find('-') != -1:
+        if text.find('－') != -1 or text.find('ー') != -1 or text.find('-') != -1 or text.find('―') != -1 or text.find(
+                '(cid:16089)') != -1:
             return text
 
         if text.find('無職') != -1:
@@ -217,7 +219,7 @@ class patient_data():
             return text
         if text.find('筋肉痛') != -1:
             return text
-        if text.find('鼻閉') != -1:
+        if text.find('鼻閉') != -1 or text.find('鼻(cid:14050)') != -1:
             return text
         if text.find('痰') != -1:
             return text
