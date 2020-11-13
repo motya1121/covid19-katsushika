@@ -11,7 +11,7 @@ import json
 import os
 
 DEBUG = False
-DEBUG_PRT_MAX_NO = '408'
+DEBUG_PRT_MAX_NO = '800'
 
 class patient_data():
     def __init__(self):
@@ -45,6 +45,22 @@ class patient_data():
                         self.symptom = "発熱、咳、呼吸困難、倦怠感、筋肉痛、味覚・嗅覚障害、下痢"
                     if self.no == '318':
                         self.symptom = "なし"
+                    if self.no == '801':
+                        self.old = 40
+                    elif self.no == '802':
+                        self.old = 0
+                    elif self.no == '803':
+                        self.old = 90
+                    elif self.no == '804':
+                        self.old = 20
+                    elif self.no == '805':
+                        self.old = 70
+                    elif self.no == '806':
+                        self.old = 80
+                    elif self.no == '807':
+                        self.old = 70
+                    elif self.no == '808':
+                        self.old = 30
                     return
 
             # 陽性判明日かどうか
