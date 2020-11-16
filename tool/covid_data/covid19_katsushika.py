@@ -41,8 +41,8 @@ def check():
     setting.pdf_urls = []
     relative_pdf_links = soup.find(class_="objectlink").find_all('a')
     for link in relative_pdf_links:
-        if link.get('href').find('itiran') != -1 or link.get('href').find('ituran') != -1 or link.get('href').find(
-                'a.pdf') != -1 or link.get('href').find('b.pdf') != -1 or link.get('href').find('sui600-') != -1:
+        a_text = link.text
+        if a_text.find('一覧') != -1:
             setting.pdf_urls.append(urllib.parse.urljoin(setting.city_url, link.get('href')))
         if link.get('href').find('zokusei') != -1 or link.get('href').find('zolusei') != -1 or link.get('href').find('zousei') != -1:
             setting.pdf_joukyou_url = urllib.parse.urljoin(setting.city_url, link.get('href'))
