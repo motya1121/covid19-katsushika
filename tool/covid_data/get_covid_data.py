@@ -11,7 +11,7 @@ import json
 import os
 
 DEBUG = False
-DEBUG_PRT_MAX_NO = '800'
+DEBUG_PRT_MAX_NO = '895'
 
 class patient_data():
     def __init__(self):
@@ -236,7 +236,7 @@ class patient_data():
         if text.find('筋肉痛') != -1:
             return text
         if text.find('鼻閉') != -1 or text.find('鼻(cid:14050)') != -1:
-            return text
+            return '鼻閉'
         if text.find('痰') != -1:
             return text
         if text.find('肺炎') != -1:
@@ -251,10 +251,17 @@ class patient_data():
             return text
         if text.find('食欲不振') != -1:
             return text
-        if text.find('扁桃炎') != -1 or text.find('(cid:6245)(cid:7240)(cid:8534)') != -1:
-            return text
+        if text.find('扁桃炎') != -1 or text.find('(cid:6245)(cid:7240)(cid:8534)') != -1 or text.find(
+                '(cid:6245)(cid:7240)炎') != -1:
+            return '扁桃炎'
         if text.find('頭重感') != -1 or text.find('頭(cid:13596)感') != -1:
+            return '頭重感'
+        if text == '0':
+            return 'None'
+        if text.find('声がかすれる') != -1:
             return text
+        if text.find('胸痛') != -1 or text.find('(cid:11034)痛') != -1:
+            return '胸痛'
         return ''
 
     def get_status_id(self, coordinate):
