@@ -11,7 +11,7 @@ import json
 import os
 
 DEBUG = False
-DEBUG_PRT_MAX_NO = '895'
+DEBUG_PRT_MAX_NO = '957'
 
 class patient_data():
     def __init__(self):
@@ -229,8 +229,8 @@ class patient_data():
             return '下痢'
         if text.find('頭痛') != -1:
             return text
-        if text.find('鼻汁') != -1:
-            return text
+        if text.find('鼻汁') != -1 or text.find('鼻(cid:7890)') != -1:
+            return '鼻汁'
         if text.find('関節痛') != -1:
             return text
         if text.find('筋肉痛') != -1:
@@ -258,8 +258,9 @@ class patient_data():
             return '頭重感'
         if text == '0':
             return 'None'
-        if text.find('声がかすれる') != -1:
-            return text
+        if text.find('声がかすれる') != -1 or text.find(
+                '(cid:4748)(cid:18140)(cid:18139)(cid:18153)(cid:18204)(cid:18203)') != -1:
+            return '声がかすれる'
         if text.find('胸痛') != -1 or text.find('(cid:11034)痛') != -1:
             return '胸痛'
         return ''
