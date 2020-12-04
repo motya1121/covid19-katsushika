@@ -11,7 +11,7 @@ import json
 import os
 
 DEBUG = False
-DEBUG_PRT_MAX_NO = '957'
+DEBUG_PRT_MAX_NO = '1105'
 
 class patient_data():
     def __init__(self):
@@ -357,6 +357,9 @@ def get_data(setting):
                                 print('******ここまで {} *****'.format(temp_patient_data.no))
                                 if temp_patient_data.no == DEBUG_PRT_MAX_NO:
                                     exit()
+                            if is_Acquired(patient_datas_o700, temp_patient_data) is True:
+                                temp_patient_data = patient_data()
+                                continue
                             if temp_patient_data.no != str(TEMP_NO - 1):
                                 print("error: no:{}".format(temp_patient_data.no))
                             TEMP_NO = int(temp_patient_data.no)
@@ -390,6 +393,14 @@ def get_data(setting):
     for patient in patient_datas:
         ret_data.append(patient.export_dict())
     return ret_data
+
+
+def is_Acquired(patient_datas, temp_patient_data):
+    for patient_data in patient_datas:
+        if patient_data.no == temp_patient_data.no:
+            return True
+    return False
+
 
 
 def find_textboxes_recursively(layout_obj):
