@@ -11,7 +11,7 @@ import json
 import os
 
 DEBUG = False
-DEBUG_PRT_MAX_NO = '1258'
+DEBUG_PRT_MAX_NO = '1242'
 
 class patient_data():
     def __init__(self):
@@ -265,7 +265,7 @@ class patient_data():
             return '声がかすれる'
         if text.find('胸痛') != -1 or text.find('(cid:11034)痛') != -1:
             return '胸痛'
-        if text.find('腰痛') != -1:
+        if text.find('腰痛') != -1 or text.find('(cid:11100)痛') != -1:
             return text
         return ''
 
