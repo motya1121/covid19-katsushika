@@ -7235,7 +7235,7 @@
         "old": 30,
         "sex": 2,
         "job": "会社員",
-        "symptom": "発熱、咳、(cid:4119)頭痛",
+        "symptom": "発熱、咳、咽頭痛",
         "appearance_dt": "2020-10-10",
         "status_id": 5
     },
@@ -7282,7 +7282,7 @@
     {
         "No": "729",
         "revealed_dt": "2020-10-17",
-        "old": 100,
+        "old": 90,
         "sex": 1,
         "job": "無職",
         "symptom": "発熱",
@@ -7345,7 +7345,7 @@
         "old": 50,
         "sex": 1,
         "job": "無職",
-        "symptom": "発熱、頭痛、(cid:4119)頭痛",
+        "symptom": "発熱、頭痛、咽頭痛",
         "appearance_dt": "2020-10-14",
         "status_id": 5
     },
@@ -7445,7 +7445,7 @@
         "old": 50,
         "sex": 2,
         "job": "会社員",
-        "symptom": "嗅覚障害、(cid:4119)頭痛",
+        "symptom": "嗅覚障害、咽頭痛",
         "appearance_dt": "2020-10-16",
         "status_id": 5
     },
@@ -7605,7 +7605,7 @@
         "old": 20,
         "sex": 2,
         "job": "無職",
-        "symptom": "発熱、鼻汁、鼻閉、味覚障害、(cid:4119)頭痛",
+        "symptom": "発熱、鼻汁、鼻閉、味覚障害、咽頭痛",
         "appearance_dt": "2020-10-24",
         "status_id": 5
     },
@@ -7825,7 +7825,7 @@
         "old": 10,
         "sex": 1,
         "job": "学生",
-        "symptom": "(cid:4119)頭痛",
+        "symptom": "咽頭痛",
         "appearance_dt": "2020-10-30",
         "status_id": 5
     },
@@ -7835,7 +7835,7 @@
         "old": 30,
         "sex": 1,
         "job": "会社員",
-        "symptom": "発熱、(cid:4119)頭痛",
+        "symptom": "発熱、咽頭痛",
         "appearance_dt": "2020-10-27",
         "status_id": 5
     },
@@ -8195,7 +8195,7 @@
         "old": 20,
         "sex": 2,
         "job": "会社員",
-        "symptom": "頭痛(cid:18313)(cid:4119)頭痛",
+        "symptom": "頭痛(cid:18313)咽頭痛",
         "appearance_dt": "2020-11-04",
         "status_id": 5
     },
@@ -8322,7 +8322,7 @@
     {
         "No": "833",
         "revealed_dt": "2020-11-07",
-        "old": 100,
+        "old": 90,
         "sex": 2,
         "job": "無職",
         "symptom": "咳(cid:18313)鼻汁",
@@ -8332,7 +8332,7 @@
     {
         "No": "834",
         "revealed_dt": "2020-11-07",
-        "old": 100,
+        "old": 90,
         "sex": 2,
         "job": "無職",
         "symptom": "なし",
@@ -8425,7 +8425,7 @@
         "old": 50,
         "sex": 1,
         "job": "会社員",
-        "symptom": "発熱、鼻汁、(cid:4119)頭痛",
+        "symptom": "発熱、鼻汁、咽頭痛",
         "appearance_dt": "2020-11-07",
         "status_id": 5
     },
@@ -8665,7 +8665,7 @@
         "old": 40,
         "sex": 1,
         "job": "会社員",
-        "symptom": "発熱、咳、倦怠感、関節痛、(cid:4119)頭痛",
+        "symptom": "発熱、咳、倦怠感、関節痛、咽頭痛",
         "appearance_dt": "2020-11-08",
         "status_id": 5
     },
@@ -8675,7 +8675,7 @@
         "old": 40,
         "sex": 1,
         "job": "会社員",
-        "symptom": "(cid:4119)頭痛",
+        "symptom": "咽頭痛",
         "appearance_dt": "2020-11-06",
         "status_id": 5
     },
@@ -8685,7 +8685,7 @@
         "old": 40,
         "sex": 1,
         "job": "会社員",
-        "symptom": "筋肉痛、(cid:4119)頭痛",
+        "symptom": "筋肉痛、咽頭痛",
         "appearance_dt": "2020-11-09",
         "status_id": 5
     },
@@ -8715,7 +8715,7 @@
         "old": 30,
         "sex": 2,
         "job": "会社員",
-        "symptom": "発熱、(cid:4119)頭痛",
+        "symptom": "発熱、咽頭痛",
         "appearance_dt": "2020-11-08",
         "status_id": 5
     },
@@ -8835,7 +8835,7 @@
         "old": 50,
         "sex": 2,
         "job": "無職",
-        "symptom": "咳、鼻汁、(cid:4119)頭痛",
+        "symptom": "咳、鼻汁、咽頭痛",
         "appearance_dt": "2020-11-08",
         "status_id": 5
     },
@@ -8885,7 +8885,7 @@
         "old": 70,
         "sex": 1,
         "job": "無職",
-        "symptom": "咳(cid:18313)(cid:4119)頭痛",
+        "symptom": "咳(cid:18313)咽頭痛",
         "appearance_dt": "2020-11-09",
         "status_id": 5
     },
@@ -8905,7 +8905,7 @@
         "old": 40,
         "sex": 1,
         "job": "無職",
-        "symptom": "発熱(cid:18313)(cid:4119)頭痛",
+        "symptom": "発熱(cid:18313)咽頭痛",
         "appearance_dt": "2020-11-11",
         "status_id": 5
     },
@@ -9165,7 +9165,7 @@
         "old": 30,
         "sex": 1,
         "job": "会社員",
-        "symptom": "発熱(cid:18313)嗅覚障害(cid:18313)下痢(cid:18313)(cid:4119)頭痛",
+        "symptom": "発熱(cid:18313)嗅覚障害(cid:18313)下痢(cid:18313)咽頭痛",
         "appearance_dt": "2020-11-12",
         "status_id": 5
     },
@@ -9292,7 +9292,7 @@
     {
         "No": "930",
         "revealed_dt": "2020-11-16",
-        "old": 100,
+        "old": 90,
         "sex": 2,
         "job": "無職",
         "symptom": "発熱、咳",
@@ -9305,7 +9305,7 @@
         "old": 60,
         "sex": 1,
         "job": "自営業",
-        "symptom": "発熱、下痢、(cid:4119)頭痛",
+        "symptom": "発熱、下痢、咽頭痛",
         "appearance_dt": "2020-11-08",
         "status_id": 2
     },
@@ -9362,7 +9362,7 @@
     {
         "No": "937",
         "revealed_dt": "2020-11-16",
-        "old": 100,
+        "old": 90,
         "sex": 1,
         "job": "無職",
         "symptom": "発熱",
@@ -9415,7 +9415,7 @@
         "old": 40,
         "sex": 1,
         "job": "会社員",
-        "symptom": "発熱、(cid:4119)頭痛",
+        "symptom": "発熱、咽頭痛",
         "appearance_dt": "2020-11-11",
         "status_id": 5
     },
@@ -9845,7 +9845,7 @@
         "old": 10,
         "sex": 2,
         "job": "会社員",
-        "symptom": "鼻閉、嗅覚障害、(cid:4119)頭痛",
+        "symptom": "鼻閉、嗅覚障害、咽頭痛",
         "appearance_dt": "2020-11-11",
         "status_id": 5
     },
@@ -9975,7 +9975,7 @@
         "old": 20,
         "sex": 1,
         "job": "会社員",
-        "symptom": "発熱、咳、倦怠感、(cid:4119)頭痛",
+        "symptom": "発熱、咳、倦怠感、咽頭痛",
         "appearance_dt": "2020-11-17",
         "status_id": 5
     },
@@ -9992,7 +9992,7 @@
     {
         "No": "1000",
         "revealed_dt": "2020-11-19",
-        "old": 100,
+        "old": 90,
         "sex": 2,
         "job": "無職",
         "symptom": "発熱",
@@ -10025,7 +10025,7 @@
         "old": 30,
         "sex": 2,
         "job": "会社員",
-        "symptom": "鼻閉(cid:18313)(cid:4119)頭痛",
+        "symptom": "鼻閉(cid:18313)咽頭痛",
         "appearance_dt": "2020-11-18",
         "status_id": 2
     },
@@ -10062,7 +10062,7 @@
     {
         "No": "1007",
         "revealed_dt": "2020-11-20",
-        "old": 100,
+        "old": 90,
         "sex": 1,
         "job": "無職",
         "symptom": "発熱",
@@ -10125,7 +10125,7 @@
         "old": 60,
         "sex": 2,
         "job": "無職",
-        "symptom": "発熱(cid:18313)(cid:4119)頭痛",
+        "symptom": "発熱(cid:18313)咽頭痛",
         "appearance_dt": "2020-11-16",
         "status_id": 5
     },
@@ -10135,7 +10135,7 @@
         "old": 50,
         "sex": 2,
         "job": "無職",
-        "symptom": "発熱(cid:18313)(cid:4119)頭痛",
+        "symptom": "発熱(cid:18313)咽頭痛",
         "appearance_dt": "2020-11-18",
         "status_id": 5
     },
@@ -10252,7 +10252,7 @@
     {
         "No": "1026",
         "revealed_dt": "2020-11-21",
-        "old": 100,
+        "old": 90,
         "sex": 2,
         "job": "無職",
         "symptom": "発熱(cid:18313)咳",
@@ -10365,7 +10365,7 @@
         "old": 30,
         "sex": 2,
         "job": "会社員",
-        "symptom": "頭痛(cid:18313)(cid:4119)頭痛",
+        "symptom": "頭痛(cid:18313)咽頭痛",
         "appearance_dt": "2020-11-20",
         "status_id": 5
     },
@@ -10422,7 +10422,7 @@
     {
         "No": "1043",
         "revealed_dt": "2020-11-22",
-        "old": 100,
+        "old": 90,
         "sex": 1,
         "job": "無職",
         "symptom": "発熱(cid:18313)下痢",
@@ -10482,7 +10482,7 @@
     {
         "No": "1049",
         "revealed_dt": "2020-11-23",
-        "old": 100,
+        "old": 90,
         "sex": 1,
         "job": "無職",
         "symptom": "発熱",
@@ -10492,7 +10492,7 @@
     {
         "No": "1050",
         "revealed_dt": "2020-11-23",
-        "old": 100,
+        "old": 90,
         "sex": 2,
         "job": "無職",
         "symptom": "なし",
@@ -10542,7 +10542,7 @@
     {
         "No": "1055",
         "revealed_dt": "2020-11-24",
-        "old": 100,
+        "old": 90,
         "sex": 1,
         "job": "無職",
         "symptom": "発熱",
@@ -10565,7 +10565,7 @@
         "old": 50,
         "sex": 2,
         "job": "無職",
-        "symptom": "発熱、咳、(cid:4119)頭痛",
+        "symptom": "発熱、咳、咽頭痛",
         "appearance_dt": "2020-11-13",
         "status_id": 5
     },
@@ -10602,7 +10602,7 @@
     {
         "No": "1061",
         "revealed_dt": "2020-11-24",
-        "old": 100,
+        "old": 90,
         "sex": 2,
         "job": "無職",
         "symptom": "発熱、呼吸困難",
@@ -10625,7 +10625,7 @@
         "old": 50,
         "sex": 1,
         "job": "会社員",
-        "symptom": "発熱、(cid:4004)(cid:7868)",
+        "symptom": "発熱、(cid:4004)気",
         "appearance_dt": "2020-11-18",
         "status_id": 5
     },
@@ -10665,7 +10665,7 @@
         "old": 60,
         "sex": 1,
         "job": "無職",
-        "symptom": "発熱、咳、(cid:4119)頭痛",
+        "symptom": "発熱、咳、咽頭痛",
         "appearance_dt": "2020-11-15",
         "status_id": 5
     },
@@ -10725,7 +10725,7 @@
         "old": 30,
         "sex": 2,
         "job": "自営業",
-        "symptom": "頭痛、倦怠感、(cid:4119)頭痛",
+        "symptom": "頭痛、倦怠感、咽頭痛",
         "appearance_dt": "2020-11-20",
         "status_id": 5
     },
@@ -10915,7 +10915,7 @@
         "old": 20,
         "sex": 1,
         "job": "会社員",
-        "symptom": "発熱、咳、(cid:4119)頭痛",
+        "symptom": "発熱、咳、咽頭痛",
         "appearance_dt": "2020-11-23",
         "status_id": 5
     },
@@ -11145,7 +11145,7 @@
         "old": 20,
         "sex": 1,
         "job": "学生",
-        "symptom": "発熱(cid:18313)頭痛(cid:18313)(cid:4119)頭痛",
+        "symptom": "発熱(cid:18313)頭痛(cid:18313)咽頭痛",
         "appearance_dt": "2020-11-26",
         "status_id": 5
     },
@@ -11332,7 +11332,7 @@
     {
         "No": "1134",
         "revealed_dt": "2020-11-28",
-        "old": 100,
+        "old": 90,
         "sex": 2,
         "job": "無職",
         "symptom": "咳(cid:18313)呼吸困難",
@@ -11425,7 +11425,7 @@
         "old": 20,
         "sex": 1,
         "job": "会社員",
-        "symptom": "(cid:4119)頭痛",
+        "symptom": "咽頭痛",
         "appearance_dt": "2020-11-25",
         "status_id": 5
     },
@@ -11502,7 +11502,7 @@
     {
         "No": "1151",
         "revealed_dt": "2020-11-30",
-        "old": 100,
+        "old": 90,
         "sex": 2,
         "job": "無職",
         "symptom": "咳",
@@ -11612,7 +11612,7 @@
     {
         "No": "1162",
         "revealed_dt": "2020-12-01",
-        "old": 100,
+        "old": 90,
         "sex": 2,
         "job": "無職",
         "symptom": "発熱",
@@ -11695,7 +11695,7 @@
         "old": 30,
         "sex": 2,
         "job": "会社員",
-        "symptom": "倦怠感(cid:18313)下痢(cid:18313)(cid:4119)頭痛",
+        "symptom": "倦怠感(cid:18313)下痢(cid:18313)咽頭痛",
         "appearance_dt": "2020-11-29",
         "status_id": 5
     },
@@ -11815,7 +11815,7 @@
         "old": 20,
         "sex": 2,
         "job": "会社員",
-        "symptom": "発熱(cid:18313)頭痛(cid:18313)倦怠感(cid:18313)(cid:4119)頭痛",
+        "symptom": "発熱(cid:18313)頭痛(cid:18313)倦怠感(cid:18313)咽頭痛",
         "appearance_dt": "2020-12-01",
         "status_id": 5
     },
@@ -11845,7 +11845,7 @@
         "old": 20,
         "sex": 2,
         "job": "会社員",
-        "symptom": "発熱(cid:18313)(cid:4119)頭痛",
+        "symptom": "発熱(cid:18313)咽頭痛",
         "appearance_dt": "2020-11-29",
         "status_id": 5
     },
@@ -11945,7 +11945,7 @@
         "old": 10,
         "sex": 2,
         "job": "学生",
-        "symptom": "発熱(cid:18313)鼻汁(cid:18313)頭痛(cid:18313)嗅覚障害(cid:18313)(cid:4119)頭痛",
+        "symptom": "発熱(cid:18313)鼻汁(cid:18313)頭痛(cid:18313)嗅覚障害(cid:18313)咽頭痛",
         "appearance_dt": "2020-11-30",
         "status_id": 5
     },
@@ -12015,7 +12015,7 @@
         "old": 50,
         "sex": 2,
         "job": "会社員",
-        "symptom": "発熱、咳、(cid:4119)頭痛",
+        "symptom": "発熱、咳、咽頭痛",
         "appearance_dt": "2020-12-02",
         "status_id": 5
     },
@@ -12057,7 +12057,7 @@
         "job": "無職",
         "symptom": "発熱",
         "appearance_dt": "2020-12-03",
-        "status_id": 4
+        "status_id": 5
     },
     {
         "No": "1207",
@@ -12065,7 +12065,7 @@
         "old": 20,
         "sex": 1,
         "job": "学生",
-        "symptom": "発熱、頭痛、(cid:4119)頭痛",
+        "symptom": "発熱、頭痛、咽頭痛",
         "appearance_dt": "2020-12-03",
         "status_id": 5
     },
@@ -12077,7 +12077,7 @@
         "job": "無職",
         "symptom": "発熱、咳、関節痛",
         "appearance_dt": "2020-12-03",
-        "status_id": 4
+        "status_id": 5
     },
     {
         "No": "1209",
@@ -12087,7 +12087,7 @@
         "job": "無職",
         "symptom": "なし",
         "appearance_dt": "",
-        "status_id": 4
+        "status_id": 5
     },
     {
         "No": "1210",
@@ -12097,7 +12097,7 @@
         "job": "会社員",
         "symptom": "倦怠感、味覚障害、嗅覚障害",
         "appearance_dt": "2020-11-27",
-        "status_id": 4
+        "status_id": 5
     },
     {
         "No": "1211",
@@ -12105,9 +12105,9 @@
         "old": 40,
         "sex": 1,
         "job": "自営業",
-        "symptom": "(cid:4119)頭痛",
+        "symptom": "咽頭痛",
         "appearance_dt": "2020-12-02",
-        "status_id": 4
+        "status_id": 5
     },
     {
         "No": "1212",
@@ -12137,7 +12137,7 @@
         "job": "自営業",
         "symptom": "発熱",
         "appearance_dt": "2020-11-27",
-        "status_id": 4
+        "status_id": 5
     },
     {
         "No": "1215",
@@ -12147,12 +12147,12 @@
         "job": "会社員",
         "symptom": "発熱、頭痛",
         "appearance_dt": "2020-12-02",
-        "status_id": 4
+        "status_id": 5
     },
     {
         "No": "1216",
         "revealed_dt": "2020-12-05",
-        "old": 100,
+        "old": 90,
         "sex": 2,
         "job": "無職",
         "symptom": "なし",
@@ -12167,7 +12167,7 @@
         "job": "自営業",
         "symptom": "発熱",
         "appearance_dt": "2020-11-28",
-        "status_id": 4
+        "status_id": 5
     },
     {
         "No": "1218",
@@ -12217,7 +12217,7 @@
         "job": "会社員",
         "symptom": "頭痛",
         "appearance_dt": "2020-11-28",
-        "status_id": 4
+        "status_id": 5
     },
     {
         "No": "1223",
@@ -12257,7 +12257,7 @@
         "job": "会社員",
         "symptom": "発熱",
         "appearance_dt": "2020-11-27",
-        "status_id": 4
+        "status_id": 5
     },
     {
         "No": "1227",
@@ -12327,7 +12327,7 @@
         "job": "会社員",
         "symptom": "なし",
         "appearance_dt": "",
-        "status_id": 3
+        "status_id": 5
     },
     {
         "No": "1234",
@@ -12375,7 +12375,7 @@
         "old": 60,
         "sex": 2,
         "job": "無職",
-        "symptom": "発熱、(cid:4119)頭痛",
+        "symptom": "発熱、咽頭痛",
         "appearance_dt": "2020-12-05",
         "status_id": 4
     },
@@ -12415,7 +12415,7 @@
         "old": 20,
         "sex": 1,
         "job": "会社員",
-        "symptom": "発熱、(cid:4119)頭痛",
+        "symptom": "発熱、咽頭痛",
         "appearance_dt": "2020-12-07",
         "status_id": 3
     },
@@ -12557,7 +12557,7 @@
         "job": "無職",
         "symptom": "鼻汁、味覚障害、嗅覚障害",
         "appearance_dt": "2020-12-05",
-        "status_id": 3
+        "status_id": 5
     },
     {
         "No": "1257",
@@ -12585,7 +12585,7 @@
         "old": 20,
         "sex": 1,
         "job": "会社員",
-        "symptom": "発熱、咳、倦怠感、(cid:4119)頭痛",
+        "symptom": "発熱、咳、倦怠感、咽頭痛",
         "appearance_dt": "2020-12-06",
         "status_id": 4
     },
@@ -12735,7 +12735,7 @@
         "old": 20,
         "sex": 2,
         "job": "学生",
-        "symptom": "発熱、(cid:4302)(cid:7868)、倦怠感、筋肉痛、味覚障害、嗅覚障害",
+        "symptom": "発熱、(cid:4302)気、倦怠感、筋肉痛、味覚障害、嗅覚障害",
         "appearance_dt": "2020-12-06",
         "status_id": 3
     },
@@ -12835,7 +12835,7 @@
         "old": 20,
         "sex": 1,
         "job": "自営業",
-        "symptom": "発熱、倦怠感、関節痛、味覚障害、嗅覚障害、(cid:4119)頭痛",
+        "symptom": "発熱、倦怠感、関節痛、味覚障害、嗅覚障害、咽頭痛",
         "appearance_dt": "2020-12-03",
         "status_id": 3
     },
@@ -12855,7 +12855,7 @@
         "old": 20,
         "sex": 1,
         "job": "学生",
-        "symptom": "咳、鼻汁、鼻閉、(cid:4119)頭痛",
+        "symptom": "咳、鼻汁、鼻閉、咽頭痛",
         "appearance_dt": "2020-12-06",
         "status_id": 3
     },
@@ -12875,7 +12875,7 @@
         "old": 20,
         "sex": 2,
         "job": "公務員",
-        "symptom": "(cid:4119)頭痛",
+        "symptom": "咽頭痛",
         "appearance_dt": "2020-12-08",
         "status_id": 4
     },
@@ -12885,7 +12885,7 @@
         "old": 20,
         "sex": 2,
         "job": "会社員",
-        "symptom": "発熱、咳、(cid:4119)頭痛",
+        "symptom": "発熱、咳、咽頭痛",
         "appearance_dt": "2020-12-05",
         "status_id": 3
     },
@@ -13497,6 +13497,126 @@
         "job": "会社員",
         "symptom": "発熱",
         "appearance_dt": "2020-12-10",
+        "status_id": 3
+    },
+    {
+        "No": "1351",
+        "revealed_dt": "2020-11-27",
+        "old": 80,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "発熱",
+        "appearance_dt": "2020-11-27",
+        "status_id": 5
+    },
+    {
+        "No": "1352",
+        "revealed_dt": "2020-11-28",
+        "old": 90,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "発熱",
+        "appearance_dt": "2020-11-28",
+        "status_id": 6
+    },
+    {
+        "No": "1353",
+        "revealed_dt": "2020-12-14",
+        "old": 50,
+        "sex": 1,
+        "job": "会社員",
+        "symptom": "発熱、咳、下痢",
+        "appearance_dt": "2020-12-05",
+        "status_id": 4
+    },
+    {
+        "No": "1354",
+        "revealed_dt": "2020-12-14",
+        "old": 40,
+        "sex": 1,
+        "job": "会社員",
+        "symptom": "咽頭痛",
+        "appearance_dt": "2020-12-08",
+        "status_id": 4
+    },
+    {
+        "No": "1355",
+        "revealed_dt": "2020-12-14",
+        "old": 30,
+        "sex": 2,
+        "job": "会社員",
+        "symptom": "発熱、頭痛、倦怠感、味覚障害、嗅覚障害、寒気",
+        "appearance_dt": "2020-12-10",
+        "status_id": 4
+    },
+    {
+        "No": "1356",
+        "revealed_dt": "2020-12-14",
+        "old": 30,
+        "sex": 2,
+        "job": "会社員",
+        "symptom": "発熱、鼻閉",
+        "appearance_dt": "2020-12-10",
+        "status_id": 4
+    },
+    {
+        "No": "1357",
+        "revealed_dt": "2020-12-14",
+        "old": 10,
+        "sex": 1,
+        "job": "学生",
+        "symptom": "発熱、頭痛、関節痛",
+        "appearance_dt": "2020-12-13",
+        "status_id": 4
+    },
+    {
+        "No": "1358",
+        "revealed_dt": "2020-12-14",
+        "old": 50,
+        "sex": 2,
+        "job": "会社員",
+        "symptom": "発熱、咳",
+        "appearance_dt": "2020-12-10",
+        "status_id": 4
+    },
+    {
+        "No": "1359",
+        "revealed_dt": "2020-12-14",
+        "old": 30,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "倦怠感、味覚障害、嗅覚障害",
+        "appearance_dt": "2020-12-07",
+        "status_id": 4
+    },
+    {
+        "No": "1360",
+        "revealed_dt": "2020-12-14",
+        "old": 0,
+        "sex": 2,
+        "job": "－",
+        "symptom": "発熱、咳、鼻汁",
+        "appearance_dt": "2020-12-11",
+        "status_id": 4
+    },
+    {
+        "No": "1361",
+        "revealed_dt": "2020-12-14",
+        "old": 0,
+        "sex": 2,
+        "job": "－",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 4
+    },
+    {
+        "No": "1362",
+        "revealed_dt": "2020-12-14",
+        "old": 20,
+        "sex": 1,
+        "job": "会社員",
+        "symptom": "発熱、頭痛",
+        "appearance_dt": "2020-12-13",
         "status_id": 3
     }
 ]
