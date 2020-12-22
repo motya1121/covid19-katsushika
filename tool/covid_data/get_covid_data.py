@@ -11,7 +11,7 @@ import json
 import os
 
 DEBUG = False
-DEBUG_PRT_MAX_NO = '1436'
+DEBUG_PRT_MAX_NO = '1482'
 
 class patient_data():
     def __init__(self):
@@ -35,6 +35,12 @@ class patient_data():
                 if self.no != '':  # noの場合関数終了
                     if self.no == '1260':
                         self.symptom = "風邪症状"
+                    if self.no == '1487':
+                        self.appearance_dt = self.check_date('12/19')
+                    if self.no == '1481':
+                        self.appearance_dt = self.check_date('12/16')
+                    if self.no == '1484':
+                        self.appearance_dt = self.check_date('12/11')
                     if self.no == '1438':
                         self.appearance_dt = self.check_date('12/16')
                     if self.no == '1408':
