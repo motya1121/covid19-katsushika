@@ -329,7 +329,7 @@ def get_data(setting):
     interpreter = PDFPageInterpreter(resource_manager, device)
     # 返却する辞書
     ret_data = []
-    patient_datas_o700 = []
+    patient_datas_o1200 = []
     TEMP_NO = 0
 
     '''
@@ -374,23 +374,23 @@ def get_data(setting):
                                 print('******ここまで {} *****'.format(temp_patient_data.no))
                                 if temp_patient_data.no == DEBUG_PRT_MAX_NO:
                                     exit()
-                            if is_Acquired(patient_datas_o700, temp_patient_data) is True:
+                            if is_Acquired(patient_datas_o1200, temp_patient_data) is True:
                                 temp_patient_data = patient_data()
                                 continue
                             if temp_patient_data.no != str(TEMP_NO - 1):
                                 print("error: no:{}".format(temp_patient_data.no))
                             TEMP_NO = int(temp_patient_data.no)
-                            patient_datas_o700.append(temp_patient_data)
+                            patient_datas_o1200.append(temp_patient_data)
                             temp_patient_data = patient_data()
-    patient_datas_o700.reverse()  # リストを反転させる
+    patient_datas_o1200.reverse()  # リストを反転させる
 
-    # 1-400のデータを処理
+    # 1-1200のデータを処理
     row_datas = []
-    patient_datas_u700 = []
+    patient_datas_u1200 = []
     with open(os.path.dirname(os.path.abspath(__file__)) + "/data/row_data.json", "r") as f:
         row_datas = json.load(f)
     for row_data in row_datas:
-        if row_data['No'] == '701':
+        if row_data['No'] == '1201':
             break
         temp_patient_data = patient_data()
         temp_patient_data.no = row_data['No']
@@ -404,9 +404,9 @@ def get_data(setting):
         else:
             temp_patient_data.appearance_dt = datetime.datetime.strptime(row_data['appearance_dt'], '%Y-%m-%d')
         temp_patient_data.status_id = row_data['status_id']
-        patient_datas_u700.append(temp_patient_data)
+        patient_datas_u1200.append(temp_patient_data)
 
-    patient_datas = patient_datas_u700 + patient_datas_o700
+    patient_datas = patient_datas_u1200 + patient_datas_o1200
     for patient in patient_datas:
         ret_data.append(patient.export_dict())
     return ret_data
