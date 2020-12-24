@@ -11,7 +11,7 @@ import json
 import os
 
 DEBUG = False
-DEBUG_PRT_MAX_NO = '1482'
+DEBUG_PRT_MAX_NO = '1083'
 
 class patient_data():
     def __init__(self):
@@ -203,7 +203,7 @@ class patient_data():
             return '生徒'
         elif text.find('保育園児') != -1:
             return '保育園児'
-        elif text.find('自営業') != -1:
+        elif text.find('自営業') != -1 or text.find('自(cid:4256)業') != -1:
             return '自営業'
         elif text.find('医療従事者') != -1 or text.find('(cid:3851)療(cid:5777)(cid:2982)者') != -1:
             return '医療従事者'
@@ -243,10 +243,10 @@ class patient_data():
             return text
         if text.find('鼻汁') != -1 or text.find('鼻(cid:7890)') != -1:
             return '鼻汁'
-        if text.find('関節痛') != -1:
-            return text
-        if text.find('筋肉痛') != -1:
-            return text
+        if text.find('関節痛') != -1 or text.find('(cid:14069)(cid:10247)痛') != -1:
+            return '関節痛'
+        if text.find('筋肉痛') != -1 or text.find('(cid:10173)(cid:10967)痛') != -1:
+            return '筋肉痛'
         if text.find('鼻閉') != -1 or text.find('鼻(cid:14050)') != -1:
             return '鼻閉'
         if text.find('痰') != -1:
@@ -276,9 +276,9 @@ class patient_data():
         if text.find('胸痛') != -1 or text.find('(cid:11034)痛') != -1:
             return '胸痛'
         if text.find('腰痛') != -1 or text.find('(cid:11100)痛') != -1:
-            return text
-        if text.find('鼻の痛み') != -1:
-            return text
+            return '腰痛'
+        if text.find('鼻の痛み') != -1 or text.find('鼻の痛(cid:18191)') != -1:
+            return '鼻の痛み'
         return ''
 
     def get_status_id(self, coordinate):
@@ -341,6 +341,7 @@ def get_data(setting):
         for pdf_url in setting.pdf_urls:
             # pdf取得
             pdf_path = dname + '/covid_data.pdf'
+            print(pdf_url)
             with urllib.request.urlopen(pdf_url) as u:
                 with open(pdf_path, 'bw') as o:
                     o.write(u.read())
