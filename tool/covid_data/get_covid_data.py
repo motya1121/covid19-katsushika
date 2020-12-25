@@ -35,6 +35,10 @@ class patient_data():
                 if self.no != '':  # noの場合関数終了
                     if self.no == '1260':
                         self.symptom = "風邪症状"
+                    if self.no == '1575':
+                        self.appearance_dt = self.check_date('12/21')
+                    if self.no == '1574':
+                        self.appearance_dt = self.check_date('12/24')
                     if self.no == '1531':
                         self.appearance_dt = self.check_date('12/13')
                     if self.no == '1487':
