@@ -11,7 +11,7 @@ import json
 import os
 
 DEBUG = False
-DEBUG_PRT_MAX_NO = '1083'
+DEBUG_PRT_MAX_NO = '1557'
 
 class patient_data():
     def __init__(self):
@@ -33,12 +33,19 @@ class patient_data():
             if self.no == '':  # 未取得の場合
                 self.no = self.check_no(text)
                 if self.no != '':  # noの場合関数終了
+                    #print(self.no)
                     if self.no == '1260':
                         self.symptom = "風邪症状"
+                    if self.no == '1597':
+                        self.appearance_dt = self.check_date('12/21')
+                    if self.no == '1587':
+                        self.appearance_dt = self.check_date('12/19')
                     if self.no == '1575':
                         self.appearance_dt = self.check_date('12/21')
                     if self.no == '1574':
                         self.appearance_dt = self.check_date('12/24')
+                    if self.no == '1568':
+                        self.appearance_dt = self.check_date('12/21')
                     if self.no == '1531':
                         self.appearance_dt = self.check_date('12/13')
                     if self.no == '1487':
@@ -167,7 +174,7 @@ class patient_data():
             return 0
         if text.find('１０') != -1:
             return 10
-        elif text.find('２０') != -1:
+        elif text.find('２０') != -1 or text.find('(cid:18452)０') != -1:
             return 20
         elif text.find('３０') != -1:
             return 30
@@ -255,12 +262,12 @@ class patient_data():
             return '筋肉痛'
         if text.find('鼻閉') != -1 or text.find('鼻(cid:14050)') != -1:
             return '鼻閉'
-        if text.find('痰') != -1:
-            return text
+        if text.find('痰') != -1 or text.find('(cid:9329)') != -1:
+            return '痰'
         if text.find('肺炎') != -1:
             return text
-        if text.find('呼吸困難') != -1:
-            return text
+        if text.find('呼吸困難') != -1 or text.find('(cid:4071)(cid:4030)(cid:4436)(cid:14260)') != -1:
+            return '呼吸困難'
         if text.find('調査中') != -1:
             return text
         if text.find('咽頭痛') != -1:
