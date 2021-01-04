@@ -28,7 +28,7 @@ def check():
     if m is None:
         return -1
 
-    get_update_datetime = datetime.datetime.strptime('2020-{0[0]}-{0[1]}'.format(m.groups()), '%Y-%m-%d')
+    get_update_datetime = datetime.datetime.strptime('2021-{0[0]}-{0[1]}'.format(m.groups()), '%Y-%m-%d')
     update_datetime = datetime.datetime.strptime(setting.update_datetime, '%Y-%m-%d %H:%M:%S')
     update_flag = False
     if update_datetime < get_update_datetime:
