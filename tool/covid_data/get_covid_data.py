@@ -104,6 +104,18 @@ class patient_data():
         ret_str = ret_str.replace('(cid:16887)', '－')
         ret_str = ret_str.replace('(cid:5776)', '徒')
         ret_str = ret_str.replace('(cid:18313)', '・')
+        ret_str = ret_str.replace('(cid:5083)', '学')
+        ret_str = ret_str.replace('(cid:9173)', '生')
+        ret_str = ret_str.replace('(cid:18445)', '１')
+        ret_str = ret_str.replace('(cid:18446)', '２')
+        ret_str = ret_str.replace('(cid:18447)', '３')
+        ret_str = ret_str.replace('(cid:18448)', '４')
+        ret_str = ret_str.replace('(cid:18449)', '５')
+        ret_str = ret_str.replace('(cid:18450)', '６')
+        ret_str = ret_str.replace('(cid:18451)', '７')
+        ret_str = ret_str.replace('(cid:18452)', '８')
+        ret_str = ret_str.replace('(cid:18453)', '９')
+        ret_str = ret_str.replace('(cid:7763)', '歳')
         return ret_str
     def check_date(self, text) -> dt:
         if text.find('－') != -1 or text.find('ー') != -1:
