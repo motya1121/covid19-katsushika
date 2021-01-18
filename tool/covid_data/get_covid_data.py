@@ -128,8 +128,8 @@ class patient_data():
         ret_str = ret_str.replace('(cid:18141)', 'き')
         ret_str = ret_str.replace('(cid:11358)', '苦')
         ret_str = ret_str.replace('(cid:3392)', '像')
-        #ret_str = ret_str.replace('(cid:)', '')
-        #ret_str = ret_str.replace('(cid:)', '')
+        ret_str = ret_str.replace('(cid:5925)', '息')
+        ret_str = ret_str.replace('(cid:18149)', 'さ')
         #ret_str = ret_str.replace('(cid:)', '')
         #ret_str = ret_str.replace('(cid:)', '')
         #ret_str = ret_str.replace('(cid:)', '')
@@ -141,7 +141,7 @@ class patient_data():
         #ret_str = ret_str.replace('(cid:)', '')
         return ret_str
     def check_date(self, text) -> dt:
-        if text.find('－') != -1 or text.find('ー') != -1:
+        if text.find('－') != -1 or text.find('ー') != -1 or text.find('-') != -1:
             return ''
 
         if text.find('11/') != -1 or text.find('12/') != -1:
@@ -188,7 +188,7 @@ class patient_data():
 
     def parse_job(self, line_list_4, line_str):
         # －の場合の処理
-        if line_list_4.find('－') != -1 or line_list_4.find('ー') != -1:
+        if line_list_4.find('－') != -1 or line_list_4.find('ー') != -1 or line_list_4.find('-') != -1:
             return '－'
         if line_str.find('無職') != -1:
             return '無職'
@@ -214,7 +214,7 @@ class patient_data():
         if line_str[symptom_start_index] == ':':
             symptom_start_index += 1
         for i in range(symptom_start_index, len(line_str)):
-            if line_str[i].isdecimal() is True or line_str[i].find('－') != -1 or line_str[i].find('ー') != -1:
+            if line_str[i].isdecimal() is True or line_str[i].find('－') != -1 or line_str[i].find('ー') != -1  or line_str[i].find('-') != -1:
                 break
         if line_str[i-1] == ':':
             symptom_end_index = i-1
@@ -226,7 +226,7 @@ class patient_data():
         # 綺麗な形の場合
         ret_str = ''
         try:
-            if line_list_6.find('－') != -1 or line_list_6.find('ー') != -1:
+            if line_list_6.find('－') != -1 or line_list_6.find('ー') != -1 or line_list_6.find('-') != -1:
                 ret_str = None
             else:
                 if line_list_6.find('11/') != -1 or line_list_6.find('12/') != -1:
@@ -249,7 +249,7 @@ class patient_data():
                 appearance_dt_start_index = i
 
             # 発症日のおしり出し
-            if line_str[appearance_dt_start_index].find('－') != -1 or line_str[appearance_dt_start_index].find('ー') != -1:
+            if line_str[appearance_dt_start_index].find('－') != -1 or line_str[appearance_dt_start_index].find('ー') != -1  or line_str[appearance_dt_start_index].find('-') != -1:
                 ret_str =  None
 
             for i in range(appearance_dt_start_index, len(line_str)):
