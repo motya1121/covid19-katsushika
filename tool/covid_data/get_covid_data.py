@@ -139,6 +139,8 @@ class patient_data():
         #ret_str = ret_str.replace('(cid:)', '')
         #ret_str = ret_str.replace('(cid:)', '')
         #ret_str = ret_str.replace('(cid:)', '')
+        #ret_str = ret_str.replace('(cid:)', '')
+        #ret_str = ret_str.replace('(cid:)', '')
         return ret_str
     def check_date(self, text) -> dt:
         if text.find('－') != -1 or text.find('ー') != -1 or text.find('-') != -1:
