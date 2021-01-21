@@ -44,6 +44,7 @@ class patient_data():
 
     def cid_to_jp(self, text:str) -> str:
         ret_str=text
+        #print(ret_str)
         ret_str = ret_str.replace('(cid:7053)', '未')
         ret_str = ret_str.replace('(cid:8246)', '満')
         ret_str = ret_str.replace('(cid:3510)', '公')
@@ -130,6 +131,13 @@ class patient_data():
         ret_str = ret_str.replace('(cid:3392)', '像')
         ret_str = ret_str.replace('(cid:5925)', '息')
         ret_str = ret_str.replace('(cid:18149)', 'さ')
+        ret_str = ret_str.replace('(cid:13307)', '通')
+        ret_str = ret_str.replace('(cid:18550)', 'コ')
+        ret_str = ret_str.replace('(cid:18583)', 'ロ')
+        ret_str = ret_str.replace('(cid:18561)', 'ナ')
+        ret_str = ret_str.replace('(cid:4773)', '外')
+        #ret_str = ret_str.replace('(cid:)', '')
+        #ret_str = ret_str.replace('(cid:)', '')
         #ret_str = ret_str.replace('(cid:)', '')
         #ret_str = ret_str.replace('(cid:)', '')
         #ret_str = ret_str.replace('(cid:)', '')
@@ -359,6 +367,8 @@ def is_skip(text):
         return True
     elif text.find('ｺﾛﾅ以外') != -1:
         return True
+    elif text.find('#N/A') != -1:
+        return True
     return False
 
 
@@ -409,6 +419,8 @@ def get_data(setting) -> list:
 
                     for box in boxes:
                         if is_skip(box.get_text()) is True:
+                            if box.get_text().find('#N/A') != -1:
+                                box_list = []
                             continue
                         temp_tb_avg = (box.y1 + box.y0) / 2
 
