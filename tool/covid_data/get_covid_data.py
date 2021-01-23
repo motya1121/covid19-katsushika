@@ -233,6 +233,11 @@ class patient_data():
         return line_str[symptom_start_index:symptom_end_index]
 
     def parse_appearance_dt(self, line_list_6, line_str):
+        # 例外処理
+        if self.no in ['2933', '2921']:
+            ret_str = None
+            return ret_str
+        
         # 綺麗な形の場合
         ret_str = ''
         try:
