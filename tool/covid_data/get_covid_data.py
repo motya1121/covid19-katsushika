@@ -136,7 +136,7 @@ class patient_data():
         ret_str = ret_str.replace('(cid:18583)', 'ロ')
         ret_str = ret_str.replace('(cid:18561)', 'ナ')
         ret_str = ret_str.replace('(cid:4773)', '外')
-        #ret_str = ret_str.replace('(cid:)', '')
+        ret_str = ret_str.replace('(cid:18314)', '－')
         #ret_str = ret_str.replace('(cid:)', '')
         #ret_str = ret_str.replace('(cid:)', '')
         #ret_str = ret_str.replace('(cid:)', '')
@@ -234,7 +234,7 @@ class patient_data():
 
     def parse_appearance_dt(self, line_list_6, line_str):
         # 例外処理
-        if self.no in ['2933', '2921']:
+        if self.no in ['2933', '2921', '3066', '3062', '3032', '3023']:
             ret_str = None
             return ret_str
         
