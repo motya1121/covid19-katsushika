@@ -234,14 +234,18 @@ class patient_data():
 
     def parse_appearance_dt(self, line_list_6, line_str):
         # 例外処理
-        if self.no in ['2933', '2921', '3066', '3062', '3032', '3023']:
+        '''
+        if self.no in ['2933', '2921', '3066', '3062', '3032', '3023', '3087', '3089']:
             ret_str = None
             return ret_str
+        '''
         
         # 綺麗な形の場合
         ret_str = ''
         try:
             if line_list_6.find('－') != -1 or line_list_6.find('ー') != -1 or line_list_6.find('-') != -1:
+                ret_str = None
+            elif line_list_6 == '1/0':
                 ret_str = None
             else:
                 if line_list_6.find('11/') != -1 or line_list_6.find('12/') != -1:
