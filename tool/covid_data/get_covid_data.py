@@ -30,8 +30,12 @@ class patient_data():
         line_str = ''
         for box in self.box_list:
             line_str += '{}:'.format(self.cid_to_jp(box.get_text()).replace('\n', '').replace(' ', ':'))
+
+        # check remain cid
         if line_str.find('cid') != -1:
             print(line_str)
+            exit()
+
         line_list = line_str.split(':')
         self.no = line_list[0]
         self.revealed_dt = self.check_date(line_list[1])
@@ -42,114 +46,17 @@ class patient_data():
         self.appearance_dt = self.parse_appearance_dt(line_list[6],line_str)
         self.status_id = self.get_status_id(self.box_list[-1].x0)
 
-    def cid_to_jp(self, text:str) -> str:
-        ret_str=text
-        #print(ret_str)
-        ret_str = ret_str.replace('(cid:7053)', '未')
-        ret_str = ret_str.replace('(cid:8246)', '満')
-        ret_str = ret_str.replace('(cid:3510)', '公')
-        ret_str = ret_str.replace('(cid:3771)', '務')
-        ret_str = ret_str.replace('(cid:7197)', '査')
-        ret_str = ret_str.replace('(cid:2928)', '中')
-        ret_str = ret_str.replace('(cid:4256)', '営')
-        ret_str = ret_str.replace('(cid:3851)', '医')
-        ret_str = ret_str.replace('(cid:5777)', '従')
-        ret_str = ret_str.replace('(cid:2982)', '事')
-        ret_str = ret_str.replace('(cid:2903)', '下')
-        ret_str = ret_str.replace('(cid:9321)', '痢')
-        ret_str = ret_str.replace('(cid:7890)', '汁')
-        ret_str = ret_str.replace('(cid:14069)', '関')
-        ret_str = ret_str.replace('(cid:10247)', '節')
-        ret_str = ret_str.replace('(cid:10173)', '筋')
-        ret_str = ret_str.replace('(cid:10967)', '肉')
-        ret_str = ret_str.replace('(cid:14050)', '閉')
-        ret_str = ret_str.replace('(cid:9329)', '痰')
-        ret_str = ret_str.replace('(cid:4071)', '呼')
-        ret_str = ret_str.replace('(cid:4030)', '吸')
-        ret_str = ret_str.replace('(cid:4436)', '困')
-        ret_str = ret_str.replace('(cid:14260)', '難')
-        ret_str = ret_str.replace('(cid:6245)', '扁')
-        ret_str = ret_str.replace('(cid:7240)', '桃')
-        ret_str = ret_str.replace('(cid:8534)', '炎')
-        ret_str = ret_str.replace('(cid:13596)', '重')
-        ret_str = ret_str.replace('(cid:4748)', '声')
-        ret_str = ret_str.replace('(cid:18140)', 'が')
-        ret_str = ret_str.replace('(cid:18139)', 'か')
-        ret_str = ret_str.replace('(cid:18153)', 'す')
-        ret_str = ret_str.replace('(cid:18204)', 'れ')
-        ret_str = ret_str.replace('(cid:18203)', 'る')
-        ret_str = ret_str.replace('(cid:11034)', '胸')
-        ret_str = ret_str.replace('(cid:11100)', '腰')
-        ret_str = ret_str.replace('(cid:18191)', 'み')
-        ret_str = ret_str.replace('(cid:4302)', '嘔')
-        ret_str = ret_str.replace('(cid:4004)', '吐')
-        ret_str = ret_str.replace('(cid:5967)', '悪')
-        ret_str = ret_str.replace('(cid:5166)', '寒')
-        ret_str = ret_str.replace('(cid:14551)', '食')
-        ret_str = ret_str.replace('(cid:7719)', '欲')
-        ret_str = ret_str.replace('(cid:8182)', '減')
-        ret_str = ret_str.replace('(cid:13285)', '退')
-        ret_str = ret_str.replace('(cid:18169)', 'ど')
-        ret_str = ret_str.replace('(cid:13354)', '違')
-        ret_str = ret_str.replace('(cid:4084)', '和')
-        ret_str = ret_str.replace('(cid:3506)', '全')
-        ret_str = ret_str.replace('(cid:13087)', '身')
-        ret_str = ret_str.replace('(cid:16089)', '－')
-        ret_str = ret_str.replace('(cid:7868)', '気')
-        ret_str = ret_str.replace('(cid:11004)', '背')
-        ret_str = ret_str.replace('(cid:13450)', '部')
-        ret_str = ret_str.replace('(cid:3048)', '以')
-        ret_str = ret_str.replace('(cid:10997)', '肺')
-        ret_str = ret_str.replace('(cid:4260)', '嗄')
-        ret_str = ret_str.replace('(cid:11105)', '腹')
-        ret_str = ret_str.replace('(cid:16887)', '－')
-        ret_str = ret_str.replace('(cid:5776)', '徒')
-        ret_str = ret_str.replace('(cid:18313)', '・')
-        ret_str = ret_str.replace('(cid:5083)', '学')
-        ret_str = ret_str.replace('(cid:9173)', '生')
-        ret_str = ret_str.replace('(cid:18445)', '１')
-        ret_str = ret_str.replace('(cid:18446)', '２')
-        ret_str = ret_str.replace('(cid:18447)', '３')
-        ret_str = ret_str.replace('(cid:18448)', '４')
-        ret_str = ret_str.replace('(cid:18449)', '５')
-        ret_str = ret_str.replace('(cid:18450)', '６')
-        ret_str = ret_str.replace('(cid:18451)', '７')
-        ret_str = ret_str.replace('(cid:18452)', '８')
-        ret_str = ret_str.replace('(cid:18453)', '９')
-        ret_str = ret_str.replace('(cid:7763)', '歳')
-        ret_str = ret_str.replace('(cid:4065)', '味')
-        ret_str = ret_str.replace('(cid:12396)', '覚')
-        ret_str = ret_str.replace('(cid:14208)', '障')
-        ret_str = ret_str.replace('(cid:5142)', '害')
-        ret_str = ret_str.replace('(cid:4261)', '嗅')
-        ret_str = ret_str.replace('(cid:12396)', '覚')
-        ret_str = ret_str.replace('(cid:15407)', '鼻')
-        ret_str = ret_str.replace('(cid:14476)', '頭')
-        ret_str = ret_str.replace('(cid:4119)', '咽')
-        ret_str = ret_str.replace('(cid:18141)', 'き')
-        ret_str = ret_str.replace('(cid:11358)', '苦')
-        ret_str = ret_str.replace('(cid:3392)', '像')
-        ret_str = ret_str.replace('(cid:5925)', '息')
-        ret_str = ret_str.replace('(cid:18149)', 'さ')
-        ret_str = ret_str.replace('(cid:13307)', '通')
-        ret_str = ret_str.replace('(cid:18550)', 'コ')
-        ret_str = ret_str.replace('(cid:18583)', 'ロ')
-        ret_str = ret_str.replace('(cid:18561)', 'ナ')
-        ret_str = ret_str.replace('(cid:4773)', '外')
-        ret_str = ret_str.replace('(cid:18314)', '－')
-        #ret_str = ret_str.replace('(cid:)', '')
-        #ret_str = ret_str.replace('(cid:)', '')
-        #ret_str = ret_str.replace('(cid:)', '')
-        #ret_str = ret_str.replace('(cid:)', '')
-        #ret_str = ret_str.replace('(cid:)', '')
-        #ret_str = ret_str.replace('(cid:)', '')
-        #ret_str = ret_str.replace('(cid:)', '')
-        #ret_str = ret_str.replace('(cid:)', '')
-        #ret_str = ret_str.replace('(cid:)', '')
-        #ret_str = ret_str.replace('(cid:)', '')
-        #ret_str = ret_str.replace('(cid:)', '')
-        #ret_str = ret_str.replace('(cid:)', '')
+    def cid_to_jp(self, text: str) -> str:
+        with open(os.path.dirname(os.path.abspath(__file__)) + "/cid_jp_map.json", "r") as f:
+            cid_jp_map = json.load(f)
+
+        ret_str = text
+        if ret_str.find('cid') != -1:
+            for cid, jp in cid_jp_map.items():
+                ret_str = ret_str.replace(f'(cid:{cid})', jp)
+
         return ret_str
+
     def check_date(self, text) -> dt:
         if text.find('－') != -1 or text.find('ー') != -1 or text.find('-') != -1:
             return ''
@@ -239,7 +146,7 @@ class patient_data():
             ret_str = None
             return ret_str
         '''
-        
+
         # 綺麗な形の場合
         ret_str = ''
         try:
