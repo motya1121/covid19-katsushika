@@ -471,14 +471,15 @@ def get_data(setting) -> list:
             box_list = []
     patient_datas_pdf.reverse()
 
-    # 1-1200のデータを処理
+    # 閲覧不可になったデータの処理
+    old_no_range = list(range(1, 1301)) + list(range(1601, 1801))
     row_datas = []
     patient_datas_old = []
     with open(os.path.dirname(os.path.abspath(__file__)) + "/data/row_data.json", "r") as f:
         row_datas = json.load(f)
     for row_data in row_datas:
-        if row_data['No'] == '1201':
-            break
+        if int(row_data['No']) not in old_no_range:
+            continue
         temp_patient_data = patient_data()
         temp_patient_data.no = row_data['No']
         temp_patient_data.revealed_dt = dt.strptime(row_data['revealed_dt'], '%Y-%m-%d')
@@ -494,7 +495,8 @@ def get_data(setting) -> list:
         patient_datas_old.append(temp_patient_data)
 
     patient_datas = patient_datas_old + patient_datas_pdf
-    for patient in patient_datas:
+    patient_datas_sorted = sorted(patient_datas, key=lambda x: int(x.no))
+
+    for patient in patient_datas_sorted:
         ret_data.append(patient.export_dict())
     return ret_data
-
