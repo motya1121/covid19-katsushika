@@ -61,6 +61,9 @@ class patient_data():
         if text.find('－') != -1 or text.find('ー') != -1 or text.find('-') != -1:
             return ''
 
+        text = text.replace('月', '/')
+        text = text.replace('日', '')
+
         if text.find('11/') != -1 or text.find('12/') != -1:
             year = '2020'
         else:
