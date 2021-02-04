@@ -68,7 +68,13 @@ class patient_data():
             year = '2020'
         else:
             year = '2021'
-        return dt.strptime(f'{year}/{text}', '%Y/%m/%d')
+
+        try:
+            ret_dt = dt.strptime(f'{year}/{text}', '%Y/%m/%d')
+        except ValueError:
+            print(f'no:{self.no}, text:{text}')
+            exit()
+        return ret_dt
 
     def check_old(self, text) -> int:
         # oldではない場合
@@ -339,6 +345,9 @@ def get_data(setting) -> list:
                         if 10 < befor_tb_avg - temp_tb_avg or befor_tb_avg - temp_tb_avg < -10:
                             box_list.sort(key=lambda b: (b.x0))
                             if len(box_list) == 0:
+                                befor_tb_avg = temp_tb_avg
+                                box_list = []
+                            elif box_list[0].get_text().find('○') != -1:
                                 befor_tb_avg = temp_tb_avg
                                 box_list = []
                             else:
