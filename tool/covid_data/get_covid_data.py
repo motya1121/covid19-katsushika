@@ -347,7 +347,7 @@ def get_data(setting) -> list:
                             if len(box_list) == 0:
                                 befor_tb_avg = temp_tb_avg
                                 box_list = []
-                            elif box_list[0].get_text().find('-1') != -1 or box_list[0].get_text().find('○') != -1:
+                            elif box_list[0].get_text().find('-1') != -1 or box_list[0].get_text().find('○') != -1 or box_list[0].get_text().find('(cid:16089)1') != -1:
                                 befor_tb_avg = temp_tb_avg
                                 box_list = []
                             else:
