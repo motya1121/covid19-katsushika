@@ -1,15 +1,12 @@
-import sys
-
 from pdfminer.converter import PDFPageAggregator
 from pdfminer.layout import LAParams, LTContainer, LTTextBox
 from pdfminer.pdfinterp import PDFPageInterpreter, PDFResourceManager
 from pdfminer.pdfpage import PDFPage
-import tempfile
 import urllib.request
 from datetime import datetime as dt
 import json
 import os
-import setting
+import shutil
 
 
 class patient_data():
@@ -43,7 +40,7 @@ class patient_data():
         self.sex = self.check_sex(line_list[3])
         self.job = self.parse_job(line_list[4], line_str)
         self.symptom = self.parse_symptom(line_str)
-        self.appearance_dt = self.parse_appearance_dt(line_list[6],line_str)
+        self.appearance_dt = self.parse_appearance_dt(line_list[6], line_str)
         self.status_id = self.get_status_id(self.box_list[-1].x0)
 
     def cid_to_jp(self, text: str) -> str:
@@ -140,10 +137,10 @@ class patient_data():
         if line_str[symptom_start_index] == ':':
             symptom_start_index += 1
         for i in range(symptom_start_index, len(line_str)):
-            if line_str[i].isdecimal() is True or line_str[i].find('－') != -1 or line_str[i].find('ー') != -1  or line_str[i].find('-') != -1:
+            if line_str[i].isdecimal() is True or line_str[i].find('－') != -1 or line_str[i].find('ー') != -1 or line_str[i].find('-') != -1:
                 break
-        if line_str[i-1] == ':':
-            symptom_end_index = i-1
+        if line_str[i - 1] == ':':
+            symptom_end_index = i - 1
         else:
             symptom_end_index = i
         return line_str[symptom_start_index:symptom_end_index]
@@ -152,7 +149,7 @@ class patient_data():
         # 綺麗な形の場合
         ret_str = ''
         try:
-            if line_list_6.find('－') != -1 or line_list_6.find('ー') != -1 or line_list_6.find('-') != -1  or line_list_6.find('―') != -1:
+            if line_list_6.find('－') != -1 or line_list_6.find('ー') != -1 or line_list_6.find('-') != -1 or line_list_6.find('―') != -1:
                 ret_str = None
             elif line_list_6 == '1/0':
                 ret_str = None
@@ -177,8 +174,8 @@ class patient_data():
                 appearance_dt_start_index = i
 
             # 発症日のおしり出し
-            if line_str[appearance_dt_start_index].find('－') != -1 or line_str[appearance_dt_start_index].find('ー') != -1  or line_str[appearance_dt_start_index].find('-') != -1:
-                ret_str =  None
+            if line_str[appearance_dt_start_index].find('－') != -1 or line_str[appearance_dt_start_index].find('ー') != -1 or line_str[appearance_dt_start_index].find('-') != -1:
+                ret_str = None
 
             for i in range(appearance_dt_start_index, len(line_str)):
                 if line_str[i].isdecimal() is True or line_str[i] == '/':
@@ -290,6 +287,15 @@ def is_skip(text):
     return False
 
 
+def setup_pdf_archive_dir() -> str:
+    this_py_path = os.path.dirname(os.path.abspath(__file__))
+    pdf_archive_dir = os.path.join(this_py_path, 'pdf_archive')
+    shutil.rmtree(pdf_archive_dir)
+    os.mkdir(pdf_archive_dir)
+
+    return pdf_archive_dir
+
+
 def get_data(setting) -> list:
     '''
     初期化
@@ -302,6 +308,8 @@ def get_data(setting) -> list:
     device = PDFPageAggregator(resource_manager, laparams=laparams)
     # Interpreterオブジェクトを作成。
     interpreter = PDFPageInterpreter(resource_manager, device)
+    pdf_archive_dir = setup_pdf_archive_dir()
+
     # pdf data
     patient_datas_pdf = []
     patient_datas_old = []
@@ -311,59 +319,57 @@ def get_data(setting) -> list:
     '''
     befor_tb_avg = 10000  # (top + bottom)/2
 
-    # pdf格納用のテンプディレクトリを作成
-    with tempfile.TemporaryDirectory() as dname:
-        # 分割されたPDFを1つずつ読み込み・処理
-        box_list = []
-        for pdf_url in setting.pdf_urls:
-            # pdf取得
-            pdf_path = dname + '/covid_data.pdf'
-            print(pdf_url)
-            with urllib.request.urlopen(pdf_url) as u:
-                with open(pdf_path, 'bw') as o:
-                    o.write(u.read())
+    # 分割されたPDFを1つずつ読み込み・処理
+    box_list = []
+    for pdf_url in setting.pdf_urls:
+        # pdf取得
+        pdf_path = os.path.join(pdf_archive_dir, pdf_url.split('/')[-1])
+        print(pdf_url)
+        with urllib.request.urlopen(pdf_url) as u:
+            with open(pdf_path, 'bw') as o:
+                o.write(u.read())
 
-            with open(pdf_path, 'rb') as f:
-                for page in PDFPage.get_pages(f):
-                    interpreter.process_page(page)
-                    layout = device.get_result()
+        with open(pdf_path, 'rb') as f:
+            for page in PDFPage.get_pages(f):
+                interpreter.process_page(page)
+                layout = device.get_result()
 
-                    # ページ内のテキストボックスのリストを取得する。
-                    boxes = find_textboxes_recursively(layout)
+                # ページ内のテキストボックスのリストを取得する。
+                boxes = find_textboxes_recursively(layout)
 
-                    # テキストボックスの左上の座標の順でテキストボックスをソートする。
-                    # y1（Y座標の値）は上に行くほど大きくなるので、正負を反転させている。
-                    boxes.sort(key=lambda b: (-b.y1, b.x0))
+                # テキストボックスの左上の座標の順でテキストボックスをソートする。
+                # y1（Y座標の値）は上に行くほど大きくなるので、正負を反転させている。
+                boxes.sort(key=lambda b: (-b.y1, b.x0))
 
-                    for box in boxes:
-                        if is_skip(box.get_text()) is True:
-                            if box.get_text().find('#N/A') != -1:
-                                box_list = []
-                            continue
-                        temp_tb_avg = (box.y1 + box.y0) / 2
+                for box in boxes:
+                    if is_skip(box.get_text()) is True:
+                        if box.get_text().find('#N/A') != -1:
+                            box_list = []
+                        continue
+                    temp_tb_avg = (box.y1 + box.y0) / 2
 
-                        if 10 < befor_tb_avg - temp_tb_avg or befor_tb_avg - temp_tb_avg < -10:
-                            box_list.sort(key=lambda b: (b.x0))
-                            if len(box_list) == 0:
-                                befor_tb_avg = temp_tb_avg
-                                box_list = []
-                            elif box_list[0].get_text().find('-1') != -1 or box_list[0].get_text().find('○') != -1:
+                    if 10 < befor_tb_avg - temp_tb_avg or befor_tb_avg - temp_tb_avg < -10:
+                        box_list.sort(key=lambda b: (b.x0))
+                        if len(box_list) == 0:
+                            befor_tb_avg = temp_tb_avg
+                            box_list = []
+                        elif box_list[0].get_text().find('-1') != -1 or box_list[0].get_text().find('○') != -1:
+                            befor_tb_avg = temp_tb_avg
+                            box_list = []
+                        else:
+                            temp_pd = patient_data(box_list)
+                            temp_pd.parse_line()
+                            if temp_pd.is_error is False:
+                                patient_datas_pdf.append(temp_pd)
                                 befor_tb_avg = temp_tb_avg
                                 box_list = []
                             else:
-                                temp_pd = patient_data(box_list)
-                                temp_pd.parse_line()
-                                if temp_pd.is_error is False:
-                                    patient_datas_pdf.append(temp_pd)
-                                    befor_tb_avg = temp_tb_avg
-                                    box_list = []
-                                else:
-                                    print('error')
-                                    print(box_list)
-                                    befor_tb_avg = temp_tb_avg
-                                    box_list = []
+                                print('error')
+                                print(box_list)
+                                befor_tb_avg = temp_tb_avg
+                                box_list = []
 
-                        box_list.append(box)
+                    box_list.append(box)
     # 最後でデータを処理
     if len(box_list) == 0:
         befor_tb_avg = temp_tb_avg
@@ -384,7 +390,8 @@ def get_data(setting) -> list:
     patient_datas_pdf.reverse()
 
     # 閲覧不可になったデータの処理
-    old_no_range = list(range(1, 1301)) + list(range(1601, 1801))
+    # old_no_range = list(range(1, 1301)) + list(range(1601, 1801))
+    old_no_range = list(range(1, 1301))
     row_datas = []
     patient_datas_old = []
     with open(os.path.dirname(os.path.abspath(__file__)) + "/data/row_data.json", "r") as f:
