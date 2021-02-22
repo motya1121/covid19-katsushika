@@ -137,7 +137,8 @@ class patient_data():
         if line_str[symptom_start_index] == ':':
             symptom_start_index += 1
         for i in range(symptom_start_index, len(line_str)):
-            if line_str[i].isdecimal() is True or line_str[i].find('－') != -1 or line_str[i].find('ー') != -1 or line_str[i].find('-') != -1:
+            if line_str[i].isdecimal() is True or line_str[i].find('－') != -1 or line_str[i].find(
+                    'ー') != -1 or line_str[i].find('-') != -1:
                 break
         if line_str[i - 1] == ':':
             symptom_end_index = i - 1
@@ -149,7 +150,8 @@ class patient_data():
         # 綺麗な形の場合
         ret_str = ''
         try:
-            if line_list_6.find('－') != -1 or line_list_6.find('ー') != -1 or line_list_6.find('-') != -1 or line_list_6.find('―') != -1:
+            if line_list_6.find('－') != -1 or line_list_6.find('ー') != -1 or line_list_6.find(
+                    '-') != -1 or line_list_6.find('―') != -1:
                 ret_str = None
             elif line_list_6 == '1/0':
                 ret_str = None
@@ -168,13 +170,14 @@ class patient_data():
             for i in range(symptom_start_index, len(line_str)):
                 if line_str[i].isdecimal() is True or line_str[i].find('－') != -1 or line_str[i].find('ー') != -1:
                     break
-            if line_str[i-1] == ':':
+            if line_str[i - 1] == ':':
                 appearance_dt_start_index = i
             else:
                 appearance_dt_start_index = i
 
             # 発症日のおしり出し
-            if line_str[appearance_dt_start_index].find('－') != -1 or line_str[appearance_dt_start_index].find('ー') != -1 or line_str[appearance_dt_start_index].find('-') != -1:
+            if line_str[appearance_dt_start_index].find('－') != -1 or line_str[appearance_dt_start_index].find(
+                    'ー') != -1 or line_str[appearance_dt_start_index].find('-') != -1:
                 ret_str = None
 
             for i in range(appearance_dt_start_index, len(line_str)):
@@ -353,10 +356,12 @@ def get_data(setting) -> list:
                         if len(box_list) == 0:
                             befor_tb_avg = temp_tb_avg
                             box_list = []
-                        elif box_list[0].get_text().find('-1') != -1 or box_list[0].get_text().find('○') != -1:
+                        elif box_list[0].get_text().find('-1') != -1 or box_list[0].get_text().find(
+                                '○') != -1 or box_list[0].get_text().find('(cid:16089)1') != -1:
                             befor_tb_avg = temp_tb_avg
                             box_list = []
                         else:
+                            #print(box_list[0].get_text())
                             temp_pd = patient_data(box_list)
                             temp_pd.parse_line()
                             if temp_pd.is_error is False:
