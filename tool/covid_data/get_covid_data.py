@@ -395,8 +395,8 @@ def get_data(setting) -> list:
     patient_datas_pdf.reverse()
 
     # 閲覧不可になったデータの処理
-    # old_no_range = list(range(1, 1301)) + list(range(1601, 1801))
-    old_no_range = list(range(1, 1301))
+    old_no_range = list(range(1, 2701)) + list(range(3001, 3101))
+    # old_no_range = list(range(1, 1301))
     row_datas = []
     patient_datas_old = []
     with open(os.path.dirname(os.path.abspath(__file__)) + "/data/row_data.json", "r") as f:
