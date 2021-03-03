@@ -42,6 +42,8 @@ class patient_data():
         self.symptom = self.parse_symptom(line_str)
         self.appearance_dt = self.parse_appearance_dt(line_list[6], line_str)
         self.status_id = self.get_status_id(self.box_list[-1].x0)
+        if self.status_id == 0:
+            print(line_list[0], self.box_list[-1].x0, self.status_id)
 
     def cid_to_jp(self, text: str) -> str:
         with open(os.path.dirname(os.path.abspath(__file__)) + "/cid_jp_map.json", "r") as f:
@@ -192,17 +194,17 @@ class patient_data():
 
     def get_status_id(self, coordinate):
         # DEBUG
-        if 190 <= coordinate and coordinate <= 415:
+        if 190 <= coordinate and coordinate <= 386:
             return 1
-        elif 420 <= coordinate and coordinate <= 435:
+        elif 409 <= coordinate and coordinate <= 424:
             return 2
-        elif 450 <= coordinate and coordinate <= 460:
+        elif 435 <= coordinate and coordinate <= 450:
             return 3
-        elif 475 <= coordinate and coordinate <= 485:
+        elif 460 <= coordinate and coordinate <= 480:
             return 4
-        elif 500 <= coordinate and coordinate <= 510:
+        elif 485 <= coordinate and coordinate <= 504:
             return 5
-        elif 520 <= coordinate and coordinate <= 535:
+        elif 506 <= coordinate and coordinate <= 535:
             return 6
         else:
             return 0
