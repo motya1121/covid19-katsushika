@@ -377,6 +377,20 @@ def get_data(setting) -> list:
                                 box_list = []
 
                     box_list.append(box)
+
+        # 前のPDFファイルで残されたデータの処理
+        temp_pd = patient_data(box_list)
+        temp_pd.parse_line()
+        if temp_pd.is_error is False:
+            patient_datas_pdf.append(temp_pd)
+            befor_tb_avg = temp_tb_avg
+            box_list = []
+        else:
+            print('error')
+            print(box_list)
+            befor_tb_avg = temp_tb_avg
+            box_list = []
+
     # 最後でデータを処理
     if len(box_list) == 0:
         befor_tb_avg = temp_tb_avg
