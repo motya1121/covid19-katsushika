@@ -42865,7 +42865,7 @@
         "old": 70,
         "sex": 1,
         "job": "無職",
-        "symptom": "発熱、咳、血貧、肺炎",
+        "symptom": "発熱、咳、貧血、肺炎",
         "appearance_dt": "2021-03-06",
         "status_id": 1
     },
@@ -43218,65 +43218,5 @@
         "symptom": "咳、肺炎像",
         "appearance_dt": "2021-03-09",
         "status_id": 2
-    },
-    {
-        "No": "4323",
-        "revealed_dt": "2021-03-11",
-        "old": 60,
-        "sex": 1,
-        "job": "自営業",
-        "symptom": "なし",
-        "appearance_dt": "",
-        "status_id": 4
-    },
-    {
-        "No": "4324",
-        "revealed_dt": "2021-03-11",
-        "old": 40,
-        "sex": 1,
-        "job": "会社員",
-        "symptom": "なし",
-        "appearance_dt": "",
-        "status_id": 3
-    },
-    {
-        "No": "4325",
-        "revealed_dt": "2021-03-11",
-        "old": 0,
-        "sex": 2,
-        "job": "学生",
-        "symptom": "なし",
-        "appearance_dt": "",
-        "status_id": 2
-    },
-    {
-        "No": "4326",
-        "revealed_dt": "2021-03-11",
-        "old": 20,
-        "sex": 2,
-        "job": "会社員",
-        "symptom": "咳、咽頭痛、頭痛、鼻閉",
-        "appearance_dt": "2021-03-11",
-        "status_id": 3
-    },
-    {
-        "No": "4327",
-        "revealed_dt": "2021-03-11",
-        "old": 70,
-        "sex": 1,
-        "job": "調査中",
-        "symptom": "なし",
-        "appearance_dt": "",
-        "status_id": 2
-    },
-    {
-        "No": "4328",
-        "revealed_dt": "2021-03-12",
-        "old": 80,
-        "sex": 1,
-        "job": "無職",
-        "symptom": "発熱、咳、頭痛、肺炎",
-        "appearance_dt": "2021-03-08",
-        "status_id": 1
     }
 ]
