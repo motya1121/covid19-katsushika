@@ -4,6 +4,7 @@ import urllib.error
 import urllib.parse
 from bs4 import BeautifulSoup
 import datetime
+from dateutil.relativedelta import relativedelta
 import re
 from notify import notify
 from get_covid_data import get_data
@@ -96,8 +97,12 @@ def export_data(pdf_datas):
     # patients
     patients = {'date': updated_datetime.strftime('%Y/%m/%d %H:%M'), 'data': []}
     status_id = {1: '入院調整中', 2: '入院中', 3: '宿泊療養中', 4: '自宅療養中', 6: '死亡', 5: '回復'}
+    now_dt = datetime.date.today()
+    befor_2_month = now_dt - relativedelta(months=3)
 
     for pdf_data in pdf_datas:
+        if pdf_data['revealed_dt'].date() < befor_2_month:
+            continue
         temp_patient = {
             'リリース日': pdf_data['revealed_dt'].strftime('%Y-%m-%d') + 'T08:00:00.000Z',
             '症状': pdf_data['symptom'],
