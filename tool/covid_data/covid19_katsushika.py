@@ -153,7 +153,7 @@ def export_data(pdf_datas):
         if end_date < date:
             break
         patients_summary['data'].append({
-            '日付': date.strftime('%Y-%m-%d'),
+            '日付': f'{date.isoformat()}.000Z',
             '小計': temp_per_day[date.strftime('%Y-%m-%d')] if date.strftime('%Y-%m-%d') in temp_per_day.keys() else 0
         })
         date += datetime.timedelta(days=1)

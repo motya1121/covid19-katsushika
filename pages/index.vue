@@ -46,7 +46,6 @@
       <confirmed-cases-details-card />
       <confirmed-cases-attributes-card />
       <confirmed-cases-number-card />
-      <ConfirmedCasesPieChartCard />
       <GoogleMapCard />
     </v-row>
     <v-divider />
@@ -65,7 +64,6 @@ import News from '@/data/news.json'
 import ConfirmedCasesDetailsCard from '@/components/cards/ConfirmedCasesDetailsCard.vue'
 import ConfirmedCasesNumberCard from '@/components/cards/ConfirmedCasesNumberCard.vue'
 import ConfirmedCasesAttributesCard from '@/components/cards/ConfirmedCasesAttributesCard.vue'
-import ConfirmedCasesPieChartCard from '@/components/cards/ConfirmedCasesPieChartCard.vue'
 import GoogleMapCard from '@/components/cards/GoogleMapCard.vue'
 import { convertDatetimeToISO8601Format } from '@/utils/formatDate'
 
@@ -78,7 +76,6 @@ export default Vue.extend({
     ConfirmedCasesDetailsCard,
     ConfirmedCasesNumberCard,
     ConfirmedCasesAttributesCard,
-    ConfirmedCasesPieChartCard,
     GoogleMapCard
   },
   data() {

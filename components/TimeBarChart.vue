@@ -1,9 +1,12 @@
 <template>
   <data-view :title="title" :title-id="titleId" :date="date">
-    <template v-slot:description>
+    <template #attentionNote>
+      <slot name="attentionNote" />
+    </template>
+    <template #description>
       <slot name="description" />
     </template>
-    <template v-slot:button>
+    <template #button>
       <data-selector
         v-model="dataKind"
         :target-id="chartId"
@@ -13,69 +16,53 @@
     <h4 :id="`${titleId}-graph`" class="visually-hidden">
       {{ $t(`{title}のグラフ`, { title }) }}
     </h4>
-    <div class="LegendStickyChart">
-      <bar
-        :ref="'barChart'"
-        :chart-data="displayData"
-        :options="displayOption"
-        :height="240"
-        :width="chartWidth"
-      />
-    </div>
-    <template v-slot:infoPanel>
-      <data-view-basic-info-panel
-        :l-text="displayInfo.lText"
-        :unit="displayInfo.unit"
-      />
-    </template>
-    <br />
-    <v-range-slider
-      v-model="daterange"
-      :min="MinDateNumber"
-      :max="MaxDateNumber"
-      thumb-color="#388242"
-      color="#388242"
-      track-color="#52c463"
-      hide-details
-      thumb-label="always"
-      class="align-center"
-      @input="onInput"
-    >
-      <template v-slot:thumb-label="props">
-        {{ getSliderLabels(props.value) }}
+    <scrollable-chart v-show="canvas" :display-data="displayData">
+      <template #chart="{ chartWidth }">
+        <bar
+          :ref="'barChart'"
+          :chart-id="chartId"
+          :chart-data="displayData"
+          :options="displayOption"
+          :height="240"
+          :width="chartWidth"
+        />
       </template>
-    </v-range-slider>
+      <template #sticky-chart>
+        <bar
+          class="sticky-legend"
+          :chart-id="`${chartId}-header`"
+          :chart-data="displayDataHeader"
+          :options="displayOptionHeader"
+          :plugins="yAxesBgPlugin"
+          :height="240"
+        />
+      </template>
+    </scrollable-chart>
   </data-view>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import { TranslateResult } from 'vue-i18n'
-import { ThisTypedComponentOptionsWithRecordProps } from 'vue/types/options'
 import { Chart } from 'chart.js'
-import { GraphDataType } from '@/utils/formatGraph'
-import DataView from '@/components/DataView.vue'
-import DataSelector from '@/components/DataSelector.vue'
-import DataViewBasicInfoPanel from '@/components/DataViewBasicInfoPanel.vue'
-import OpenDataLink from '@/components/OpenDataLink.vue'
-import { DisplayData, yAxesBgPlugin, scrollPlugin } from '@/plugins/vue-chart'
+import dayjs from 'dayjs'
+import Vue from 'vue'
+import { ThisTypedComponentOptionsWithRecordProps } from 'vue/types/options'
 
+import DataSelector from '@/components/DataSelector.vue'
+import DataView from '@/components/DataView.vue'
+import OpenDataLink from '@/components/OpenDataLink.vue'
+import ScrollableChart from '@/components/ScrollableChart.vue'
+import { DisplayData, yAxesBgPlugin } from '@/plugins/vue-chart'
+import calcDayBeforeRatio from '@/utils/calcDayBeforeRatio'
 import { getGraphSeriesStyle } from '@/utils/colors'
+import { GraphDataType } from '@/utils/formatGraph'
 
 type Data = {
   dataKind: 'transition' | 'cumulative'
   canvas: boolean
-  chartWidth: number | null
 }
-type Methods = {
-  formatDayBeforeRatio: (dayBeforeRatio: number) => string
-  onInput: (e: Array<number>) => void
-  getSliderLabels: (id: number) => string
-}
+type Methods = {}
 
 type Computed = {
-  displayCumulativeRatio: string
-  displayTransitionRatio: string
   displayInfo: {
     lText: string
     sText: string
@@ -86,14 +73,6 @@ type Computed = {
   displayDataHeader: DisplayData
   displayOptionHeader: Chart.ChartOptions
   scaledTicksYAxisMax: number
-  tableHeaders: {
-    text: TranslateResult
-    value: string
-  }[]
-  tableData: {
-    text: string
-    '0': number
-  }[]
 }
 type Props = {
   title: string
@@ -102,14 +81,8 @@ type Props = {
   chartData: GraphDataType[]
   date: string
   unit: string
-  url: string
-  scrollPlugin: Chart.PluginServiceRegistrationOptions[]
   yAxesBgPlugin: Chart.PluginServiceRegistrationOptions[]
-  daterange: Array<number>
-  MinDateNumber: number
-  StartDateString: string
-  MaxDateNumber: number
-  EndDateString: string
+  byDate: boolean
 }
 
 const options: ThisTypedComponentOptionsWithRecordProps<
@@ -126,7 +99,12 @@ const options: ThisTypedComponentOptionsWithRecordProps<
         ? 'cumulative'
         : 'transition'
   },
-  components: { DataView, DataSelector, DataViewBasicInfoPanel, OpenDataLink },
+  components: {
+    DataView,
+    DataSelector,
+    ScrollableChart,
+    OpenDataLink
+  },
   props: {
     title: {
       type: String,
@@ -152,82 +130,77 @@ const options: ThisTypedComponentOptionsWithRecordProps<
       type: String,
       default: ''
     },
-    url: {
-      type: String,
-      default: ''
-    },
-    scrollPlugin: {
-      type: Array,
-      default: () => scrollPlugin
-    },
     yAxesBgPlugin: {
       type: Array,
       default: () => yAxesBgPlugin
     },
-    daterange: {
-      type: Array
-    },
-    MinDateNumber: {
-      type: Number
-    },
-    StartDateString: {
-      type: String
-    },
-    MaxDateNumber: {
-      type: Number
-    },
-    EndDateString: {
-      type: String
+    byDate: {
+      type: Boolean,
+      default: false
     }
   },
   data: () => ({
     dataKind: 'transition',
-    chartWidth: null,
     canvas: true
   }),
   computed: {
-    displayCumulativeRatio() {
-      const lastDay = this.chartData.slice(-1)[0].cumulative
-      const lastDayBefore = this.chartData.slice(-2)[0].cumulative
-      return this.formatDayBeforeRatio(lastDay - lastDayBefore)
-    },
-    displayTransitionRatio() {
-      const lastDay = this.chartData.slice(-1)[0].transition
-      const lastDayBefore = this.chartData.slice(-2)[0].transition
-      return this.formatDayBeforeRatio(lastDay - lastDayBefore)
-    },
     displayInfo() {
-      if (this.dataKind === 'transition') {
+      const { lastDay, lastDayData, dayBeforeRatio } = calcDayBeforeRatio({
+        displayData: this.displayData,
+        dataIndex: 1
+      })
+      const formattedLastDay = this.$d(lastDay, 'date')
+      if (this.dataKind === 'transition' && this.byDate) {
         return {
-          lText: `${this.chartData.slice(-1)[0].cumulative.toLocaleString()}`,
-          sText: `${this.chartData.slice(-1)[0].label} ${this.$t(
-            '実績値'
-          )}（${this.$t('前日比')}: ${this.displayTransitionRatio} ${
-            this.unit
-          }）`,
+          lText: lastDayData,
+          sText: `${formattedLastDay} ${this.$t('日別値')}（${this.$t(
+            '前日比'
+          )}: ${dayBeforeRatio} ${this.unit}）`,
+          unit: this.unit
+        }
+      } else if (this.dataKind === 'transition') {
+        return {
+          lText: lastDayData,
+          sText: `${formattedLastDay} ${this.$t('実績値')}（${this.$t(
+            '前日比'
+          )}: ${dayBeforeRatio} ${this.unit}）`,
           unit: this.unit
         }
       }
       return {
-        lText: this.chartData[
-          this.chartData.length - 1
-        ].cumulative.toLocaleString(),
-        sText: `${this.chartData.slice(-1)[0].label} ${this.$t(
-          '累計値'
-        )}（${this.$t('前日比')}: ${this.displayCumulativeRatio} ${
-          this.unit
-        }）`,
+        lText: lastDayData,
+        sText: `${formattedLastDay} ${this.$t('累計値')}（${this.$t(
+          '前日比'
+        )}: ${dayBeforeRatio} ${this.unit}）`,
         unit: this.unit
       }
     },
     displayData() {
       const style = getGraphSeriesStyle(1)[0]
+      const zeroMouseOverHeight = 5
+      const transparentWhite = 'rgba(255,255,255,0)'
+
       if (this.dataKind === 'transition') {
         return {
           labels: this.chartData.map(d => {
             return d.label
           }),
           datasets: [
+            {
+              label: this.dataKind,
+              data: this.chartData.map(_d => {
+                return 0
+              }),
+              backgroundColor: transparentWhite,
+              borderColor: transparentWhite,
+              borderWidth: 0,
+              minBarLength: this.chartData.map(d => {
+                if (d.transition <= 0) {
+                  return zeroMouseOverHeight
+                }
+                return 0
+              })
+            },
             {
               label: this.dataKind,
               data: this.chartData.map(d => {
@@ -245,6 +218,21 @@ const options: ThisTypedComponentOptionsWithRecordProps<
         datasets: [
           {
             label: this.dataKind,
+            data: this.chartData.map(_d => {
+              return 0
+            }),
+            backgroundColor: transparentWhite,
+            borderColor: transparentWhite,
+            borderWidth: 0,
+            minBarLength: this.chartData.map(d => {
+              if (d.cumulative <= 0) {
+                return zeroMouseOverHeight
+              }
+              return 0
+            })
+          },
+          {
+            label: this.dataKind,
             data: this.chartData.map(d => {
               return d.cumulative
             }),
@@ -258,22 +246,23 @@ const options: ThisTypedComponentOptionsWithRecordProps<
     displayOption() {
       const unit = this.unit
       const scaledTicksYAxisMax = this.scaledTicksYAxisMax
+
       const options: Chart.ChartOptions = {
         tooltips: {
           displayColors: false,
           callbacks: {
-            label(tooltipItem) {
+            label: tooltipItem => {
               const labelText = `${parseInt(
                 tooltipItem.value!
               ).toLocaleString()} ${unit}`
               return labelText
             },
-            title(tooltipItem, data) {
-              return data.labels![tooltipItem[0].index!] as string[]
+            title: (tooltipItem, data) => {
+              const label = data.labels![tooltipItem[0].index!] as string
+              return this.$d(new Date(label), 'date')
             }
           }
         },
-        responsive: false,
         maintainAspectRatio: false,
         legend: {
           display: false
@@ -292,7 +281,7 @@ const options: ThisTypedComponentOptionsWithRecordProps<
                 fontColor: '#808080',
                 maxRotation: 0,
                 callback: (label: string) => {
-                  return label.split('/')[1]
+                  return dayjs(label).format('D')
                 }
               }
               // #2384: If you set "type" to "time", make sure that the bars at both ends are not hidden.
@@ -316,39 +305,41 @@ const options: ThisTypedComponentOptionsWithRecordProps<
               type: 'time',
               time: {
                 unit: 'month',
-                parser: 'M/D',
                 displayFormats: {
-                  month: 'MMM'
+                  month: 'YYYY-MM'
                 }
               }
             }
           ],
           yAxes: [
             {
-              stacked: true,
+              position: 'left',
               gridLines: {
                 display: true,
+                drawOnChartArea: true,
                 color: '#E5E5E5'
               },
               ticks: {
-                suggestedMin: 0,
                 maxTicksLimit: 8,
                 fontColor: '#808080',
+                suggestedMin: 0,
                 suggestedMax: scaledTicksYAxisMax
               }
             }
           ]
         }
       }
+
       if (this.$route.query.ogp === 'true') {
         Object.assign(options, { animation: { duration: 0 } })
       }
+
       return options
     },
     displayDataHeader() {
       if (this.dataKind === 'transition') {
         return {
-          labels: ['2020/1/1'],
+          labels: ['2020-01-01'],
           datasets: [
             {
               data: [Math.max(...this.chartData.map(d => d.transition))],
@@ -359,7 +350,7 @@ const options: ThisTypedComponentOptionsWithRecordProps<
         }
       }
       return {
-        labels: ['2020/1/1'],
+        labels: ['2020-01-01'],
         datasets: [
           {
             data: [Math.max(...this.chartData.map(d => d.cumulative))],
@@ -371,13 +362,13 @@ const options: ThisTypedComponentOptionsWithRecordProps<
     },
     displayOptionHeader() {
       const scaledTicksYAxisMax = this.scaledTicksYAxisMax
+
       const options: Chart.ChartOptions = {
-        responsive: false,
+        tooltips: { enabled: false },
         maintainAspectRatio: false,
         legend: {
           display: false
         },
-        tooltips: { enabled: false },
         scales: {
           xAxes: [
             {
@@ -389,11 +380,10 @@ const options: ThisTypedComponentOptionsWithRecordProps<
               ticks: {
                 fontSize: 9,
                 maxTicksLimit: 20,
-                fontColor: 'transparent',
+                fontColor: 'transparent', // displayOption では '#808080'
                 maxRotation: 0,
-                minRotation: 0,
                 callback: (label: string) => {
-                  return label.split('/')[1]
+                  return dayjs(label).format('D')
                 }
               }
             },
@@ -402,52 +392,37 @@ const options: ThisTypedComponentOptionsWithRecordProps<
               stacked: true,
               gridLines: {
                 drawOnChartArea: false,
-                drawTicks: false, // true -> false
+                drawTicks: false, // displayOption では true
                 drawBorder: false,
                 tickMarkLength: 10
               },
               ticks: {
                 fontSize: 11,
-                fontColor: 'transparent', // #808080
-                padding: 13, // 3 + 10(tickMarkLength)
-                fontStyle: 'bold',
-                callback: (label: string) => {
-                  const monthStringArry = [
-                    'Jan',
-                    'Feb',
-                    'Mar',
-                    'Apr',
-                    'May',
-                    'Jun',
-                    'Jul',
-                    'Aug',
-                    'Sep',
-                    'Oct',
-                    'Nov',
-                    'Dec'
-                  ]
-                  const month = monthStringArry.indexOf(label.split(' ')[0]) + 1
-                  return month + '月'
-                }
+                fontColor: 'transparent', // displayOption では '#808080'
+                padding: 13, // 3 + 10(tickMarkLength)，displayOption では 3
+                fontStyle: 'bold'
               },
               type: 'time',
               time: {
-                unit: 'month'
+                unit: 'month',
+                displayFormats: {
+                  month: 'YYYY-MM'
+                }
               }
             }
           ],
           yAxes: [
             {
-              stacked: true,
+              position: 'left',
               gridLines: {
                 display: true,
-                drawOnChartArea: false,
-                color: '#E5E5E5' // #E5E5E5
+                drawOnChartArea: false, // displayOption では true
+                color: '#E5E5E5'
               },
               ticks: {
-                suggestedMin: 0,
                 maxTicksLimit: 8,
-                fontColor: '#808080', // #808080
+                fontColor: '#808080',
+                suggestedMin: 0,
                 suggestedMax: scaledTicksYAxisMax
               }
             }
@@ -455,6 +430,7 @@ const options: ThisTypedComponentOptionsWithRecordProps<
         },
         animation: { duration: 0 }
       }
+
       return options
     },
     scaledTicksYAxisMax() {
@@ -462,49 +438,9 @@ const options: ThisTypedComponentOptionsWithRecordProps<
         this.dataKind === 'transition' ? 'transition' : 'cumulative'
       const values = this.chartData.map(d => d[dataKind])
       return Math.max(...values)
-    },
-    tableHeaders() {
-      return [
-        { text: this.$t('日付'), value: 'text' },
-        { text: this.title, value: '0' }
-      ]
-    },
-    tableData() {
-      return this.displayData.datasets![0].data!.map((_, i) => {
-        return {
-          text: this.displayData.labels![i] as string,
-          '0': this.displayData.datasets![0].data![i] as number
-        }
-      })
-    }
-  },
-  methods: {
-    formatDayBeforeRatio(dayBeforeRatio: number): string {
-      const dayBeforeRatioLocaleString = dayBeforeRatio.toLocaleString()
-      switch (Math.sign(dayBeforeRatio)) {
-        case 1:
-          return `+${dayBeforeRatioLocaleString}`
-        case -1:
-          return `${dayBeforeRatioLocaleString}`
-        default:
-          return `${dayBeforeRatioLocaleString}`
-      }
-    },
-    onInput(e: Array<number>): void {
-      this.$emit('update_cut_Data', e[0], e[1])
-    },
-    getSliderLabels(id): string {
-      if (id === this.daterange[0]) {
-        return this.StartDateString
-      } else {
-        return this.EndDateString
-      }
     }
   },
   mounted() {
-    if (this.$el) {
-      this.chartWidth = this.$el!.clientWidth - 22 * 2
-    }
     const barChart = this.$refs.barChart as Vue
     const barElement = barChart.$el
     const canvas = barElement.querySelector('canvas')

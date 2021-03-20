@@ -45,7 +45,7 @@ export default (data: DataType[]) => {
   }
   data.forEach(d => {
     const TableRow: TableDataType = {
-      公表日: dayjs(d['リリース日']).format('MM/DD') ?? '不明',
+      公表日: dayjs(d['リリース日']).format('YYYY/MM/DD') ?? '不明',
       症状: d['症状'] ?? '調査中',
       年代: d['年代'] ?? '不明',
       性別: d['性別'] ?? '不明',
