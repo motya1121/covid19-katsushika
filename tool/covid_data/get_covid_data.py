@@ -35,7 +35,6 @@ class patient_data():
 
         line_list = line_str.split(':')
         # 例外処理
-        print(line_list)
         if line_list[0] == '3842':
             line_list = ['3842', '2/12', '７０代', '男', '無職', '咳以外の呼吸器症状', '2/12', '○', '']
         self.no = line_list[0]
@@ -368,7 +367,6 @@ def get_data(setting) -> list:
                             box_list = []
                         else:
                             #print(box_list[0].get_text())
-                            print(box_list)
                             temp_pd = patient_data(box_list)
                             temp_pd.parse_line()
                             if temp_pd.is_error is False:
