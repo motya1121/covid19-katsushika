@@ -197,7 +197,7 @@ class patient_data():
 
     def get_status_id(self, coordinate):
         # DEBUG
-        if 190 <= coordinate and coordinate <= 386:
+        if 186 <= coordinate and coordinate <= 386:
             return 1
         elif 409 <= coordinate and coordinate <= 424:
             return 2
@@ -415,7 +415,7 @@ def get_data(setting) -> list:
 
     # 閲覧不可になったデータの処理
     # 4301-4308はミスで削除されたもの
-    old_no_range = list(range(1, 2801)) + list(range(3001, 3101)) + list(range(3501, 3701)) + list(range(4301, 4309))
+    old_no_range = list(range(1, 2801)) + list(range(3001, 3101)) + list(range(3501, 3701)) 
     # old_no_range = list(range(1, 1301))
     row_datas = []
     patient_datas_old = []
