@@ -8,6 +8,8 @@ import json
 import os
 import shutil
 
+DEBUG = False
+
 
 class patient_data():
 
@@ -30,13 +32,19 @@ class patient_data():
 
         # check remain cid
         if line_str.find('cid') != -1:
+            print('cid error')
             print(line_str)
             exit()
 
         line_list = line_str.split(':')
+        if DEBUG is True:
+            print(self.box_list)
+            print(line_list)
         # 例外処理
         if line_list[0] == '3842':
             line_list = ['3842', '2/12', '７０代', '男', '無職', '咳以外の呼吸器症状', '2/12', '○', '']
+        elif line_list[1] == '4601':
+            line_list = ['4601', '4/13', '２０代', '女', '会社員', '発熱、頭痛、倦怠感、味覚障害、嗅覚障害', '4/4', '○', '']
         self.no = line_list[0]
         self.revealed_dt = self.check_date(line_list[1])
         self.old = self.check_old(line_list[2])
@@ -46,6 +54,7 @@ class patient_data():
         self.appearance_dt = self.parse_appearance_dt(line_list[6], line_str)
         self.status_id = self.get_status_id(self.box_list[-1].x0)
         if self.status_id == 0:
+            print('error status id')
             print(line_list[0], self.box_list[-1].x0, self.status_id)
 
     def cid_to_jp(self, text: str) -> str:
@@ -74,6 +83,7 @@ class patient_data():
         try:
             ret_dt = dt.strptime(f'{year}/{text}', '%Y/%m/%d')
         except ValueError:
+            print('error check date')
             print(f'no:{self.no}, text:{text}')
             exit()
         return ret_dt
@@ -366,7 +376,6 @@ def get_data(setting) -> list:
                             befor_tb_avg = temp_tb_avg
                             box_list = []
                         else:
-                            #print(box_list[0].get_text())
                             temp_pd = patient_data(box_list)
                             temp_pd.parse_line()
                             if temp_pd.is_error is False:
