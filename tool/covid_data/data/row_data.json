@@ -35002,9 +35002,9 @@
     {
         "No": "3501",
         "revealed_dt": "2021-02-02",
-        "old": 50,
-        "sex": 2,
-        "job": "会社員",
+        "old": 60,
+        "sex": 1,
+        "job": "公務員",
         "symptom": "なし",
         "appearance_dt": "",
         "status_id": 5
@@ -35012,17 +35012,17 @@
     {
         "No": "3502",
         "revealed_dt": "2021-02-02",
-        "old": 80,
-        "sex": 1,
+        "old": 60,
+        "sex": 2,
         "job": "無職",
-        "symptom": "発熱、咳、倦怠感、息苦しさ",
-        "appearance_dt": "2021-01-29",
+        "symptom": "なし",
+        "appearance_dt": "",
         "status_id": 5
     },
     {
         "No": "3503",
         "revealed_dt": "2021-02-02",
-        "old": 50,
+        "old": 20,
         "sex": 1,
         "job": "会社員",
         "symptom": "なし",
@@ -35032,36 +35032,6 @@
     {
         "No": "3504",
         "revealed_dt": "2021-02-02",
-        "old": 60,
-        "sex": 1,
-        "job": "公務員",
-        "symptom": "なし",
-        "appearance_dt": "",
-        "status_id": 5
-    },
-    {
-        "No": "3505",
-        "revealed_dt": "2021-02-02",
-        "old": 60,
-        "sex": 2,
-        "job": "無職",
-        "symptom": "なし",
-        "appearance_dt": "",
-        "status_id": 5
-    },
-    {
-        "No": "3506",
-        "revealed_dt": "2021-02-02",
-        "old": 20,
-        "sex": 1,
-        "job": "会社員",
-        "symptom": "なし",
-        "appearance_dt": "",
-        "status_id": 5
-    },
-    {
-        "No": "3507",
-        "revealed_dt": "2021-02-02",
         "old": 90,
         "sex": 2,
         "job": "無職",
@@ -35070,7 +35040,7 @@
         "status_id": 5
     },
     {
-        "No": "3508",
+        "No": "3505",
         "revealed_dt": "2021-02-02",
         "old": 20,
         "sex": 1,
@@ -35080,7 +35050,7 @@
         "status_id": 5
     },
     {
-        "No": "3509",
+        "No": "3506",
         "revealed_dt": "2021-02-02",
         "old": 90,
         "sex": 1,
@@ -35090,7 +35060,7 @@
         "status_id": 5
     },
     {
-        "No": "3510",
+        "No": "3507",
         "revealed_dt": "2021-02-02",
         "old": 30,
         "sex": 1,
@@ -35100,7 +35070,7 @@
         "status_id": 5
     },
     {
-        "No": "3511",
+        "No": "3508",
         "revealed_dt": "2021-02-02",
         "old": 40,
         "sex": 1,
@@ -35110,7 +35080,7 @@
         "status_id": 5
     },
     {
-        "No": "3512",
+        "No": "3509",
         "revealed_dt": "2021-02-02",
         "old": 50,
         "sex": 2,
@@ -35120,17 +35090,17 @@
         "status_id": 5
     },
     {
-        "No": "3513",
+        "No": "3510",
         "revealed_dt": "2021-02-02",
         "old": 20,
         "sex": 1,
         "job": "調査中",
-        "symptom": "",
+        "symptom": "なし",
         "appearance_dt": "",
         "status_id": 5
     },
     {
-        "No": "3514",
+        "No": "3511",
         "revealed_dt": "2021-02-03",
         "old": 30,
         "sex": 1,
@@ -35140,7 +35110,7 @@
         "status_id": 5
     },
     {
-        "No": "3515",
+        "No": "3512",
         "revealed_dt": "2021-02-03",
         "old": 50,
         "sex": 1,
@@ -35150,7 +35120,7 @@
         "status_id": 5
     },
     {
-        "No": "3516",
+        "No": "3513",
         "revealed_dt": "2021-02-03",
         "old": 80,
         "sex": 2,
@@ -35160,7 +35130,7 @@
         "status_id": 5
     },
     {
-        "No": "3517",
+        "No": "3514",
         "revealed_dt": "2021-02-03",
         "old": 80,
         "sex": 1,
@@ -35170,7 +35140,7 @@
         "status_id": 5
     },
     {
-        "No": "3518",
+        "No": "3515",
         "revealed_dt": "2021-02-03",
         "old": 40,
         "sex": 2,
@@ -35180,7 +35150,7 @@
         "status_id": 5
     },
     {
-        "No": "3519",
+        "No": "3516",
         "revealed_dt": "2021-02-03",
         "old": 90,
         "sex": 1,
@@ -35190,7 +35160,7 @@
         "status_id": 6
     },
     {
-        "No": "3520",
+        "No": "3517",
         "revealed_dt": "2021-02-03",
         "old": 80,
         "sex": 1,
@@ -35200,7 +35170,7 @@
         "status_id": 5
     },
     {
-        "No": "3521",
+        "No": "3518",
         "revealed_dt": "2021-02-03",
         "old": 60,
         "sex": 2,
@@ -35210,7 +35180,7 @@
         "status_id": 5
     },
     {
-        "No": "3522",
+        "No": "3519",
         "revealed_dt": "2021-02-03",
         "old": 30,
         "sex": 1,
@@ -35220,7 +35190,7 @@
         "status_id": 5
     },
     {
-        "No": "3523",
+        "No": "3520",
         "revealed_dt": "2021-02-03",
         "old": 20,
         "sex": 1,
@@ -35230,7 +35200,7 @@
         "status_id": 5
     },
     {
-        "No": "3524",
+        "No": "3521",
         "revealed_dt": "2021-02-03",
         "old": 50,
         "sex": 1,
@@ -35240,7 +35210,7 @@
         "status_id": 5
     },
     {
-        "No": "3525",
+        "No": "3522",
         "revealed_dt": "2021-02-03",
         "old": 10,
         "sex": 2,
@@ -35250,7 +35220,7 @@
         "status_id": 5
     },
     {
-        "No": "3526",
+        "No": "3523",
         "revealed_dt": "2021-02-03",
         "old": 10,
         "sex": 2,
@@ -35260,7 +35230,7 @@
         "status_id": 5
     },
     {
-        "No": "3527",
+        "No": "3524",
         "revealed_dt": "2021-02-03",
         "old": 30,
         "sex": 2,
@@ -35270,7 +35240,7 @@
         "status_id": 5
     },
     {
-        "No": "3528",
+        "No": "3525",
         "revealed_dt": "2021-02-03",
         "old": 0,
         "sex": 2,
@@ -35280,7 +35250,7 @@
         "status_id": 5
     },
     {
-        "No": "3529",
+        "No": "3526",
         "revealed_dt": "2021-02-03",
         "old": 10,
         "sex": 1,
@@ -35290,7 +35260,7 @@
         "status_id": 5
     },
     {
-        "No": "3530",
+        "No": "3527",
         "revealed_dt": "2021-02-03",
         "old": 80,
         "sex": 1,
@@ -35300,7 +35270,7 @@
         "status_id": 5
     },
     {
-        "No": "3531",
+        "No": "3528",
         "revealed_dt": "2021-02-03",
         "old": 20,
         "sex": 1,
@@ -35310,7 +35280,7 @@
         "status_id": 5
     },
     {
-        "No": "3532",
+        "No": "3529",
         "revealed_dt": "2021-02-03",
         "old": 30,
         "sex": 2,
@@ -35320,7 +35290,7 @@
         "status_id": 5
     },
     {
-        "No": "3533",
+        "No": "3530",
         "revealed_dt": "2021-02-03",
         "old": 50,
         "sex": 1,
@@ -35330,7 +35300,7 @@
         "status_id": 5
     },
     {
-        "No": "3534",
+        "No": "3531",
         "revealed_dt": "2021-02-03",
         "old": 60,
         "sex": 1,
@@ -35340,7 +35310,7 @@
         "status_id": 5
     },
     {
-        "No": "3535",
+        "No": "3532",
         "revealed_dt": "2021-02-03",
         "old": 20,
         "sex": 1,
@@ -35350,7 +35320,7 @@
         "status_id": 5
     },
     {
-        "No": "3536",
+        "No": "3533",
         "revealed_dt": "2021-02-03",
         "old": 30,
         "sex": 1,
@@ -35360,17 +35330,17 @@
         "status_id": 5
     },
     {
-        "No": "3537",
+        "No": "3534",
         "revealed_dt": "2021-02-03",
         "old": 80,
         "sex": 1,
         "job": "調査中",
-        "symptom": "",
+        "symptom": "なし",
         "appearance_dt": "",
         "status_id": 5
     },
     {
-        "No": "3538",
+        "No": "3535",
         "revealed_dt": "2021-02-03",
         "old": 80,
         "sex": 1,
@@ -35380,7 +35350,7 @@
         "status_id": 5
     },
     {
-        "No": "3539",
+        "No": "3536",
         "revealed_dt": "2021-02-03",
         "old": 30,
         "sex": 1,
@@ -35390,7 +35360,7 @@
         "status_id": 5
     },
     {
-        "No": "3540",
+        "No": "3537",
         "revealed_dt": "2021-02-03",
         "old": 50,
         "sex": 2,
@@ -35400,7 +35370,7 @@
         "status_id": 5
     },
     {
-        "No": "3541",
+        "No": "3538",
         "revealed_dt": "2021-02-03",
         "old": 20,
         "sex": 1,
@@ -35410,7 +35380,7 @@
         "status_id": 5
     },
     {
-        "No": "3542",
+        "No": "3539",
         "revealed_dt": "2021-02-03",
         "old": 50,
         "sex": 2,
@@ -35420,7 +35390,7 @@
         "status_id": 5
     },
     {
-        "No": "3543",
+        "No": "3540",
         "revealed_dt": "2021-02-03",
         "old": 20,
         "sex": 2,
@@ -35430,7 +35400,7 @@
         "status_id": 5
     },
     {
-        "No": "3544",
+        "No": "3541",
         "revealed_dt": "2021-02-03",
         "old": 40,
         "sex": 2,
@@ -35440,13 +35410,43 @@
         "status_id": 5
     },
     {
-        "No": "3545",
+        "No": "3542",
         "revealed_dt": "2021-02-03",
         "old": 50,
         "sex": 2,
         "job": "会社員",
         "symptom": "なし",
         "appearance_dt": "",
+        "status_id": 5
+    },
+    {
+        "No": "3543",
+        "revealed_dt": "2021-02-03",
+        "old": 80,
+        "sex": 1,
+        "job": "無職",
+        "symptom": "発熱",
+        "appearance_dt": "2021-02-02",
+        "status_id": 5
+    },
+    {
+        "No": "3544",
+        "revealed_dt": "2021-02-03",
+        "old": 20,
+        "sex": 1,
+        "job": "学生",
+        "symptom": "腰痛",
+        "appearance_dt": "2021-02-02",
+        "status_id": 5
+    },
+    {
+        "No": "3545",
+        "revealed_dt": "2021-02-03",
+        "old": 40,
+        "sex": 1,
+        "job": "会社員",
+        "symptom": "発熱、倦怠感",
+        "appearance_dt": "2021-02-02",
         "status_id": 5
     },
     {
@@ -35462,36 +35462,6 @@
     {
         "No": "3547",
         "revealed_dt": "2021-02-03",
-        "old": 20,
-        "sex": 1,
-        "job": "学生",
-        "symptom": "腰痛",
-        "appearance_dt": "2021-02-02",
-        "status_id": 5
-    },
-    {
-        "No": "3548",
-        "revealed_dt": "2021-02-03",
-        "old": 40,
-        "sex": 1,
-        "job": "会社員",
-        "symptom": "発熱、倦怠感",
-        "appearance_dt": "2021-02-02",
-        "status_id": 5
-    },
-    {
-        "No": "3549",
-        "revealed_dt": "2021-02-03",
-        "old": 80,
-        "sex": 1,
-        "job": "無職",
-        "symptom": "発熱",
-        "appearance_dt": "2021-02-02",
-        "status_id": 5
-    },
-    {
-        "No": "3550",
-        "revealed_dt": "2021-02-03",
         "old": 70,
         "sex": 1,
         "job": "無職",
@@ -35500,17 +35470,17 @@
         "status_id": 5
     },
     {
-        "No": "3551",
+        "No": "3548",
         "revealed_dt": "2021-02-03",
         "old": 60,
         "sex": 1,
         "job": "無職",
         "symptom": "発熱",
         "appearance_dt": "2021-02-02",
-        "status_id": 2
+        "status_id": 5
     },
     {
-        "No": "3552",
+        "No": "3549",
         "revealed_dt": "2021-02-03",
         "old": 30,
         "sex": 1,
@@ -35520,7 +35490,7 @@
         "status_id": 5
     },
     {
-        "No": "3553",
+        "No": "3550",
         "revealed_dt": "2021-02-03",
         "old": 30,
         "sex": 2,
@@ -35530,7 +35500,7 @@
         "status_id": 5
     },
     {
-        "No": "3554",
+        "No": "3551",
         "revealed_dt": "2021-02-03",
         "old": 20,
         "sex": 1,
@@ -35540,7 +35510,7 @@
         "status_id": 5
     },
     {
-        "No": "3555",
+        "No": "3552",
         "revealed_dt": "2021-02-04",
         "old": 40,
         "sex": 2,
@@ -35550,7 +35520,7 @@
         "status_id": 5
     },
     {
-        "No": "3556",
+        "No": "3553",
         "revealed_dt": "2021-02-04",
         "old": 70,
         "sex": 2,
@@ -35560,7 +35530,7 @@
         "status_id": 5
     },
     {
-        "No": "3557",
+        "No": "3554",
         "revealed_dt": "2021-02-04",
         "old": 90,
         "sex": 2,
@@ -35570,57 +35540,57 @@
         "status_id": 6
     },
     {
-        "No": "3558",
+        "No": "3555",
         "revealed_dt": "2021-02-04",
         "old": 10,
         "sex": 2,
         "job": "学生",
-        "symptom": "なし:―:○",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 5
+    },
+    {
+        "No": "3556",
+        "revealed_dt": "2021-02-04",
+        "old": 10,
+        "sex": 2,
+        "job": "学生",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 5
+    },
+    {
+        "No": "3557",
+        "revealed_dt": "2021-02-04",
+        "old": 0,
+        "sex": 2,
+        "job": "－",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 5
+    },
+    {
+        "No": "3558",
+        "revealed_dt": "2021-02-04",
+        "old": 0,
+        "sex": 2,
+        "job": "－",
+        "symptom": "なし",
         "appearance_dt": "",
         "status_id": 5
     },
     {
         "No": "3559",
         "revealed_dt": "2021-02-04",
-        "old": 10,
+        "old": 60,
         "sex": 2,
-        "job": "学生",
-        "symptom": "なし:―:○",
+        "job": "無職",
+        "symptom": "なし",
         "appearance_dt": "",
         "status_id": 5
     },
     {
         "No": "3560",
-        "revealed_dt": "2021-02-04",
-        "old": 0,
-        "sex": 2,
-        "job": "－",
-        "symptom": "なし:―:○",
-        "appearance_dt": "",
-        "status_id": 5
-    },
-    {
-        "No": "3561",
-        "revealed_dt": "2021-02-04",
-        "old": 0,
-        "sex": 2,
-        "job": "－",
-        "symptom": "なし:―:○",
-        "appearance_dt": "",
-        "status_id": 5
-    },
-    {
-        "No": "3562",
-        "revealed_dt": "2021-02-04",
-        "old": 60,
-        "sex": 2,
-        "job": "無職",
-        "symptom": "なし:―:○",
-        "appearance_dt": "",
-        "status_id": 5
-    },
-    {
-        "No": "3563",
         "revealed_dt": "2021-02-04",
         "old": 30,
         "sex": 1,
@@ -35630,7 +35600,7 @@
         "status_id": 5
     },
     {
-        "No": "3564",
+        "No": "3561",
         "revealed_dt": "2021-02-04",
         "old": 50,
         "sex": 2,
@@ -35640,7 +35610,7 @@
         "status_id": 5
     },
     {
-        "No": "3565",
+        "No": "3562",
         "revealed_dt": "2021-02-04",
         "old": 30,
         "sex": 2,
@@ -35650,7 +35620,7 @@
         "status_id": 5
     },
     {
-        "No": "3566",
+        "No": "3563",
         "revealed_dt": "2021-02-04",
         "old": 40,
         "sex": 1,
@@ -35660,7 +35630,7 @@
         "status_id": 5
     },
     {
-        "No": "3567",
+        "No": "3564",
         "revealed_dt": "2021-02-04",
         "old": 20,
         "sex": 2,
@@ -35670,7 +35640,7 @@
         "status_id": 5
     },
     {
-        "No": "3568",
+        "No": "3565",
         "revealed_dt": "2021-02-04",
         "old": 20,
         "sex": 2,
@@ -35680,7 +35650,7 @@
         "status_id": 5
     },
     {
-        "No": "3569",
+        "No": "3566",
         "revealed_dt": "2021-02-04",
         "old": 40,
         "sex": 1,
@@ -35690,7 +35660,7 @@
         "status_id": 5
     },
     {
-        "No": "3570",
+        "No": "3567",
         "revealed_dt": "2021-02-04",
         "old": 80,
         "sex": 2,
@@ -35700,7 +35670,7 @@
         "status_id": 5
     },
     {
-        "No": "3571",
+        "No": "3568",
         "revealed_dt": "2021-02-04",
         "old": 20,
         "sex": 1,
@@ -35710,7 +35680,7 @@
         "status_id": 5
     },
     {
-        "No": "3572",
+        "No": "3569",
         "revealed_dt": "2021-02-04",
         "old": 50,
         "sex": 2,
@@ -35720,7 +35690,7 @@
         "status_id": 5
     },
     {
-        "No": "3573",
+        "No": "3570",
         "revealed_dt": "2021-02-04",
         "old": 70,
         "sex": 1,
@@ -35730,7 +35700,7 @@
         "status_id": 5
     },
     {
-        "No": "3574",
+        "No": "3571",
         "revealed_dt": "2021-02-04",
         "old": 20,
         "sex": 1,
@@ -35740,7 +35710,7 @@
         "status_id": 5
     },
     {
-        "No": "3575",
+        "No": "3572",
         "revealed_dt": "2021-02-04",
         "old": 90,
         "sex": 2,
@@ -35750,13 +35720,43 @@
         "status_id": 6
     },
     {
-        "No": "3576",
+        "No": "3573",
         "revealed_dt": "2021-02-04",
         "old": 70,
         "sex": 2,
         "job": "無職",
         "symptom": "発熱、咳",
         "appearance_dt": "2021-02-04",
+        "status_id": 5
+    },
+    {
+        "No": "3574",
+        "revealed_dt": "2021-02-04",
+        "old": 70,
+        "sex": 1,
+        "job": "無職",
+        "symptom": "発熱",
+        "appearance_dt": "2021-02-03",
+        "status_id": 6
+    },
+    {
+        "No": "3575",
+        "revealed_dt": "2021-02-04",
+        "old": 50,
+        "sex": 1,
+        "job": "会社員",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 5
+    },
+    {
+        "No": "3576",
+        "revealed_dt": "2021-02-04",
+        "old": 80,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
         "status_id": 5
     },
     {
@@ -35767,40 +35767,10 @@
         "job": "無職",
         "symptom": "発熱",
         "appearance_dt": "2021-02-03",
-        "status_id": 6
+        "status_id": 5
     },
     {
         "No": "3578",
-        "revealed_dt": "2021-02-04",
-        "old": 50,
-        "sex": 1,
-        "job": "会社員",
-        "symptom": "なし:―:○",
-        "appearance_dt": "",
-        "status_id": 5
-    },
-    {
-        "No": "3579",
-        "revealed_dt": "2021-02-04",
-        "old": 80,
-        "sex": 2,
-        "job": "無職",
-        "symptom": "なし:―:○",
-        "appearance_dt": "",
-        "status_id": 5
-    },
-    {
-        "No": "3580",
-        "revealed_dt": "2021-02-04",
-        "old": 70,
-        "sex": 1,
-        "job": "無職",
-        "symptom": "発熱",
-        "appearance_dt": "2021-02-03",
-        "status_id": 5
-    },
-    {
-        "No": "3581",
         "revealed_dt": "2021-02-04",
         "old": 30,
         "sex": 2,
@@ -35810,17 +35780,17 @@
         "status_id": 5
     },
     {
-        "No": "3582",
+        "No": "3579",
         "revealed_dt": "2021-02-04",
         "old": 50,
         "sex": 2,
         "job": "会社員",
-        "symptom": "なし:―:○",
+        "symptom": "なし",
         "appearance_dt": "",
         "status_id": 5
     },
     {
-        "No": "3583",
+        "No": "3580",
         "revealed_dt": "2021-02-04",
         "old": 30,
         "sex": 1,
@@ -35830,7 +35800,7 @@
         "status_id": 5
     },
     {
-        "No": "3584",
+        "No": "3581",
         "revealed_dt": "2021-02-05",
         "old": 70,
         "sex": 1,
@@ -35840,7 +35810,7 @@
         "status_id": 5
     },
     {
-        "No": "3585",
+        "No": "3582",
         "revealed_dt": "2021-02-05",
         "old": 90,
         "sex": 2,
@@ -35850,7 +35820,7 @@
         "status_id": 5
     },
     {
-        "No": "3586",
+        "No": "3583",
         "revealed_dt": "2021-02-05",
         "old": 50,
         "sex": 2,
@@ -35860,7 +35830,7 @@
         "status_id": 5
     },
     {
-        "No": "3587",
+        "No": "3584",
         "revealed_dt": "2021-02-05",
         "old": 40,
         "sex": 2,
@@ -35870,7 +35840,7 @@
         "status_id": 5
     },
     {
-        "No": "3588",
+        "No": "3585",
         "revealed_dt": "2021-02-05",
         "old": 70,
         "sex": 1,
@@ -35880,7 +35850,7 @@
         "status_id": 5
     },
     {
-        "No": "3589",
+        "No": "3586",
         "revealed_dt": "2021-02-05",
         "old": 10,
         "sex": 2,
@@ -35890,7 +35860,7 @@
         "status_id": 5
     },
     {
-        "No": "3590",
+        "No": "3587",
         "revealed_dt": "2021-02-05",
         "old": 40,
         "sex": 2,
@@ -35900,7 +35870,7 @@
         "status_id": 5
     },
     {
-        "No": "3591",
+        "No": "3588",
         "revealed_dt": "2021-02-05",
         "old": 20,
         "sex": 1,
@@ -35910,7 +35880,7 @@
         "status_id": 5
     },
     {
-        "No": "3592",
+        "No": "3589",
         "revealed_dt": "2021-02-05",
         "old": 20,
         "sex": 1,
@@ -35920,7 +35890,7 @@
         "status_id": 5
     },
     {
-        "No": "3593",
+        "No": "3590",
         "revealed_dt": "2021-02-05",
         "old": 40,
         "sex": 1,
@@ -35930,7 +35900,7 @@
         "status_id": 5
     },
     {
-        "No": "3594",
+        "No": "3591",
         "revealed_dt": "2021-02-05",
         "old": 20,
         "sex": 2,
@@ -35940,17 +35910,17 @@
         "status_id": 5
     },
     {
-        "No": "3595",
+        "No": "3592",
         "revealed_dt": "2021-02-05",
         "old": 10,
         "sex": 2,
         "job": "調査中",
-        "symptom": "",
+        "symptom": "なし",
         "appearance_dt": "",
         "status_id": 5
     },
     {
-        "No": "3596",
+        "No": "3593",
         "revealed_dt": "2021-02-05",
         "old": 40,
         "sex": 2,
@@ -35960,17 +35930,17 @@
         "status_id": 5
     },
     {
-        "No": "3597",
+        "No": "3594",
         "revealed_dt": "2021-02-05",
         "old": 20,
         "sex": 1,
         "job": "学生",
-        "symptom": "なし:―:○",
+        "symptom": "なし",
         "appearance_dt": "",
         "status_id": 5
     },
     {
-        "No": "3598",
+        "No": "3595",
         "revealed_dt": "2021-02-05",
         "old": 30,
         "sex": 2,
@@ -35980,17 +35950,17 @@
         "status_id": 5
     },
     {
-        "No": "3599",
+        "No": "3596",
         "revealed_dt": "2021-02-05",
         "old": 40,
         "sex": 1,
         "job": "会社員",
         "symptom": "発熱、倦怠感",
         "appearance_dt": "2021-02-03",
-        "status_id": 2
+        "status_id": 5
     },
     {
-        "No": "3600",
+        "No": "3597",
         "revealed_dt": "2021-02-05",
         "old": 50,
         "sex": 2,
@@ -36000,17 +35970,7 @@
         "status_id": 5
     },
     {
-        "No": "3601",
-        "revealed_dt": "2021-02-05",
-        "old": 50,
-        "sex": 2,
-        "job": "会社員",
-        "symptom": "咳、頭痛",
-        "appearance_dt": "2021-02-03",
-        "status_id": 5
-    },
-    {
-        "No": "3602",
+        "No": "3598",
         "revealed_dt": "2021-02-05",
         "old": 40,
         "sex": 2,
@@ -36020,37 +35980,37 @@
         "status_id": 5
     },
     {
-        "No": "3603",
+        "No": "3599",
         "revealed_dt": "2021-02-05",
         "old": 80,
         "sex": 1,
         "job": "調査中",
-        "symptom": "",
+        "symptom": "なし",
         "appearance_dt": "",
         "status_id": 5
     },
     {
-        "No": "3604",
+        "No": "3600",
         "revealed_dt": "2021-02-05",
         "old": 90,
         "sex": 2,
         "job": "調査中",
-        "symptom": "",
+        "symptom": "なし",
         "appearance_dt": "",
         "status_id": 5
     },
     {
-        "No": "3605",
+        "No": "3601",
         "revealed_dt": "2021-02-05",
         "old": 70,
         "sex": 2,
         "job": "調査中",
-        "symptom": "",
+        "symptom": "なし",
         "appearance_dt": "",
         "status_id": 5
     },
     {
-        "No": "3606",
+        "No": "3602",
         "revealed_dt": "2021-02-05",
         "old": 70,
         "sex": 2,
@@ -36060,7 +36020,7 @@
         "status_id": 5
     },
     {
-        "No": "3607",
+        "No": "3603",
         "revealed_dt": "2021-02-05",
         "old": 80,
         "sex": 2,
@@ -36070,57 +36030,57 @@
         "status_id": 6
     },
     {
-        "No": "3608",
+        "No": "3604",
         "revealed_dt": "2021-02-05",
         "old": 80,
         "sex": 2,
         "job": "調査中",
-        "symptom": "",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 5
+    },
+    {
+        "No": "3605",
+        "revealed_dt": "2021-02-05",
+        "old": 80,
+        "sex": 2,
+        "job": "調査中",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 5
+    },
+    {
+        "No": "3606",
+        "revealed_dt": "2021-02-05",
+        "old": 80,
+        "sex": 2,
+        "job": "調査中",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 5
+    },
+    {
+        "No": "3607",
+        "revealed_dt": "2021-02-05",
+        "old": 80,
+        "sex": 2,
+        "job": "調査中",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 5
+    },
+    {
+        "No": "3608",
+        "revealed_dt": "2021-02-05",
+        "old": 60,
+        "sex": 2,
+        "job": "会社員",
+        "symptom": "なし",
         "appearance_dt": "",
         "status_id": 5
     },
     {
         "No": "3609",
-        "revealed_dt": "2021-02-05",
-        "old": 80,
-        "sex": 2,
-        "job": "調査中",
-        "symptom": "",
-        "appearance_dt": "",
-        "status_id": 5
-    },
-    {
-        "No": "3610",
-        "revealed_dt": "2021-02-05",
-        "old": 80,
-        "sex": 2,
-        "job": "調査中",
-        "symptom": "",
-        "appearance_dt": "",
-        "status_id": 5
-    },
-    {
-        "No": "3611",
-        "revealed_dt": "2021-02-05",
-        "old": 80,
-        "sex": 2,
-        "job": "調査中",
-        "symptom": "",
-        "appearance_dt": "",
-        "status_id": 5
-    },
-    {
-        "No": "3612",
-        "revealed_dt": "2021-02-05",
-        "old": 60,
-        "sex": 2,
-        "job": "会社員",
-        "symptom": "なし:―:○",
-        "appearance_dt": "",
-        "status_id": 5
-    },
-    {
-        "No": "3613",
         "revealed_dt": "2021-02-05",
         "old": 70,
         "sex": 2,
@@ -36130,7 +36090,7 @@
         "status_id": 5
     },
     {
-        "No": "3614",
+        "No": "3610",
         "revealed_dt": "2021-02-05",
         "old": 40,
         "sex": 2,
@@ -36140,7 +36100,7 @@
         "status_id": 5
     },
     {
-        "No": "3615",
+        "No": "3611",
         "revealed_dt": "2021-02-05",
         "old": 80,
         "sex": 1,
@@ -36150,37 +36110,37 @@
         "status_id": 5
     },
     {
-        "No": "3616",
+        "No": "3612",
         "revealed_dt": "2021-02-05",
         "old": 30,
         "sex": 1,
         "job": "会社員",
-        "symptom": "なし:―:○",
+        "symptom": "なし",
         "appearance_dt": "",
         "status_id": 5
     },
     {
-        "No": "3617",
+        "No": "3613",
         "revealed_dt": "2021-02-05",
         "old": 30,
         "sex": 2,
         "job": "会社員",
-        "symptom": "なし:―:○",
+        "symptom": "なし",
         "appearance_dt": "",
         "status_id": 5
     },
     {
-        "No": "3618",
+        "No": "3614",
         "revealed_dt": "2021-02-05",
         "old": 50,
         "sex": 1,
         "job": "会社員",
-        "symptom": "なし:―:○",
+        "symptom": "なし",
         "appearance_dt": "",
         "status_id": 5
     },
     {
-        "No": "3619",
+        "No": "3615",
         "revealed_dt": "2021-02-05",
         "old": 60,
         "sex": 2,
@@ -36190,7 +36150,7 @@
         "status_id": 5
     },
     {
-        "No": "3620",
+        "No": "3616",
         "revealed_dt": "2021-02-05",
         "old": 30,
         "sex": 2,
@@ -36200,7 +36160,7 @@
         "status_id": 5
     },
     {
-        "No": "3621",
+        "No": "3617",
         "revealed_dt": "2021-02-05",
         "old": 30,
         "sex": 1,
@@ -36210,7 +36170,7 @@
         "status_id": 5
     },
     {
-        "No": "3622",
+        "No": "3618",
         "revealed_dt": "2021-02-05",
         "old": 20,
         "sex": 1,
@@ -36220,7 +36180,7 @@
         "status_id": 5
     },
     {
-        "No": "3623",
+        "No": "3619",
         "revealed_dt": "2021-02-05",
         "old": 50,
         "sex": 1,
@@ -36230,7 +36190,7 @@
         "status_id": 5
     },
     {
-        "No": "3624",
+        "No": "3620",
         "revealed_dt": "2021-02-05",
         "old": 60,
         "sex": 2,
@@ -36240,7 +36200,7 @@
         "status_id": 5
     },
     {
-        "No": "3625",
+        "No": "3621",
         "revealed_dt": "2021-02-05",
         "old": 0,
         "sex": 2,
@@ -36250,7 +36210,7 @@
         "status_id": 5
     },
     {
-        "No": "3626",
+        "No": "3622",
         "revealed_dt": "2021-02-05",
         "old": 40,
         "sex": 2,
@@ -36260,7 +36220,7 @@
         "status_id": 5
     },
     {
-        "No": "3627",
+        "No": "3623",
         "revealed_dt": "2021-02-05",
         "old": 20,
         "sex": 2,
@@ -36270,22 +36230,62 @@
         "status_id": 5
     },
     {
-        "No": "3628",
+        "No": "3624",
         "revealed_dt": "2021-02-05",
         "old": 50,
         "sex": 1,
         "job": "調査中",
-        "symptom": "",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 5
+    },
+    {
+        "No": "3625",
+        "revealed_dt": "2021-02-05",
+        "old": 80,
+        "sex": 2,
+        "job": "調査中",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 5
+    },
+    {
+        "No": "3626",
+        "revealed_dt": "2021-02-05",
+        "old": 70,
+        "sex": 2,
+        "job": "調査中",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 5
+    },
+    {
+        "No": "3627",
+        "revealed_dt": "2021-02-05",
+        "old": 90,
+        "sex": 1,
+        "job": "調査中",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 5
+    },
+    {
+        "No": "3628",
+        "revealed_dt": "2021-02-05",
+        "old": 90,
+        "sex": 2,
+        "job": "調査中",
+        "symptom": "なし",
         "appearance_dt": "",
         "status_id": 5
     },
     {
         "No": "3629",
         "revealed_dt": "2021-02-05",
-        "old": 80,
-        "sex": 2,
+        "old": 50,
+        "sex": 1,
         "job": "調査中",
-        "symptom": "",
+        "symptom": "なし",
         "appearance_dt": "",
         "status_id": 5
     },
@@ -36295,7 +36295,7 @@
         "old": 70,
         "sex": 2,
         "job": "調査中",
-        "symptom": "",
+        "symptom": "なし",
         "appearance_dt": "",
         "status_id": 5
     },
@@ -36303,84 +36303,44 @@
         "No": "3631",
         "revealed_dt": "2021-02-05",
         "old": 90,
-        "sex": 1,
+        "sex": 2,
         "job": "調査中",
-        "symptom": "",
+        "symptom": "なし",
         "appearance_dt": "",
         "status_id": 5
     },
     {
         "No": "3632",
         "revealed_dt": "2021-02-05",
-        "old": 90,
+        "old": 50,
         "sex": 2,
-        "job": "調査中",
-        "symptom": "",
+        "job": "会社員",
+        "symptom": "なし",
         "appearance_dt": "",
         "status_id": 5
     },
     {
         "No": "3633",
         "revealed_dt": "2021-02-05",
-        "old": 50,
+        "old": 40,
         "sex": 1,
-        "job": "調査中",
-        "symptom": "",
+        "job": "会社員",
+        "symptom": "なし",
         "appearance_dt": "",
         "status_id": 5
     },
     {
         "No": "3634",
         "revealed_dt": "2021-02-05",
-        "old": 70,
+        "old": 60,
         "sex": 2,
-        "job": "調査中",
-        "symptom": "",
+        "job": "会社員",
+        "symptom": "なし",
         "appearance_dt": "",
         "status_id": 5
     },
     {
         "No": "3635",
-        "revealed_dt": "2021-02-05",
-        "old": 90,
-        "sex": 2,
-        "job": "調査中",
-        "symptom": "",
-        "appearance_dt": "",
-        "status_id": 5
-    },
-    {
-        "No": "3636",
-        "revealed_dt": "2021-02-05",
-        "old": 50,
-        "sex": 2,
-        "job": "会社員",
-        "symptom": "なし:―:○",
-        "appearance_dt": "",
-        "status_id": 5
-    },
-    {
-        "No": "3637",
-        "revealed_dt": "2021-02-05",
-        "old": 40,
-        "sex": 1,
-        "job": "会社員",
-        "symptom": "なし:―:○",
-        "appearance_dt": "",
-        "status_id": 5
-    },
-    {
-        "No": "3638",
-        "revealed_dt": "2021-02-05",
-        "old": 60,
-        "sex": 2,
-        "job": "会社員",
-        "symptom": "なし:―:○",
-        "appearance_dt": "",
-        "status_id": 5
-    },
-    {
-        "No": "3639",
         "revealed_dt": "2021-02-05",
         "old": 30,
         "sex": 2,
@@ -36390,7 +36350,7 @@
         "status_id": 5
     },
     {
-        "No": "3640",
+        "No": "3636",
         "revealed_dt": "2021-02-06",
         "old": 80,
         "sex": 1,
@@ -36400,7 +36360,7 @@
         "status_id": 5
     },
     {
-        "No": "3641",
+        "No": "3637",
         "revealed_dt": "2021-02-06",
         "old": 20,
         "sex": 1,
@@ -36410,47 +36370,47 @@
         "status_id": 5
     },
     {
-        "No": "3642",
+        "No": "3638",
         "revealed_dt": "2021-02-06",
         "old": 70,
         "sex": 1,
         "job": "無職",
-        "symptom": "なし:―:○",
+        "symptom": "なし",
         "appearance_dt": "",
         "status_id": 5
     },
     {
-        "No": "3643",
+        "No": "3639",
         "revealed_dt": "2021-02-06",
         "old": 80,
         "sex": 2,
         "job": "無職",
-        "symptom": "なし:―:○",
+        "symptom": "なし",
         "appearance_dt": "",
         "status_id": 5
     },
     {
-        "No": "3644",
+        "No": "3640",
         "revealed_dt": "2021-02-06",
         "old": 50,
         "sex": 2,
         "job": "会社員",
-        "symptom": "なし:―:○",
+        "symptom": "なし",
         "appearance_dt": "",
         "status_id": 5
     },
     {
-        "No": "3645",
+        "No": "3641",
         "revealed_dt": "2021-02-06",
         "old": 40,
         "sex": 2,
         "job": "会社員",
-        "symptom": "なし:―:○",
+        "symptom": "なし",
         "appearance_dt": "",
         "status_id": 5
     },
     {
-        "No": "3646",
+        "No": "3642",
         "revealed_dt": "2021-02-06",
         "old": 30,
         "sex": 1,
@@ -36460,7 +36420,7 @@
         "status_id": 5
     },
     {
-        "No": "3647",
+        "No": "3643",
         "revealed_dt": "2021-02-06",
         "old": 30,
         "sex": 1,
@@ -36470,7 +36430,7 @@
         "status_id": 5
     },
     {
-        "No": "3648",
+        "No": "3644",
         "revealed_dt": "2021-02-06",
         "old": 10,
         "sex": 2,
@@ -36480,7 +36440,7 @@
         "status_id": 5
     },
     {
-        "No": "3649",
+        "No": "3645",
         "revealed_dt": "2021-02-06",
         "old": 70,
         "sex": 2,
@@ -36490,7 +36450,7 @@
         "status_id": 5
     },
     {
-        "No": "3650",
+        "No": "3646",
         "revealed_dt": "2021-02-06",
         "old": 80,
         "sex": 1,
@@ -36500,7 +36460,7 @@
         "status_id": 6
     },
     {
-        "No": "3651",
+        "No": "3647",
         "revealed_dt": "2021-02-06",
         "old": 20,
         "sex": 1,
@@ -36510,7 +36470,7 @@
         "status_id": 5
     },
     {
-        "No": "3652",
+        "No": "3648",
         "revealed_dt": "2021-02-06",
         "old": 20,
         "sex": 1,
@@ -36520,7 +36480,7 @@
         "status_id": 5
     },
     {
-        "No": "3653",
+        "No": "3649",
         "revealed_dt": "2021-02-06",
         "old": 50,
         "sex": 2,
@@ -36530,7 +36490,7 @@
         "status_id": 5
     },
     {
-        "No": "3654",
+        "No": "3650",
         "revealed_dt": "2021-02-06",
         "old": 80,
         "sex": 2,
@@ -36540,7 +36500,7 @@
         "status_id": 5
     },
     {
-        "No": "3655",
+        "No": "3651",
         "revealed_dt": "2021-02-06",
         "old": 90,
         "sex": 1,
@@ -36550,7 +36510,7 @@
         "status_id": 6
     },
     {
-        "No": "3656",
+        "No": "3652",
         "revealed_dt": "2021-02-06",
         "old": 70,
         "sex": 1,
@@ -36560,7 +36520,7 @@
         "status_id": 5
     },
     {
-        "No": "3657",
+        "No": "3653",
         "revealed_dt": "2021-02-06",
         "old": 40,
         "sex": 2,
@@ -36570,17 +36530,17 @@
         "status_id": 5
     },
     {
-        "No": "3658",
+        "No": "3654",
         "revealed_dt": "2021-02-06",
         "old": 0,
         "sex": 2,
         "job": "－",
-        "symptom": "なし:―:○",
+        "symptom": "なし",
         "appearance_dt": "",
         "status_id": 5
     },
     {
-        "No": "3659",
+        "No": "3655",
         "revealed_dt": "2021-02-06",
         "old": 80,
         "sex": 2,
@@ -36590,27 +36550,27 @@
         "status_id": 5
     },
     {
-        "No": "3660",
+        "No": "3656",
         "revealed_dt": "2021-02-06",
         "old": 60,
         "sex": 1,
         "job": "無職",
-        "symptom": "なし:―:○",
+        "symptom": "なし",
         "appearance_dt": "",
         "status_id": 5
     },
     {
-        "No": "3661",
+        "No": "3657",
         "revealed_dt": "2021-02-06",
         "old": 60,
         "sex": 2,
         "job": "医療従事者",
-        "symptom": "なし:―:○",
+        "symptom": "なし",
         "appearance_dt": "",
         "status_id": 5
     },
     {
-        "No": "3662",
+        "No": "3658",
         "revealed_dt": "2021-02-06",
         "old": 80,
         "sex": 1,
@@ -36620,7 +36580,7 @@
         "status_id": 5
     },
     {
-        "No": "3663",
+        "No": "3659",
         "revealed_dt": "2021-02-06",
         "old": 80,
         "sex": 2,
@@ -36630,7 +36590,7 @@
         "status_id": 5
     },
     {
-        "No": "3664",
+        "No": "3660",
         "revealed_dt": "2021-02-06",
         "old": 20,
         "sex": 1,
@@ -36640,7 +36600,7 @@
         "status_id": 5
     },
     {
-        "No": "3665",
+        "No": "3661",
         "revealed_dt": "2021-02-06",
         "old": 90,
         "sex": 2,
@@ -36650,7 +36610,7 @@
         "status_id": 5
     },
     {
-        "No": "3666",
+        "No": "3662",
         "revealed_dt": "2021-02-06",
         "old": 50,
         "sex": 2,
@@ -36660,7 +36620,7 @@
         "status_id": 5
     },
     {
-        "No": "3667",
+        "No": "3663",
         "revealed_dt": "2021-02-06",
         "old": 20,
         "sex": 2,
@@ -36670,7 +36630,7 @@
         "status_id": 5
     },
     {
-        "No": "3668",
+        "No": "3664",
         "revealed_dt": "2021-02-06",
         "old": 20,
         "sex": 1,
@@ -36680,7 +36640,7 @@
         "status_id": 5
     },
     {
-        "No": "3669",
+        "No": "3665",
         "revealed_dt": "2021-02-06",
         "old": 40,
         "sex": 2,
@@ -36690,7 +36650,7 @@
         "status_id": 5
     },
     {
-        "No": "3670",
+        "No": "3666",
         "revealed_dt": "2021-02-06",
         "old": 60,
         "sex": 1,
@@ -36700,14 +36660,54 @@
         "status_id": 6
     },
     {
+        "No": "3667",
+        "revealed_dt": "2021-02-06",
+        "old": 80,
+        "sex": 2,
+        "job": "調査中",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 5
+    },
+    {
+        "No": "3668",
+        "revealed_dt": "2021-02-06",
+        "old": 70,
+        "sex": 1,
+        "job": "調査中",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 6
+    },
+    {
+        "No": "3669",
+        "revealed_dt": "2021-02-06",
+        "old": 90,
+        "sex": 2,
+        "job": "調査中",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 5
+    },
+    {
+        "No": "3670",
+        "revealed_dt": "2021-02-06",
+        "old": 80,
+        "sex": 1,
+        "job": "調査中",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 5
+    },
+    {
         "No": "3671",
         "revealed_dt": "2021-02-06",
         "old": 80,
         "sex": 2,
         "job": "調査中",
-        "symptom": "",
+        "symptom": "なし",
         "appearance_dt": "",
-        "status_id": 5
+        "status_id": 6
     },
     {
         "No": "3672",
@@ -36715,62 +36715,22 @@
         "old": 70,
         "sex": 1,
         "job": "調査中",
-        "symptom": "",
+        "symptom": "なし",
         "appearance_dt": "",
         "status_id": 5
     },
     {
         "No": "3673",
         "revealed_dt": "2021-02-06",
-        "old": 90,
-        "sex": 2,
+        "old": 60,
+        "sex": 1,
         "job": "調査中",
-        "symptom": "",
+        "symptom": "なし",
         "appearance_dt": "",
         "status_id": 5
     },
     {
         "No": "3674",
-        "revealed_dt": "2021-02-06",
-        "old": 80,
-        "sex": 1,
-        "job": "調査中",
-        "symptom": "",
-        "appearance_dt": "",
-        "status_id": 5
-    },
-    {
-        "No": "3675",
-        "revealed_dt": "2021-02-06",
-        "old": 80,
-        "sex": 2,
-        "job": "調査中",
-        "symptom": "",
-        "appearance_dt": "",
-        "status_id": 6
-    },
-    {
-        "No": "3676",
-        "revealed_dt": "2021-02-06",
-        "old": 70,
-        "sex": 1,
-        "job": "調査中",
-        "symptom": "",
-        "appearance_dt": "",
-        "status_id": 5
-    },
-    {
-        "No": "3677",
-        "revealed_dt": "2021-02-06",
-        "old": 60,
-        "sex": 1,
-        "job": "調査中",
-        "symptom": "",
-        "appearance_dt": "",
-        "status_id": 5
-    },
-    {
-        "No": "3678",
         "revealed_dt": "2021-02-06",
         "old": 30,
         "sex": 1,
@@ -36780,7 +36740,7 @@
         "status_id": 5
     },
     {
-        "No": "3679",
+        "No": "3675",
         "revealed_dt": "2021-02-06",
         "old": 30,
         "sex": 1,
@@ -36790,17 +36750,17 @@
         "status_id": 5
     },
     {
-        "No": "3680",
+        "No": "3676",
         "revealed_dt": "2021-02-06",
         "old": 50,
         "sex": 2,
         "job": "医療従事者",
-        "symptom": "なし:―:○",
+        "symptom": "なし",
         "appearance_dt": "",
         "status_id": 5
     },
     {
-        "No": "3681",
+        "No": "3677",
         "revealed_dt": "2021-02-06",
         "old": 50,
         "sex": 2,
@@ -36810,57 +36770,57 @@
         "status_id": 5
     },
     {
-        "No": "3682",
+        "No": "3678",
         "revealed_dt": "2021-02-06",
         "old": 80,
         "sex": 2,
         "job": "調査中",
-        "symptom": "",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 5
+    },
+    {
+        "No": "3679",
+        "revealed_dt": "2021-02-06",
+        "old": 80,
+        "sex": 1,
+        "job": "調査中",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 5
+    },
+    {
+        "No": "3680",
+        "revealed_dt": "2021-02-06",
+        "old": 80,
+        "sex": 2,
+        "job": "調査中",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 6
+    },
+    {
+        "No": "3681",
+        "revealed_dt": "2021-02-06",
+        "old": 90,
+        "sex": 2,
+        "job": "調査中",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 5
+    },
+    {
+        "No": "3682",
+        "revealed_dt": "2021-02-06",
+        "old": 70,
+        "sex": 2,
+        "job": "調査中",
+        "symptom": "なし",
         "appearance_dt": "",
         "status_id": 5
     },
     {
         "No": "3683",
-        "revealed_dt": "2021-02-06",
-        "old": 80,
-        "sex": 1,
-        "job": "調査中",
-        "symptom": "",
-        "appearance_dt": "",
-        "status_id": 5
-    },
-    {
-        "No": "3684",
-        "revealed_dt": "2021-02-06",
-        "old": 80,
-        "sex": 2,
-        "job": "調査中",
-        "symptom": "",
-        "appearance_dt": "",
-        "status_id": 6
-    },
-    {
-        "No": "3685",
-        "revealed_dt": "2021-02-06",
-        "old": 90,
-        "sex": 2,
-        "job": "調査中",
-        "symptom": "",
-        "appearance_dt": "",
-        "status_id": 5
-    },
-    {
-        "No": "3686",
-        "revealed_dt": "2021-02-06",
-        "old": 70,
-        "sex": 2,
-        "job": "調査中",
-        "symptom": "",
-        "appearance_dt": "",
-        "status_id": 5
-    },
-    {
-        "No": "3687",
         "revealed_dt": "2021-02-07",
         "old": 20,
         "sex": 1,
@@ -36870,7 +36830,7 @@
         "status_id": 5
     },
     {
-        "No": "3688",
+        "No": "3684",
         "revealed_dt": "2021-02-07",
         "old": 50,
         "sex": 2,
@@ -36880,7 +36840,7 @@
         "status_id": 5
     },
     {
-        "No": "3689",
+        "No": "3685",
         "revealed_dt": "2021-02-07",
         "old": 50,
         "sex": 1,
@@ -36890,7 +36850,7 @@
         "status_id": 5
     },
     {
-        "No": "3690",
+        "No": "3686",
         "revealed_dt": "2021-02-07",
         "old": 20,
         "sex": 2,
@@ -36900,7 +36860,7 @@
         "status_id": 5
     },
     {
-        "No": "3691",
+        "No": "3687",
         "revealed_dt": "2021-02-07",
         "old": 30,
         "sex": 1,
@@ -36910,7 +36870,7 @@
         "status_id": 5
     },
     {
-        "No": "3692",
+        "No": "3688",
         "revealed_dt": "2021-02-07",
         "old": 20,
         "sex": 1,
@@ -36920,27 +36880,27 @@
         "status_id": 5
     },
     {
-        "No": "3693",
+        "No": "3689",
         "revealed_dt": "2021-02-07",
         "old": 90,
         "sex": 2,
         "job": "無職",
-        "symptom": "なし:―:○",
+        "symptom": "なし",
         "appearance_dt": "",
         "status_id": 5
     },
     {
-        "No": "3694",
+        "No": "3690",
         "revealed_dt": "2021-02-07",
         "old": 50,
         "sex": 1,
         "job": "会社員",
-        "symptom": "なし:―:○",
+        "symptom": "なし",
         "appearance_dt": "",
         "status_id": 5
     },
     {
-        "No": "3695",
+        "No": "3691",
         "revealed_dt": "2021-02-07",
         "old": 30,
         "sex": 2,
@@ -36950,7 +36910,7 @@
         "status_id": 5
     },
     {
-        "No": "3696",
+        "No": "3692",
         "revealed_dt": "2021-02-07",
         "old": 20,
         "sex": 2,
@@ -36960,7 +36920,7 @@
         "status_id": 5
     },
     {
-        "No": "3697",
+        "No": "3693",
         "revealed_dt": "2021-02-07",
         "old": 80,
         "sex": 1,
@@ -36970,33 +36930,73 @@
         "status_id": 6
     },
     {
-        "No": "3698",
+        "No": "3694",
         "revealed_dt": "2021-02-07",
         "old": 60,
         "sex": 1,
         "job": "調査中",
-        "symptom": "",
+        "symptom": "なし",
         "appearance_dt": "",
+        "status_id": 5
+    },
+    {
+        "No": "3695",
+        "revealed_dt": "2021-02-07",
+        "old": 80,
+        "sex": 1,
+        "job": "調査中",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 6
+    },
+    {
+        "No": "3696",
+        "revealed_dt": "2021-02-07",
+        "old": 80,
+        "sex": 1,
+        "job": "調査中",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 6
+    },
+    {
+        "No": "3697",
+        "revealed_dt": "2021-02-07",
+        "old": 10,
+        "sex": 1,
+        "job": "会社員",
+        "symptom": "発熱",
+        "appearance_dt": "2021-02-05",
+        "status_id": 5
+    },
+    {
+        "No": "3698",
+        "revealed_dt": "2021-02-07",
+        "old": 90,
+        "sex": 1,
+        "job": "無職",
+        "symptom": "発熱、鼻汁",
+        "appearance_dt": "2021-02-06",
         "status_id": 5
     },
     {
         "No": "3699",
         "revealed_dt": "2021-02-07",
-        "old": 80,
-        "sex": 1,
-        "job": "調査中",
-        "symptom": "",
-        "appearance_dt": "",
-        "status_id": 6
+        "old": 30,
+        "sex": 2,
+        "job": "会社員",
+        "symptom": "発熱、咳、頭痛、倦怠感、味覚障害、嗅覚障害、鼻汁、鼻閉、頭痛",
+        "appearance_dt": "2021-02-05",
+        "status_id": 5
     },
     {
         "No": "3700",
-        "revealed_dt": "2021-02-07",
-        "old": 80,
+        "revealed_dt": "2021-02-08",
+        "old": 90,
         "sex": 1,
-        "job": "調査中",
-        "symptom": "",
-        "appearance_dt": "",
+        "job": "無職",
+        "symptom": "発熱、鼻汁、鼻閉",
+        "appearance_dt": "2021-02-04",
         "status_id": 5
     },
     {
@@ -40245,7 +40245,7 @@
         "old": 30,
         "sex": 2,
         "job": "無職",
-        "symptom": "発熱、味覚障害、嗅覚障害、",
+        "symptom": "発熱、味覚障害、嗅覚障害",
         "appearance_dt": "2021-02-09",
         "status_id": 5
     },
@@ -40585,7 +40585,7 @@
         "old": 40,
         "sex": 1,
         "job": "無職",
-        "symptom": "咳、咽頭痛、倦怠感、寒気",
+        "symptom": "咳、咽頭痛、倦怠感、悪寒",
         "appearance_dt": "2021-02-17",
         "status_id": 5
     },
@@ -40745,7 +40745,7 @@
         "old": 40,
         "sex": 1,
         "job": "会社員",
-        "symptom": "発熱、咳、咽頭痛、倦怠感、味覚障害、嗅覚障害、息切れ、胸の痛み",
+        "symptom": "発熱、咳、咽頭痛、倦怠感、味覚障:害、嗅覚障害、息切れ、胸痛",
         "appearance_dt": "2021-02-13",
         "status_id": 5
     },
@@ -41565,7 +41565,7 @@
         "old": 40,
         "sex": 2,
         "job": "自営業",
-        "symptom": "発熱、咳、頭痛、倦怠感、嗄声",
+        "symptom": "発熱、咳、頭痛、倦怠感、唸る",
         "appearance_dt": "2021-02-19",
         "status_id": 5
     },
@@ -41655,7 +41655,7 @@
         "old": 70,
         "sex": 2,
         "job": "無職",
-        "symptom": "咽頭痛、胃不性",
+        "symptom": "咽頭痛、呼吸苦",
         "appearance_dt": "2021-02-18",
         "status_id": 5
     },
@@ -42265,8 +42265,8 @@
         "old": 10,
         "sex": 2,
         "job": "学生",
-        "symptom": "",
-        "appearance_dt": "2021-03-02",
+        "symptom": "なし",
+        "appearance_dt": "",
         "status_id": 5
     },
     {
@@ -42995,7 +42995,7 @@
         "old": 20,
         "sex": 2,
         "job": "会社員",
-        "symptom": "発熱、咳、鼻汁鼻閉",
+        "symptom": "発熱、咳、鼻汁、鼻閉",
         "appearance_dt": "2021-03-09",
         "status_id": 5
     },
@@ -44325,7 +44325,7 @@
         "old": 70,
         "sex": 1,
         "job": "無職",
-        "symptom": "発熱、咳、咽頭痛、倦怠感、呼吸困難感",
+        "symptom": "発熱、咳、咽頭痛、倦怠感、呼吸困難",
         "appearance_dt": "2021-03-25",
         "status_id": 5
     },
@@ -44455,7 +44455,7 @@
         "old": 60,
         "sex": 1,
         "job": "公務員",
-        "symptom": "発熱、咳、頭痛、倦怠感、寒気、淡",
+        "symptom": "発熱、咳、頭痛、倦怠感、寒気、痰",
         "appearance_dt": "2021-03-24",
         "status_id": 5
     },
@@ -44925,7 +44925,7 @@
         "old": 70,
         "sex": 1,
         "job": "無職",
-        "symptom": "発熱、咳、",
+        "symptom": "発熱、咳",
         "appearance_dt": "2021-04-05",
         "status_id": 2
     },
@@ -45185,7 +45185,7 @@
         "old": 60,
         "sex": 1,
         "job": "会社員",
-        "symptom": "発熱、関、倦怠感",
+        "symptom": "発熱、咳、倦怠感",
         "appearance_dt": "2021-04-01",
         "status_id": 2
     },
@@ -45454,8 +45454,8 @@
         "revealed_dt": "2021-04-10",
         "old": 60,
         "sex": 1,
-        "job": "",
-        "symptom": "4546:4/10:６０代:男:1/0:倦怠感、食欲低下:4/5:○",
+        "job": "無職",
+        "symptom": "倦怠感、食欲低下",
         "appearance_dt": "2021-04-05",
         "status_id": 2
     },
@@ -45464,8 +45464,8 @@
         "revealed_dt": "2021-04-10",
         "old": 10,
         "sex": 1,
-        "job": "",
-        "symptom": "4547:4/10:１０代:男:1/0:発熱、倦怠感:4/8:○",
+        "job": "無職",
+        "symptom": "発熱、倦怠感",
         "appearance_dt": "2021-04-08",
         "status_id": 4
     },
@@ -46017,7 +46017,7 @@
         "job": "会社員",
         "symptom": "咽頭痛、倦怠感",
         "appearance_dt": "2021-04-10",
-        "status_id": 3
+        "status_id": 5
     },
     {
         "No": "4603",
@@ -46065,7 +46065,7 @@
         "old": 80,
         "sex": 2,
         "job": "無職",
-        "symptom": "発熱、倦怠感、鼻汁、左手足の振線",
+        "symptom": "発熱、倦怠感、鼻汁、左手足の振戦",
         "appearance_dt": "2021-04-10",
         "status_id": 2
     },
@@ -46107,7 +46107,7 @@
         "job": "会社員",
         "symptom": "発熱、咳、倦怠感",
         "appearance_dt": "2021-04-10",
-        "status_id": 3
+        "status_id": 5
     },
     {
         "No": "4612",
@@ -46167,7 +46167,7 @@
         "job": "無職",
         "symptom": "発熱、味覚障害、嗅覚障害",
         "appearance_dt": "2021-04-10",
-        "status_id": 3
+        "status_id": 5
     },
     {
         "No": "4618",
@@ -46195,7 +46195,7 @@
         "old": 20,
         "sex": 1,
         "job": "会社員",
-        "symptom": "発熱、咳、頭痛、倦怠感、",
+        "symptom": "発熱、咳、頭痛、倦怠感",
         "appearance_dt": "2021-04-09",
         "status_id": 5
     },
@@ -46217,7 +46217,7 @@
         "job": "会社員",
         "symptom": "発熱、咽頭痛、倦怠感",
         "appearance_dt": "2021-04-10",
-        "status_id": 3
+        "status_id": 5
     },
     {
         "No": "4623",
@@ -46225,7 +46225,7 @@
         "old": 20,
         "sex": 2,
         "job": "会社員",
-        "symptom": "発熱、咳、頭痛、",
+        "symptom": "発熱、咳、頭痛",
         "appearance_dt": "2021-04-12",
         "status_id": 4
     },
@@ -46327,7 +46327,7 @@
         "job": "会社員",
         "symptom": "咽頭痛、倦怠感",
         "appearance_dt": "2021-04-10",
-        "status_id": 4
+        "status_id": 5
     },
     {
         "No": "4634",
@@ -46355,7 +46355,7 @@
         "old": 40,
         "sex": 1,
         "job": "会社員",
-        "symptom": "咳、咽頭痛、頭痛、",
+        "symptom": "咳、咽頭痛、頭痛",
         "appearance_dt": "2021-04-12",
         "status_id": 2
     },
@@ -46614,10 +46614,10 @@
         "revealed_dt": "2021-04-15",
         "old": 20,
         "sex": 1,
-        "job": "調査中",
-        "symptom": "なし",
-        "appearance_dt": "",
-        "status_id": 1
+        "job": "無職",
+        "symptom": "発熱、頭痛、倦怠感",
+        "appearance_dt": "2021-04-12",
+        "status_id": 4
     },
     {
         "No": "4663",
@@ -46814,10 +46814,10 @@
         "revealed_dt": "2021-04-16",
         "old": 10,
         "sex": 1,
-        "job": "調査中",
-        "symptom": "なし",
-        "appearance_dt": "",
-        "status_id": 3
+        "job": "学生",
+        "symptom": "発熱、咽頭痛",
+        "appearance_dt": "2021-04-12",
+        "status_id": 4
     },
     {
         "No": "4683",
@@ -46857,7 +46857,7 @@
         "job": "会社員",
         "symptom": "発熱、倦怠感",
         "appearance_dt": "2021-04-10",
-        "status_id": 4
+        "status_id": 5
     },
     {
         "No": "4687",
@@ -46964,9 +46964,9 @@
         "revealed_dt": "2021-04-16",
         "old": 20,
         "sex": 2,
-        "job": "調査中",
-        "symptom": "なし",
-        "appearance_dt": "",
+        "job": "会社員",
+        "symptom": "発熱、咳、倦怠感、味覚障害、嗅覚障害",
+        "appearance_dt": "2021-04-15",
         "status_id": 4
     },
     {
@@ -47205,7 +47205,7 @@
         "old": 60,
         "sex": 1,
         "job": "公務員",
-        "symptom": "発煙津、咳、頭痛",
+        "symptom": "発熱、咳、頭痛",
         "appearance_dt": "2021-04-15",
         "status_id": 2
     },
@@ -47325,8 +47325,8 @@
         "old": 70,
         "sex": 2,
         "job": "無職",
-        "symptom": "",
-        "appearance_dt": "2021-04-13",
+        "symptom": "なし",
+        "appearance_dt": "",
         "status_id": 4
     },
     {
@@ -47414,9 +47414,9 @@
         "revealed_dt": "2021-04-17",
         "old": 80,
         "sex": 1,
-        "job": "調査中",
-        "symptom": "なし",
-        "appearance_dt": "",
+        "job": "無職",
+        "symptom": "発熱",
+        "appearance_dt": "2021-04-17",
         "status_id": 6
     },
     {
@@ -47464,9 +47464,9 @@
         "revealed_dt": "2021-04-17",
         "old": 90,
         "sex": 2,
-        "job": "調査中",
-        "symptom": "なし",
-        "appearance_dt": "",
+        "job": "無職",
+        "symptom": "発熱、咳、倦怠感",
+        "appearance_dt": "2021-04-14",
         "status_id": 1
     },
     {
@@ -47588,5 +47588,635 @@
         "symptom": "発熱、倦怠感",
         "appearance_dt": "2021-04-17",
         "status_id": 3
+    },
+    {
+        "No": "4760",
+        "revealed_dt": "2021-04-19",
+        "old": 40,
+        "sex": 1,
+        "job": "自営業",
+        "symptom": "発熱、咳、咽頭痛、倦怠感",
+        "appearance_dt": "2021-04-14",
+        "status_id": 4
+    },
+    {
+        "No": "4761",
+        "revealed_dt": "2021-04-19",
+        "old": 20,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "発熱、咳、倦怠感",
+        "appearance_dt": "2021-04-18",
+        "status_id": 1
+    },
+    {
+        "No": "4762",
+        "revealed_dt": "2021-04-19",
+        "old": 10,
+        "sex": 1,
+        "job": "会社員",
+        "symptom": "発熱、咽頭痛、倦怠感、筋肉痛",
+        "appearance_dt": "2021-04-16",
+        "status_id": 3
+    },
+    {
+        "No": "4763",
+        "revealed_dt": "2021-04-19",
+        "old": 20,
+        "sex": 2,
+        "job": "会社員",
+        "symptom": "発熱",
+        "appearance_dt": "2021-04-17",
+        "status_id": 4
+    },
+    {
+        "No": "4764",
+        "revealed_dt": "2021-04-19",
+        "old": 30,
+        "sex": 2,
+        "job": "医療従事者",
+        "symptom": "発熱、倦怠感",
+        "appearance_dt": "2021-04-19",
+        "status_id": 3
+    },
+    {
+        "No": "4765",
+        "revealed_dt": "2021-04-19",
+        "old": 20,
+        "sex": 1,
+        "job": "会社員",
+        "symptom": "咳、咽頭痛、頭痛",
+        "appearance_dt": "2021-04-17",
+        "status_id": 4
+    },
+    {
+        "No": "4766",
+        "revealed_dt": "2021-04-19",
+        "old": 40,
+        "sex": 1,
+        "job": "会社員",
+        "symptom": "発熱、咽頭痛",
+        "appearance_dt": "2021-04-14",
+        "status_id": 4
+    },
+    {
+        "No": "4767",
+        "revealed_dt": "2021-04-19",
+        "old": 80,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4768",
+        "revealed_dt": "2021-04-19",
+        "old": 80,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4769",
+        "revealed_dt": "2021-04-19",
+        "old": 90,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4770",
+        "revealed_dt": "2021-04-19",
+        "old": 80,
+        "sex": 1,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4771",
+        "revealed_dt": "2021-04-19",
+        "old": 80,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4772",
+        "revealed_dt": "2021-04-19",
+        "old": 80,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4773",
+        "revealed_dt": "2021-04-19",
+        "old": 80,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4774",
+        "revealed_dt": "2021-04-19",
+        "old": 80,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4775",
+        "revealed_dt": "2021-04-19",
+        "old": 80,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4776",
+        "revealed_dt": "2021-04-19",
+        "old": 90,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4777",
+        "revealed_dt": "2021-04-19",
+        "old": 70,
+        "sex": 1,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4778",
+        "revealed_dt": "2021-04-19",
+        "old": 90,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4779",
+        "revealed_dt": "2021-04-19",
+        "old": 90,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4780",
+        "revealed_dt": "2021-04-19",
+        "old": 80,
+        "sex": 1,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4781",
+        "revealed_dt": "2021-04-19",
+        "old": 90,
+        "sex": 1,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4782",
+        "revealed_dt": "2021-04-19",
+        "old": 80,
+        "sex": 1,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4783",
+        "revealed_dt": "2021-04-19",
+        "old": 90,
+        "sex": 1,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4784",
+        "revealed_dt": "2021-04-19",
+        "old": 80,
+        "sex": 1,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4785",
+        "revealed_dt": "2021-04-19",
+        "old": 80,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4786",
+        "revealed_dt": "2021-04-19",
+        "old": 70,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4787",
+        "revealed_dt": "2021-04-19",
+        "old": 70,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4788",
+        "revealed_dt": "2021-04-19",
+        "old": 70,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4789",
+        "revealed_dt": "2021-04-19",
+        "old": 70,
+        "sex": 1,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4790",
+        "revealed_dt": "2021-04-19",
+        "old": 80,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4791",
+        "revealed_dt": "2021-04-19",
+        "old": 80,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4792",
+        "revealed_dt": "2021-04-19",
+        "old": 70,
+        "sex": 1,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4793",
+        "revealed_dt": "2021-04-19",
+        "old": 90,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4794",
+        "revealed_dt": "2021-04-19",
+        "old": 70,
+        "sex": 1,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4795",
+        "revealed_dt": "2021-04-19",
+        "old": 70,
+        "sex": 1,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4796",
+        "revealed_dt": "2021-04-19",
+        "old": 70,
+        "sex": 1,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4797",
+        "revealed_dt": "2021-04-19",
+        "old": 80,
+        "sex": 1,
+        "job": "無職",
+        "symptom": "発熱",
+        "appearance_dt": "2021-04-16",
+        "status_id": 2
+    },
+    {
+        "No": "4798",
+        "revealed_dt": "2021-04-19",
+        "old": 90,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4799",
+        "revealed_dt": "2021-04-19",
+        "old": 80,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4800",
+        "revealed_dt": "2021-04-19",
+        "old": 80,
+        "sex": 1,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4801",
+        "revealed_dt": "2021-04-19",
+        "old": 70,
+        "sex": 1,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4802",
+        "revealed_dt": "2021-04-19",
+        "old": 90,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4803",
+        "revealed_dt": "2021-04-19",
+        "old": 80,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4804",
+        "revealed_dt": "2021-04-19",
+        "old": 80,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4805",
+        "revealed_dt": "2021-04-19",
+        "old": 70,
+        "sex": 1,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4806",
+        "revealed_dt": "2021-04-19",
+        "old": 90,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4807",
+        "revealed_dt": "2021-04-19",
+        "old": 40,
+        "sex": 1,
+        "job": "会社員",
+        "symptom": "発熱、悪寒、筋肉痛",
+        "appearance_dt": "2021-04-18",
+        "status_id": 3
+    },
+    {
+        "No": "4808",
+        "revealed_dt": "2021-04-19",
+        "old": 20,
+        "sex": 1,
+        "job": "会社員",
+        "symptom": "発熱、咳、咽頭痛、鼻汁",
+        "appearance_dt": "2021-04-14",
+        "status_id": 3
+    },
+    {
+        "No": "4809",
+        "revealed_dt": "2021-04-19",
+        "old": 40,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "嗅覚障害、鼻汁",
+        "appearance_dt": "2021-04-17",
+        "status_id": 4
+    },
+    {
+        "No": "4810",
+        "revealed_dt": "2021-04-19",
+        "old": 70,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "発熱、咳、倦怠感",
+        "appearance_dt": "2021-04-18",
+        "status_id": 1
+    },
+    {
+        "No": "4811",
+        "revealed_dt": "2021-04-19",
+        "old": 50,
+        "sex": 1,
+        "job": "自営業",
+        "symptom": "発熱、咳、倦怠感",
+        "appearance_dt": "2021-04-17",
+        "status_id": 3
+    },
+    {
+        "No": "4812",
+        "revealed_dt": "2021-04-19",
+        "old": 20,
+        "sex": 1,
+        "job": "学生",
+        "symptom": "発熱",
+        "appearance_dt": "2021-04-16",
+        "status_id": 4
+    },
+    {
+        "No": "4813",
+        "revealed_dt": "2021-04-19",
+        "old": 10,
+        "sex": 2,
+        "job": "学生",
+        "symptom": "発熱、咳、頭痛、倦怠感",
+        "appearance_dt": "2021-04-16",
+        "status_id": 3
+    },
+    {
+        "No": "4814",
+        "revealed_dt": "2021-04-19",
+        "old": 30,
+        "sex": 2,
+        "job": "公務員",
+        "symptom": "発熱",
+        "appearance_dt": "2021-04-17",
+        "status_id": 2
+    },
+    {
+        "No": "4815",
+        "revealed_dt": "2021-04-19",
+        "old": 40,
+        "sex": 1,
+        "job": "会社員",
+        "symptom": "咳",
+        "appearance_dt": "2021-04-17",
+        "status_id": 4
+    },
+    {
+        "No": "4816",
+        "revealed_dt": "2021-04-19",
+        "old": 70,
+        "sex": 1,
+        "job": "無職",
+        "symptom": "食欲不振",
+        "appearance_dt": "2021-04-17",
+        "status_id": 2
+    },
+    {
+        "No": "4817",
+        "revealed_dt": "2021-04-19",
+        "old": 30,
+        "sex": 1,
+        "job": "会社員",
+        "symptom": "咳",
+        "appearance_dt": "2021-04-17",
+        "status_id": 4
+    },
+    {
+        "No": "4818",
+        "revealed_dt": "2021-04-19",
+        "old": 70,
+        "sex": 1,
+        "job": "無職",
+        "symptom": "咳、咽頭痛",
+        "appearance_dt": "2021-04-15",
+        "status_id": 1
+    },
+    {
+        "No": "4819",
+        "revealed_dt": "2021-04-19",
+        "old": 30,
+        "sex": 2,
+        "job": "会社員",
+        "symptom": "咳、咽頭痛、倦怠感",
+        "appearance_dt": "2021-04-19",
+        "status_id": 3
+    },
+    {
+        "No": "4820",
+        "revealed_dt": "2021-04-19",
+        "old": 60,
+        "sex": 1,
+        "job": "自営業",
+        "symptom": "発熱",
+        "appearance_dt": "2021-04-16",
+        "status_id": 4
+    },
+    {
+        "No": "4821",
+        "revealed_dt": "2021-04-19",
+        "old": 50,
+        "sex": 1,
+        "job": "調査中",
+        "symptom": "なし",
+        "appearance_dt": "",
+        "status_id": 1
+    },
+    {
+        "No": "4822",
+        "revealed_dt": "2021-04-19",
+        "old": 70,
+        "sex": 2,
+        "job": "無職",
+        "symptom": "発熱、咳、頭痛、関節痛",
+        "appearance_dt": "2021-04-19",
+        "status_id": 4
     }
 ]
