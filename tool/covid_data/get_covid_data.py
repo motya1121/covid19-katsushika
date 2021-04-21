@@ -423,7 +423,6 @@ def get_data(setting) -> list:
     patient_datas_pdf.reverse()
 
     # 閲覧不可になったデータの処理
-    # 4501~4510が削除されたため例外対応
     old_no_range = list(range(1, 3401))
     row_datas = []
     patient_datas_old = []
