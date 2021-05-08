@@ -7,6 +7,7 @@ from datetime import datetime as dt
 import json
 import os
 import shutil
+import re
 
 DEBUG = False
 
@@ -32,6 +33,16 @@ class patient_data():
 
         # check remain cid
         if line_str.find('cid') != -1:
+            pattern  = r'\(cid:(\d+)\)' 
+            cid_codes = re.findall(pattern, line_str)
+            cid_jp_map = None
+            with open(os.path.dirname(os.path.abspath(__file__)) + "/cid_jp_map.json", "r") as f:
+                cid_jp_map = json.load(f)
+            for cid_code in cid_codes:
+                if cid_code not in  cid_jp_map.keys():
+                    cid_jp_map[cid_code] = ""
+            with open(os.path.dirname(os.path.abspath(__file__)) + "/cid_jp_map.json", "w") as f:
+                json.dump(cid_jp_map, f, ensure_ascii=False, indent=4)
             print('cid error')
             print(line_str)
             exit()
