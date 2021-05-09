@@ -63,6 +63,15 @@
             </span>
           </div>
         </li>
+        <li :class="[$style.box]">
+          <div :class="$style.content">
+            <span>{{ $t('不明') }}</span>
+            <span>
+              <strong>{{ 不明.toLocaleString() }}</strong>
+              <span :class="$style.unit">{{ $t('人') }}</span>
+            </span>
+          </div>
+        </li>
       </ul>
     </li>
   </ul>
@@ -103,6 +112,10 @@ export default Vue.extend({
       required: true
     },
     回復: {
+      type: Number,
+      required: true
+    },
+    不明: {
       type: Number,
       required: true
     }
