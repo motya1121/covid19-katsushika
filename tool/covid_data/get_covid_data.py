@@ -41,8 +41,6 @@ class patient_data():
             print(self.box_list)
             print(line_list)
         # 例外処理
-        if line_list[0] == '3842':
-            line_list = ['3842', '2/12', '７０代', '男', '無職', '咳以外の呼吸器症状', '2/12', '○', '']
         elif line_list[1] == '4601':
             line_list = ['4601', '4/13', '２０代', '女', '会社員', '発熱、頭痛、倦怠感、味覚障害、嗅覚障害', '4/4', '○', '']
         self.no = line_list[0]
@@ -53,9 +51,11 @@ class patient_data():
         self.symptom = self.parse_symptom(line_str)
         self.appearance_dt = self.parse_appearance_dt(line_list[6], line_str)
         self.status_id = self.get_status_id(self.box_list[-1].x0)
+        # with open('debug.log', 'a') as f:
+        #     f.write('no: {}, coordinate: {}, status_id:{}\n'.format(self.no, self.box_list[-1].x0, self.status_id))
         if self.status_id == 0:
             print('error status id')
-            print(line_list[0], self.box_list[-1].x0, self.status_id)
+            print('no: {}, coordinate: {}, status_id:{}'.format(self.no, self.box_list[-1].x0, self.status_id))
 
     def cid_to_jp(self, text: str) -> str:
         with open(os.path.dirname(os.path.abspath(__file__)) + "/cid_jp_map.json", "r") as f:
@@ -442,7 +442,10 @@ def get_data(setting) -> list:
             temp_patient_data.appearance_dt = None
         else:
             temp_patient_data.appearance_dt = dt.strptime(row_data['appearance_dt'], '%Y-%m-%d')
-        temp_patient_data.status_id = row_data['status_id']
+        if row_data['status_id'] in [1, 2, 3, 4]:
+            temp_patient_data.status_id = 7
+        else:
+            temp_patient_data.status_id = row_data['status_id']
         patient_datas_old.append(temp_patient_data)
 
     patient_datas = patient_datas_old + patient_datas_pdf
