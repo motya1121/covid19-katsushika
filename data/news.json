@@ -3,13 +3,23 @@
     "newsItems": [
         {
             "date": "",
-            "url": "http:\/\/www.city.katsushika.lg.jp\/information\/kouho\/1005541\/index.html",
+            "url": "https://www.city.katsushika.lg.jp/kurashi/1000050/1001797/index.html",
             "text": "葛飾区の最新情報はこちら"
         },
         {
-            "date": "2020/07/17",
-            "url": "https://www.youtube.com/watch?v=he65yOK9SiE&feature=youtu.be",
+            "date": "2021/04/14",
+            "url": "https://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/026/065/zissihousinn.pdf",
+            "text": "新型コロナウイルスワクチン接種実施方針"
+        },
+        {
+            "date": "2021/04/26",
+            "url": "https://www.youtube.com/watch?v=C-Acx2qBBwY",
             "text": "葛飾区長からのメッセージ"
+        },
+        {
+            "date": "2021/05/01",
+            "url": "https://www.city.katsushika.lg.jp/kurashi/1000050/1001797/1025562.html",
+            "text": "新型コロナウイルスワクチン接種について"
         }
     ]
 }
