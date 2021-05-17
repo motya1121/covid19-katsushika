@@ -5,11 +5,12 @@
     "city_setting": {
         "city_url": "http://www.city.katsushika.lg.jp/kurashi/1000050/1001797/1023014.html",
         "pdf_urls": [
-            "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2105145401.pdf",
-            "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2105145301.pdf",
+            "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2105175501.pdf",
+            "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2105175401.pdf",
+            "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2105175301.pdf",
             "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2105145201.pdf",
             "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2105145101.pdf",
-            "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2105145001.pdf",
+            "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2105175001.pdf",
             "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2105134901.pdf",
             "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2105144801.pdf",
             "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2105144701.pdf",
@@ -20,9 +21,9 @@
             "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2104204201.pdf",
             "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2104204101.pdf"
         ],
-        "pdf_joukyou_url": "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/210514.pdf",
-        "survey_datetime": "2021-05-17 09:50:02",
-        "update_datetime": "2021-05-13 00:00:00",
-        "public_datetime": "2021-05-17 09:50:02"
+        "pdf_joukyou_url": "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/21051701.pdf",
+        "survey_datetime": "2021-05-17 17:20:03",
+        "update_datetime": "2021-05-16 00:00:00",
+        "public_datetime": "2021-05-17 17:20:03"
     }
 }
