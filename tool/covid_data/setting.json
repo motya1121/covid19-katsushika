@@ -5,24 +5,24 @@
     "city_setting": {
         "city_url": "http://www.city.katsushika.lg.jp/kurashi/1000050/1001797/1023014.html",
         "pdf_urls": [
-            "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2106075701.pdf",
-            "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2106075601.pdf",
-            "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2106045501.pdf",
-            "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2106025401.pdf",
+            "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2106085701.pdf",
+            "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2106085601.pdf",
+            "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2106085501.pdf",
+            "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2106085401.pdf",
             "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2106025301.pdf",
             "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2106025201.pdf",
             "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2106025101.pdf",
-            "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2106025001.pdf",
+            "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2106085001.pdf",
             "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2106024901.pdf",
             "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2105264801.pdf",
-            "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2105274701.pdf",
-            "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2105244601.pdf",
+            "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2106084701.pdf",
+            "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2106084601.pdf",
             "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2105274501.pdf",
             "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2105134401.pdf"
         ],
-        "pdf_joukyou_url": "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/21060702.pdf",
-        "survey_datetime": "2021-06-08 13:06:46",
-        "update_datetime": "2021-06-06 00:00:00",
-        "public_datetime": "2021-06-08 13:05:08"
+        "pdf_joukyou_url": "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/210607.pdf",
+        "survey_datetime": "2021-06-09 00:20:03",
+        "update_datetime": "2021-06-07 00:00:00",
+        "public_datetime": "2021-06-09 00:20:03"
     }
 }
