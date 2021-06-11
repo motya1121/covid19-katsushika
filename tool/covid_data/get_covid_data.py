@@ -75,7 +75,8 @@ class patient_data():
         ret_str = text
         if ret_str.find('cid') != -1:
             for cid, jp in cid_jp_map.items():
-                ret_str = ret_str.replace(f'(cid:{cid})', jp)
+                if jp != "":
+                    ret_str = ret_str.replace(f'(cid:{cid})', jp)
 
         return ret_str
 
