@@ -221,7 +221,7 @@ class patient_data():
         # DEBUG
         if 186 <= coordinate and coordinate <= 386:
             return 1
-        elif 409 <= coordinate and coordinate <= 424:
+        elif 389 <= coordinate and coordinate <= 424:
             return 2
         elif 435 <= coordinate and coordinate <= 450:
             return 3
