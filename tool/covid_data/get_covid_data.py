@@ -54,6 +54,10 @@ class patient_data():
         # 例外処理
         elif line_list[1] == '4601':
             line_list = ['4601', '4/13', '２０代', '女', '会社員', '発熱、頭痛、倦怠感、味覚障害、嗅覚障害', '4/4', '○', '']
+        # elif line_list[1] == '5887':
+        #     line_list = ['5887', '6/21', '３０代', '女', '無職', '発熱、咳、院疼痛、頭痛、倦怠感、味覚障害、嗅覚障害、鼻汁、下痢', '6/18', '○', '']
+        # elif line_list[1] == '5888':
+        #     line_list = ['5888', '6/21', '２０代', '男', '無職', '発熱、咽頭痛、頭痛、倦怠感、関節痛', '6/19', '○', '']
         self.no = line_list[0]
         self.revealed_dt = self.check_date(line_list[1])
         self.old = self.check_old(line_list[2])
@@ -378,7 +382,7 @@ def get_data(setting) -> list:
                         continue
                     temp_tb_avg = (box.y1 + box.y0) / 2
 
-                    if 10 < befor_tb_avg - temp_tb_avg or befor_tb_avg - temp_tb_avg < -10:
+                    if 15 < befor_tb_avg - temp_tb_avg or befor_tb_avg - temp_tb_avg < -15:
                         box_list.sort(key=lambda b: (b.x0))
                         if len(box_list) == 0:
                             befor_tb_avg = temp_tb_avg
@@ -399,6 +403,7 @@ def get_data(setting) -> list:
                                 print(box_list)
                                 befor_tb_avg = temp_tb_avg
                                 box_list = []
+                    befor_tb_avg = temp_tb_avg
 
                     box_list.append(box)
 
