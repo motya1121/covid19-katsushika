@@ -5,10 +5,10 @@
     "city_setting": {
         "city_url": "http://www.city.katsushika.lg.jp/kurashi/1000050/1001797/1023014.html",
         "pdf_urls": [
-            "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2107146201.pdf",
-            "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2107146101.pdf",
-            "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2107146001.pdf",
-            "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/145901.pdf",
+            "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2107166201.pdf",
+            "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2107166101.pdf",
+            "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2107166001.pdf",
+            "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/07155901.pdf",
             "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2107075801.pdf",
             "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2107135701.pdf",
             "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2106295601.pdf",
@@ -18,9 +18,9 @@
             "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2106025201.pdf",
             "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2106025101.pdf"
         ],
-        "pdf_joukyou_url": "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/210714.pdf",
-        "survey_datetime": "2021-07-14 17:20:03",
-        "update_datetime": "2021-07-13 00:00:00",
-        "public_datetime": "2021-07-14 17:20:03"
+        "pdf_joukyou_url": "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/210716.pdf",
+        "survey_datetime": "2021-07-16 19:57:12",
+        "update_datetime": "2021-07-15 00:00:00",
+        "public_datetime": "2021-07-16 17:20:02"
     }
 }
