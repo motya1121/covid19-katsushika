@@ -5,9 +5,10 @@
     "city_setting": {
         "city_url": "http://www.city.katsushika.lg.jp/kurashi/1000050/1001797/1023014.html",
         "pdf_urls": [
-            "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2107206301.pdf",
-            "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2107206201.pdf",
-            "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2107206101.pdf",
+            "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2107216401.pdf",
+            "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2107216301.pdf",
+            "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2107216201.pdf",
+            "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2107216101.pdf",
             "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2107206001.pdf",
             "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2107205901.pdf",
             "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2107075801.pdf",
@@ -19,9 +20,9 @@
             "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2106025201.pdf",
             "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/2106025101.pdf"
         ],
-        "pdf_joukyou_url": "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/210720.pdf",
-        "survey_datetime": "2021-07-20 17:30:02",
-        "update_datetime": "2021-07-19 00:00:00",
-        "public_datetime": "2021-07-20 17:20:03"
+        "pdf_joukyou_url": "http://www.city.katsushika.lg.jp/_res/projects/default_project/_page_/001/023/014/210721.pdf",
+        "survey_datetime": "2021-07-21 17:30:02",
+        "update_datetime": "2021-07-20 00:00:00",
+        "public_datetime": "2021-07-21 17:20:02"
     }
 }
